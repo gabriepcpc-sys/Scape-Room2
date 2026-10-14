@@ -3,5 +3,4 @@ let jogoAtivo = true;
     function iniciar(){
     if(!jogoAtivo) return;
      document.getElementById("cenarioMenu").src = "../JavaScript.js/Fase1.png";
-     
     }
