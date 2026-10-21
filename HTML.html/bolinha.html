@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            min-height: 400px;
+            min-width: 800px;
+        }
+        *{
+            margin:0;
+        }
+        #telaJogo{
+            border: 1px solid red;
+            width: 800px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        #bolinha{
+            border-radius: 100%;
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 100px; /*left*/
+            top: 30px; /* bottom*/
+            z-index: 2;
+            /* animation: funcaoAnimacao infinite; */
+            animation-duration: 3s;
+        }
+
+        @keyframes funcaoAnimacao{
+          
+            from,to{
+               
+                background-color: red;
+            }
+            30%{
+                scale: 110%;
+            }
+            50%{
+                background-color: green;
+            }
+        }
+
+        #quadradinho{
+            background-color: rgb(15, 237, 89);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            right: 100px; /*left*/
+            top: 30px; /* bottom*/
+            z-index: 1;
+        }
+
+        #gato{
+            animation: gatoBebado 5s linear infinite;
+        }
+        @keyframes gatoBebado{
+            from,to {
+                transform: skew(10deg);
+            }
+            50%{
+                transform: skew(-10deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="telaJogo">
+        <div id="bolinha" onclick="iniciarAnimacao()" ></div>
+        <div id="quadradinho"
+             style="right: 1px;" 
+             onclick="deslocarLado(50)"
+             ondblclick="aumentarVelocidade()"
+             ></div>
+        <img src="/imagens/barril.png" width="200" id="gato">
+    </div>
+
+    <script>
+        velocidade = 0;
+        function aumentarVelocidade(){
+            velocidade += 10
+        }
+
+        function iniciarAnimacao(){
+            document.getElementById('bolinha').style.animation = 'funcaoAnimacao 2s infinite alternate'
+        }
+
+        function deslocarLado(desloc){
+            let x =  quadradinho.style.right
+            x = Number(x.replace('px', ''))
+            console.log(x)
+            if(x > 300){ //early return 
+                return
+            }
+            quadradinho.style.right = `${x+desloc+velocidade}px` 
+        }    
+    </script>
+</body>
+</html>
