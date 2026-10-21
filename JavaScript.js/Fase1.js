@@ -1,3 +1,4 @@
+var inventario = [];
 function avancar() {
     // Lógica para avançar para a próxima tela da fase 1
     document.getElementById("Fase1Fundo1").style.display = "none";
@@ -21,6 +22,11 @@ function pegarChave() {
     
 }
 function apagarFogo(){
+    for(var i=0;i<5;i++){
+        if(inventario[i] === "Pá"){
+        inventario[i]
+        }
+    }
     var fogo = document.getElementById('FogoEsquerda');
     fogo.remove(); // Remove o fogo após apagá-lo
 }
