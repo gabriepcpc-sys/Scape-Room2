@@ -10,15 +10,17 @@
     <button id="avançar" onclick="avancar()">Avançar</button>
     <button id="voltar" onclick="voltar()"style="display: none;" >Retroceder</button>
 
-        <img id="FundoFase1" src="../imagens/Fundo1Fase1.png">
+        
 
     <div id="Fase1Fundo1">
+        <img id="FundoFase1" src="../imagens/Fundo1Fase1.png">
         <img id="FogoEsquerda" src="../imagens/Fogos.gif">
         <img id="FogoDireita" src="../imagens/Fogos.gif">
+        <img onclick="apagarfogo()"
   
         <div>   
         <img 
-             onclick="document.getElementById('ChaveFase1').remove()"    
+             onclick="pegarChave()"  
              id="ChaveFase1" src="../imagens/ObjetoFase1.png">
         </div>
         

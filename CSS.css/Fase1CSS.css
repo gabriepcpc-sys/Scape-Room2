@@ -14,13 +14,20 @@
     
 
 }
-#fogodireita{
+#FogoDireita,#FogoEsquerda{
     z-index: 1;
     position: absolute;
+    top: 390px;
+    width: 330px;
+    height: 300px;
+    
     
 }
-#fogoesquerda{
+#FogoDireita{
+   right: 260px; 
+}
+#FogoEsquerda{
     z-index: 1;
     position: absolute;
-    
+    left: 240px;
 }
