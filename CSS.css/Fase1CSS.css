@@ -4,6 +4,12 @@
     width: 1671px;
     height: 941px;
 }
+#Fase1Fundo2{
+    position: relative;
+    z-index: 0;
+    width: 1674px;
+    height: 939px;
+}
 #ChaveFase1{
     z-index: 2;
     position: absolute;
@@ -11,13 +17,13 @@
     left: 10px;
     width: 20%;
     height: 20%;
+     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
     
-
 }
 #FogoDireita,#FogoEsquerda{
     z-index: 1;
     position: absolute;
-    top: 390px;
+    top: 375px;
     width: 330px;
     height: 300px;
     
@@ -30,4 +36,28 @@
     z-index: 1;
     position: absolute;
     left: 240px;
+}
+#PaFase1{
+    z-index: 1;
+    position: absolute;
+    width: 260px;
+    height: 250px;
+    bottom: -75px;
+    transform: rotate(105deg);
+    right: -10px;
+}
+#PaFase1:hover{
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+}
+#PortaFase1{
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    height: 400px;
+    bottom: 375px;
+    right: 85px;
+    transform: rotate(-3deg);
+}
+#PortaFase1:hover{
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
 }
