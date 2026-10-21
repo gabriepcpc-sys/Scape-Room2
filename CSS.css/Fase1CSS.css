@@ -1,0 +1,16 @@
+#Fase1Fundo1{
+    position: relative;
+    z-index: 0;
+    width: 1671px;
+    height: 941px;
+}
+#ChaveFase1{
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20%;
+    height: 20%;
+    
+
+}
