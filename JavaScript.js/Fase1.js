@@ -14,3 +14,9 @@ function voltar() {
     // Oculta o botão "retroceder" novamente
     document.getElementById("voltar").style.display = "none";
 }
+function pegarChave() {
+    // Lógica para pegar a chave na fase 1
+    var chave = document.getElementById('ChaveFase1');
+    chave.remove(); // Remove a chave após pegá-la
+    
+}
