@@ -4,6 +4,15 @@
     width: 1671px; /*largura com os pixels exato da imagem*/
     height: 941px; /*altura com os pixels exato da imagem*/
 }
+#placa{
+    position: absolute;
+    top: 630px; /*a imagem esta a 630 pixels do topo */
+    width: 300px; /*a imagem tem 300 pixels de largura */
+    left: 90px; /*a imagem esta a 90 pixels da esquerda */
+}
+#placa:hover{
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /*cria a sombra da placa ao passar o mouse*/
+}
 #Fase1Fundo2{
     position: relative;
     z-index: 0; /*camada onde o elemento está posicionado */
