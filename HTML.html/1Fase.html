@@ -13,21 +13,24 @@
         
 
     <div id="Fase1Fundo1"><!-- div principal onde guarda a imagem da fase -->
-        <img id="FundoFase1" src="../imagens/Fundo1Fase1.png"><!-- a imagem em si-->
-        <img id="portafundo1fase1" src="../imagens/portaFUNDO1FASE1.png">
-        <img onclick="apagarFogo()" id="FogoEsquerda" src="../imagens/Fogos.gif"> <!-- botao que chama a função apagarfogo e chama o gif -->
-        <img id="FogoDireita" src="../imagens/Fogos.gif"><!-- chama o fogo da esquerda -->
-  
-        <div>   
- <!-- funcção que faz a chave poder ser pega com onclick e chama a imagem--> 
+        <img id="FundoFase1" 
+             src="../imagens/Fundo1Fase1.png"> <!-- a imagem em si-->
+
+        <img id="portafundo1fase1" 
+             src="../imagens/portaFUNDO1FASE1.png">
+
+        <img onclick="apagarFogo()" id="FogoEsquerda" 
+             src="../imagens/Fogos.gif"> <!-- botao que chama a função apagarfogo e chama o gif -->
+
+        <img id="FogoDireita" 
+             src="../imagens/Fogos.gif"><!-- chama o fogo da esquerda -->
+
+ <!-- função que faz a chave poder ser pega com onclick e chama a imagem--> 
         <img 
+            style="display: none;"
              onclick="pegarChave()" 
-             id="ChaveFase1" src="../imagens/ObjetoFase1.png">
-        </div>
-        
-    </div>
-    <div>
-        <img id="FogoApagado" src="../imagens/Fundo1Fase1FogoApagado.png" style="display: none;">
+             id="ChaveFase1" 
+             src="../imagens/ObjetoFase1.png">
     </div>
 
     <div id="Fase1Fundo2" style="display: none;"> <!-- div que guarda a imagem da segunda fase e esta escondida -->
@@ -41,6 +44,6 @@
         <h3>Inventário</h3> <!-- titulo do inventário -->
     <ul id="listaInventario"></ul> <!-- id do inventário -->
 </div>
-    <script src="../JavaScript.js/Fase1.js"></script><!-- linka o HTML ao JS -->
+    <script src="../JavaScript.js/Fase1.js"></script><!-- linka o HTML ao JS da Fase1 -->
 </body>
 </html>

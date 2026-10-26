@@ -51,9 +51,10 @@ function apagarFogo(){
        console.log("Você não tem a pá para apagar o fogo!");
        return;
     }
-    document.getElementById('FogoApagado').style.display = 'block';
-    document.getElementById('Fase1Fundo1').src="../imagens/Fundo1Fase1FogoApagado.png"; // Altera a imagem de fundo para a versão com o fogo apagado
+    document.getElementById('FundoFase1').src="../imagens/Fundo1Fase1FogoApagado.png"; // Altera a imagem de fundo para a versão com o fogo apagado
     var fogo = document.getElementById('FogoEsquerda');
     fogo.remove(); // Remove o fogo após apagá-lo
+    var chaveEscondida = document.getElementById('ChaveFase1');
+    chaveEscondida.style.display = "block"; // Exibe a chave após apagar o fogo
     atualizarInventario(); // Atualiza o inventário na tela
 }
