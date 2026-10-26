@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../CSS.css/Fase1CSS.css"><!-- linka a fase 1 ao seu CSS -->
 </head>
 <body>
-    <button id="avançar" onclick="avancar()">Avançar</button><!-- botao que chama a função avançar -->
-    <button id="voltar" onclick="voltar()"style="display: none;" >Retroceder</button> <!-- botao que chama a função retroceder e esta escondido -->
+    <!--<img id="avançar" onclick="avancar()" src="../imagens/Avançar.png"> --> <!-- botao que chama a função avançar -->
+   <!-- <img id="voltar" onclick="voltar()" style="display: none;" src="../imagens/Voltar.png"> --> <!-- botao que chama a função retroceder e esta escondido -->
 
         
 
@@ -17,7 +17,8 @@
              src="../imagens/Fundo1Fase1.png"> <!-- a imagem em si-->
 
         <img id="portafundo1fase1" 
-             src="../imagens/portaFUNDO1FASE1.png">
+             onclick="avancar()"
+             src="../imagens/PortaFundo1Fase1.png">
 
         <img onclick="apagarFogo()" id="FogoEsquerda" 
              src="../imagens/Fogos.gif"> <!-- botao que chama a função apagarfogo e chama o gif -->
