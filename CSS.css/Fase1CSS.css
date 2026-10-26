@@ -10,20 +10,35 @@
     width: 1674px; /*largura com os pixels exato da imagem*/
     height: 939px;
 }
-#ChaveFase1{
-    z-index: 2; /*camada onde o elemento está posicionado */
+#portafundo1fase1{
     position: absolute;
-    top: 10px; /*a imagem esta a 10 pixels do topo */
-    left: 10px; /*a imagem esta a 10 pixels da esquerda */
-    width: 20%; /*a imagem ocupa 20% da largura */
-    height: 20%; /*a imagem ocupa 20% da altura */
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));  /*cria o contorno*/
-    
+    z-index: 1; /*camada onde o elemento está posicionado */
+    top: 290px; /*o elemento esta a 290 pixels do topo */
+    left: 664px; /*o elemento esta a 664 pixels da esquerda */
+    width: 330px; /*a largura do elemento é 330 pixels */
+    height: 560px; /*a altura do elemento é 560 pixels */
 }
-#FogoDireita,#FogoEsquerda{
+#portafundo1fase1:hover{
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.7)); /*cria a sombra da porta ao passar o mouse*/
+
+}
+#ChaveFase1{
     z-index: 1; /*camada onde o elemento está posicionado */
     position: absolute;
-    top: 375px; /*o gif esta a 375 pixels do topo */
+    top: 545px; /*a imagem esta a 545 pixels do topo */
+    left: 305px; /*a imagem esta a 305 pixels da esquerda */
+    width: 12%; /*a imagem ocupa 12% da largura */
+    height: 15%; /*a imagem ocupa 15% da altura */
+}
+#ChaveFase1:hover{
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)); /*cria a sombra da chave ao passar o mouse*/
+}
+
+
+#FogoDireita,#FogoEsquerda{
+    z-index: 2; /*camada onde o elemento está posicionado */
+    position: absolute;
+    top: 370px; /*o gif esta a 370 pixels do topo */
     width: 330px; /*o gif tem 330 pixels de largura */
     height: 300px; /*o gif tem 300 pixels de altura */
 
@@ -33,8 +48,6 @@
    right: 260px;  /*o gif esta a 260 pixels da direita */
 }
 #FogoEsquerda{
-    z-index: 1; /*camada onde o elemento está posicionado */
-    position: absolute;
     left: 240px; /*o gif esta a 240 pixels da esquerda */
 }
 #PaFase1{
@@ -47,7 +60,7 @@
     right: -10px; /*deixa o elemento bem na direita*/
 }
 #PaFase1:hover{
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)); /*cria o contorno*/
+    filter: drop-shadow(0 0 15px rgb(255, 255, 255)); /*cria a sombra da pá ao passar o mouse*/
 }
 #PortaFase1{
     z-index: 1; /*camada onde o elemento está posicionado */
