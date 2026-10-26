@@ -1,63 +1,63 @@
 #Fase1Fundo1{
-    position: relative;
-    z-index: 0;
-    width: 1671px;
-    height: 941px;
+    position: relative; /**/
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1671px; /*largura com os pixels exato da imagem*/
+    height: 941px; /*altura com os pixels exato da imagem*/
 }
 #Fase1Fundo2{
     position: relative;
-    z-index: 0;
-    width: 1674px;
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1674px; /*largura com os pixels exato da imagem*/
     height: 939px;
 }
 #ChaveFase1{
-    z-index: 2;
+    z-index: 2; /*camada onde o elemento está posicionado */
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 20%;
-    height: 20%;
-     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+    top: 10px; /*a imagem esta a 10 pixels do topo */
+    left: 10px; /*a imagem esta a 10 pixels da esquerda */
+    width: 20%; /*a imagem ocupa 20% da largura */
+    height: 20%; /*a imagem ocupa 20% da altura */
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));  /*cria o contorno*/
     
 }
 #FogoDireita,#FogoEsquerda{
-    z-index: 1;
+    z-index: 1; /*camada onde o elemento está posicionado */
     position: absolute;
-    top: 375px;
-    width: 330px;
-    height: 300px;
-    
-    
+    top: 375px; /*o gif esta a 375 pixels do topo */
+    width: 330px; /*o gif tem 330 pixels de largura */
+    height: 300px; /*o gif tem 300 pixels de altura */
+
+
 }
 #FogoDireita{
-   right: 260px; 
+   right: 260px;  /*o gif esta a 260 pixels da direita */
 }
 #FogoEsquerda{
-    z-index: 1;
+    z-index: 1; /*camada onde o elemento está posicionado */
     position: absolute;
-    left: 240px;
+    left: 240px; /*o gif esta a 240 pixels da esquerda */
 }
 #PaFase1{
-    z-index: 1;
+    z-index: 1; /*camada onde o elemento está posicionado */
     position: absolute;
-    width: 260px;
-    height: 250px;
-    bottom: -75px;
-    transform: rotate(105deg);
-    right: -10px;
+    width: 260px; /*o elemento tem 260 pixels de largura */
+    height: 250px; /*o elemento tem 250 pixels de altura */
+    bottom: -75px; /*o elemento esta a 75 pixels do chão */
+    transform: rotate(105deg); /*rotaciona o elemento a 105 graus*/
+    right: -10px; /*deixa o elemento bem na direita*/
 }
 #PaFase1:hover{
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)); /*cria o contorno*/
 }
 #PortaFase1{
-    z-index: 1;
+    z-index: 1; /*camada onde o elemento está posicionado */
     position: absolute;
-    width: 250px;
-    height: 400px;
-    bottom: 375px;
-    right: 85px;
-    transform: rotate(-3deg);
+    width: 250px; /*o elemento tem 250 pixels de largura */
+    height: 400px; /*o elemento tem 400 pixels de altura */
+    bottom: 375px; /*o elemento esta a 375 pixels do chão */
+    right: 85px; /*o elemento esta a 85 pixels da direita */
+    transform: rotate(-3deg); /*rotaciona o elemento a -3 graus */
 }
 #PortaFase1:hover{
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));/*cria o contorno*/
 }
