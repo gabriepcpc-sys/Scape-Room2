@@ -1,6 +1,6 @@
   #FundoSite{
-    width: 1537px; /*o elemento tem 1537 pixels de largura */
-    height: 1023px; /*o elemento tem 1023 pixels de altura */
+    width: 1536px; /*o elemento tem 1536 pixels de largura */
+    height: 1024px; /*o elemento tem 1024 pixels de altura */
     position: relative;
     z-index: 0; /*camada onde o elemento está posicionado */
     border: 10px solid rgb(93, 209, 26);
@@ -16,7 +16,7 @@
     width: 300px; /*a largura do objeto é 300 pixels */
     height: 50%; /*a altura do objeto é 50% */
     margin-left: -200px; /*com distancia negativa o elemento fica centralizado */
-    background-color: rgba(0, 0, 0, 0.6);/*deixa o fundo da caixa translucida e escura pq a cor é preto*/
+    background-color: rgba(226, 13, 13, 0.808);/*deixa o fundo da caixa translucida e escura pq a cor é preto*/
     padding: 20px; /*deixa espaco ao redor do texto*/
     border: 3px solid rgba(255, 255, 255, 0.85); /*borda da caixa*/
     border-radius: 15px; /*arredondamento da caixa*/
