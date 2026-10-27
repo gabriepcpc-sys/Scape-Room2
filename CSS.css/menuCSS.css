@@ -7,6 +7,7 @@
     position: relative;
     z-index: 0; /*camada onde o elemento está posicionado */
     border: 10px solid rgb(93, 209, 26);
+    overflow: hidden; /*esconde o que estiver fora do elemento*/
 }
 .button{
     position: relative;
@@ -19,6 +20,7 @@
     font-family: 'Creepster', cursive;
     color: rgb(255, 255, 255); /*cor da fonte*/
     width: 100%; /*ocupa 100% da largura */
+    cursor:pointer; /*faz o cursor do mouse virar uma mãozinha ao passar por cima do botao*/
 
 }
 .titulo{
