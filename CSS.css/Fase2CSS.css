@@ -1,3 +1,24 @@
-#body{
-    color: red;
+
+#Fundoestante{
+    position: absolute;
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1024px; /*largura de 1024*/
+    height: 1024px; /*altura de 1024*/
+
+}
+#estante{
+    position:absolute;
+    z-index: 1;/*camada onde o elemento está posicionado */
+    top: 30px; /*a imagem esta a 30 pixels do topo */
+    left: 10px; /*a imagem esta a 10 pixels da esquerda */
+    width: 1000px; /*a imagem tem 1000 pixels de largura */
+    height: 1000px; /*a imagem tem 1000 pixels de altura */
+}
+#botao{
+    position: absolute;
+    z-index: 2; /*camada onde o elemento está posicionado */
+    top: 400px; /*a imagem esta a 400 pixels do topo */
+    left: 800px; /*a imagem esta a 800 pixels da esquerda */
+    width: 200px; /*a imagem tem 200 pixels de largura */
+    height: 100px; /*a imagem tem 100 pixels de altura */
 }

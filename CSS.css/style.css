@@ -1,0 +1,82 @@
+body {
+    background-color: #aa9383; /* Fundo escuro do cenário */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(37, 37, 63, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #4a4e69;
+}
+
+.shelf {
+    display: flex;
+    gap: 8px; /* Espaço entre os livros */
+    background-color: #5c3a21; /* Cor da prateleira (madeira) */
+    padding: 20px 15px;
+    border-radius: 5px;
+    border-bottom: 20px solid #3e2723; /* Base mais grossa da prateleira */
+    margin: 30px 0;
+    min-height: 220px;
+    align-items: flex-end; /* Mantém os livros encostados no chão da prateleira */
+}
+
+.book {
+    width: 50px;
+    height: 200px;
+    border-radius: 5px;
+    cursor: grab; /* Cursor de "mãozinha aberta" */
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: inset 5px 0 10px rgba(255,255,255,0.2), 3px 0 8px rgba(0,0,0,0.5);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.book:active {
+    cursor: grabbing; /* Mãozinha fechada ao segurar */
+}
+
+/* Efeito visual de quando estamos arrastando algo para cima de um livro */
+.book.drag-over {
+    transform: scale(1.1) translateY(-10px);
+    filter: brightness(1.5);
+    border: 2px dashed white;
+}
+
+/* Cores dos Livros */
+.red { background-color: #e41d06; }
+.yellow { background-color: #f1c40f; }
+.green { background-color: #27ae60; }
+.blue { background-color: #2980b9; }
+.purple { background-color: #8e44ad; }
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #e67e22;
+    color: white;
+    border: 2px solid #d35400;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 25px;
+}
