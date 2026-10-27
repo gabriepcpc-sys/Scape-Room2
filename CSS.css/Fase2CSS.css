@@ -17,55 +17,56 @@
 }
 #botao{
 position: absolute;
-    z-index: 2;
-    top: 450px; /* Ajuste para ficar alinhado com a prateleira do meio */
+    z-index: 2; /*  camada onde o elemento esta posicionado  */
+    top: 450px; /* Ajuste para ficar na altura boa*/
     width: 170px; /* Largura do botão */
     left: 820px; /* Ajuste para não ficar muito no canto */
-    background-color: #4a4e4d7c; 
-    color: #f7f4f4;
-    font-family: 'Creepster', cursive; /* Usa aquela fonte de terror da Fase 1 */
-    font-size: 20px;
-    letter-spacing: 2px;
-    border: 5px solid #1b2922;
-    border-radius: 10px;
+    background-color: #4a4e4d7c; /*cor de fundo do botao*/
+    color: #f7f4f4;/*cor da fonte*/
+    font-family: 'Creepster', cursive; /* chama a fonte creepster*/
+    font-size: 20px; /*tamanho da fonte*/
+    letter-spacing: 2px;/*espaçamento entre as letras*/
+    border: 5px solid #1b2922;/*configuerações da borda*/
+    border-radius: 10px;/*arredondamento da borda*/
 }
 
-/* Efeito de "afundar" a pedra ao passar o mouse ou clicar */
+
 #botao:hover {
-    background-color: #3b3d3c;
-   box-shadow: 0 0 15px rgb(202, 19, 19);/*faz o brilho no botao ao passar o mouse por cima */
+    background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
+    box-shadow: 0 0 15px rgb(202, 19, 19);/*faz o brilho no botao ao passar o mouse por cima */
+    
 }
 #h2{
-    color: #8d0f0f;
-    text-align: center;
-    font-family: 'Creepster', cursive;
-    font-size: 80px;
-    letter-spacing: 2px;
+    color: #8d0f0f;/*cor do titulo*/
+    text-align: center;/*alinhamento do titulo*/
+    font-family: 'Creepster', cursive;/* chama a fonte creepster*/
+    font-size: 80px;/*tamanho da fonte*/
+    letter-spacing: 2px;/*espaçamento entre as letra*/
 }
 .divtitulo{
     position: absolute;
     z-index: 2; /*camada onde o elemento está posicionado */
-    top: 10px; 
-    left:60px;
-    width: 900px;
+    top: 10px; /*a div do titulo esta a 10px do topo*/
+    left:60px;/*a div do titulo esta a 60px da esquerda*/
+    width: 900px;/*a div do titulo tem 90px de largura*/
 }
 .divestante{
     position: absolute;
-    display: flex;
-    gap: 5px;
-    top: 420px;
-    left:355px ;
+    display: flex;/*diz que os elementos dentro da div são flexiveis*/
+    gap: 5px;/*espaçamento entre os elementos de 5px*/
+    top: 420px;/*a div esta a 420px do topo*/
+    left:355px ;/*a div esta a 355px da esquerda */
 
 }
 .livro {
     z-index: 3; /*camada onde o elemento está posicionado */
-    width: 25px; /*largura de 100*/
-    height: 150px; /*altura de 200*/
+    width: 25px; /*largura de 25px*/
+    height: 150px; /*altura de 150px*/
     border-radius: 5px; /*bordas arredondadas*/
-    cursor: grab; /*cursor de "mãozinha aberta" */
-    border: 6px solid rgba(0, 0, 0, 0.7);
-    box-shadow: inset 5px 0 10px rgba(194, 183, 183, 0.5), 3px 0 8px rgba(0,0,0,0.5);
+    cursor: grab; /*cursor de mãozinha aberta */
+    border: 6px solid rgba(0, 0, 0, 0.7);/*configuração da borda*/
 }
+/*define as cores dos livros*/
 .vermelho { background-color: red; }
 .amarelo { background-color:yellow; }
 .verde { background-color: green; }
