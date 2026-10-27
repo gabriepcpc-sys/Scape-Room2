@@ -12,7 +12,7 @@
 .button{
     position: relative;
     background-color: rgba(116, 14, 14, 0.792); /*cor do botao*/
-    z-index: 2; /*camada onde o elemento está posicionado */
+    z-index: 4; /*camada onde o elemento está posicionado */
     border-radius: 15px; /*arredonnda o botao*/
     border: 3px solid rgb(0,0,0); /*edita a borda do botao*/
     padding: 5px 5px; /*deixa espaco ao redor do texto*/
@@ -43,7 +43,7 @@
 
 .caixa-menu{
    position: absolute;
-    z-index:1; /*camada onde o elemento está posicionado */
+    z-index:3; /*camada onde o elemento está posicionado */
     top:25%; /*o objeto esta a 25% do topo */
     left:49%; /*o objeto esta a 49% da esquerda */
     width: 300px; /*a largura do objeto é 300 pixels */
@@ -63,8 +63,3 @@
    box-shadow: 0 0 15px rgb(248, 247, 247);/*faz o brilho no botao ao passar o mouse por cima */
    background-color: rgb(220, 20, 20);/*muda a cor do botao ao passar o mouse por cima*/
 }
-
-
-
-
-
