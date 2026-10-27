@@ -58,3 +58,12 @@ function apagarFogo(){
     chaveEscondida.style.display = "block"; // Exibe a chave após apagar o fogo
     atualizarInventario(); // Atualiza o inventário na tela
 }
+
+function abrirPorta(){
+    if (!inventario.includes("Chave")) {
+        console.log("Você não tem a chave para abrir a porta!");
+        return;
+    }
+    // Se tiver a chave, vai para a próxima fase
+     window.location.href = "2Fase.html";
+}
