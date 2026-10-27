@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
 
 #Fundoestante{
     position: absolute;
@@ -15,10 +16,60 @@
     height: 1000px; /*a imagem tem 1000 pixels de altura */
 }
 #botao{
+position: absolute;
+    z-index: 2;
+    top: 450px; /* Ajuste para ficar alinhado com a prateleira do meio */
+    width: 170px; /* Largura do botão */
+    left: 820px; /* Ajuste para não ficar muito no canto */
+    background-color: #4a4e4d7c; 
+    color: #f7f4f4;
+    font-family: 'Creepster', cursive; /* Usa aquela fonte de terror da Fase 1 */
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: 5px solid #1b2922;
+    border-radius: 10px;
+}
+
+/* Efeito de "afundar" a pedra ao passar o mouse ou clicar */
+#botao:hover {
+    background-color: #3b3d3c;
+   box-shadow: 0 0 15px rgb(202, 19, 19);/*faz o brilho no botao ao passar o mouse por cima */
+}
+#h2{
+    color: #8d0f0f;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    font-size: 80px;
+    letter-spacing: 2px;
+}
+.divtitulo{
     position: absolute;
     z-index: 2; /*camada onde o elemento está posicionado */
-    top: 400px; /*a imagem esta a 400 pixels do topo */
-    left: 800px; /*a imagem esta a 800 pixels da esquerda */
-    width: 200px; /*a imagem tem 200 pixels de largura */
-    height: 100px; /*a imagem tem 100 pixels de altura */
+    top: 10px; 
+    left:60px;
+    width: 900px;
 }
+.divestante{
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    top: 420px;
+    left:355px ;
+
+}
+.livro {
+    z-index: 3; /*camada onde o elemento está posicionado */
+    width: 25px; /*largura de 100*/
+    height: 150px; /*altura de 200*/
+    border-radius: 5px; /*bordas arredondadas*/
+    cursor: grab; /*cursor de "mãozinha aberta" */
+    border: 6px solid rgba(0, 0, 0, 0.7);
+    box-shadow: inset 5px 0 10px rgba(194, 183, 183, 0.5), 3px 0 8px rgba(0,0,0,0.5);
+}
+.vermelho { background-color: red; }
+.amarelo { background-color:yellow; }
+.verde { background-color: green; }
+.azul { background-color: blue; }
+.roxo {background-color: indigo;}
+.preto {background-color: black;}
+.branco {background-color: white;}
