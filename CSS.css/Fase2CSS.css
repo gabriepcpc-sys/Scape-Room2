@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
 
-#Fundoestante{
+#FUNDOestante{
     position: absolute;
     z-index: 0; /*camada onde o elemento está posicionado */
     width: 1024px; /*largura de 1024*/
@@ -29,7 +29,34 @@ position: absolute;
     border: 5px solid #1b2922;/*configuerações da borda*/
     border-radius: 10px;/*arredondamento da borda*/
 }
-
+#sala1{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+}
+#preto{
+    position: absolute;
+    z-index: 1;
+    top: 220px;
+    left: 670px;
+    width: 125px;
+    height: 390px;
+    border-radius: 100px 100px 60px 60px;
+}
+#preto:hover{
+    box-shadow: 0 0 15px rgba(121, 4, 4, 0.61)
+}
+#estanteDaSala{
+    position: absolute;
+    z-index: 1;
+    top: 190px;
+    right: -580px;
+    height:500px ;
+}
+#estanteDaSala:hover{
+     filter: drop-shadow( 0 0 10px rgba(255, 255, 255, 0.5));
+}
 
 #botao:hover {
     background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
@@ -37,7 +64,7 @@ position: absolute;
     
 }
 #h2{
-    color: #8d0f0f;/*cor do titulo*/
+    color: #ff3c00;/*cor do titulo*/
     text-align: center;/*alinhamento do titulo*/
     font-family: 'Creepster', cursive;/* chama a fonte creepster*/
     font-size: 80px;/*tamanho da fonte*/
