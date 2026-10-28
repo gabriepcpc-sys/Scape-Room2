@@ -31,31 +31,31 @@ position: absolute;
 }
 #sala1{
     position: relative;
-    z-index: 0;
-    width: 1672px;
-    height: 941px;
+    z-index: 0;/*camada onde o bjeto vai estar*/
+    width: 1672px;/*a sala tem 1672 px de largura*/
+    height: 941px;/*a sala tem 941px de altura*/
 }
 #preto{
     position: absolute;
-    z-index: 1;
-    top: 220px;
-    left: 670px;
-    width: 125px;
-    height: 390px;
-    border-radius: 100px 100px 60px 60px;
+    z-index: 1;/*camada em que o elemento esta*/
+    top: 220px;/*esta a 220px do topo*/
+    left: 670px;/*esta a 670px da esquerda*/
+    width: 125px;/*tem 125px de largura*/
+    height: 390px;/*tem 390px de altura*/
+    border-radius: 100px 100px 60px 60px;/*configuração do arrendondamento*/
 }
 #preto:hover{
-    box-shadow: 0 0 15px rgba(121, 4, 4, 0.61)
+    box-shadow: 0 0 15px rgba(121, 4, 4, 0.61)/*brilho ao passar o cursor*/
 }
 #estanteDaSala{
     position: absolute;
-    z-index: 1;
-    top: 190px;
-    right: -580px;
-    height:500px ;
+    z-index: 1;/*camada onde o elemento esta*/
+    top: 175px;/*esta a 175px do topo*/
+    left: 1355px;/*esta a 1355px da esquerda*/
+    height:500px ;/*tem 500px de altura*/
 }
 #estanteDaSala:hover{
-     filter: drop-shadow( 0 0 10px rgba(255, 255, 255, 0.5));
+     filter: drop-shadow( 0 0 10px rgba(255, 255, 255, 0.5));/*sombra ao passar o cursor*/
 }
 
 #botao:hover {
