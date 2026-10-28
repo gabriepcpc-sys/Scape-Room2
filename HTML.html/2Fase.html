@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,19 +7,26 @@
     <link rel="stylesheet" href="../CSS.css/Fase2CSS.css"><!-- linka a fase 2 ao seu CSS -->
 </head>
 <body>
-<div class="fundo1"><!-- define a classe -->
-<img id="sala1" src="../imagens/fundo1fase2.png"><!--chama a imagem -->
-<img id="preto" src="../imagens/preto.jpg"><!--chama a imagem -->
-<img id="estanteDaSala" src="../imagens/EstanteDaSala.png"><!--chama a imagem -->
+<div id="Fase2Fundo1" class="fundo1"><!-- define a classe -->
+     <img id="sala1" 
+          src="../imagens/fundo1fase2.png"><!--chama a imagem -->
+
+     <img id="preto" 
+          src="../imagens/preto.jpg"><!--chama a imagem -->
+
+     <img id="estanteDaSala" 
+          onclick="avancar()"
+          src="../imagens/EstanteDaSala.png"><!--chama a imagem -->
 </div>
 
 
-    <div class="container" style="display: none;"><!-- div da parte da estante-->
-      <img id="FUNDOestante" src="../imagens/FUNDOestante.jpg"><!--imagem do fundo da estante -->
-    <div class="divtitulo"><!-- div do titulo-->
-      <h2 id="h2">Organize na ordem certa!</h2>
+    <div id="Fase2Fundo2" style="display: none;"><!-- div da parte da estante-->
+         <img id="FUNDOestante" src="../imagens/FUNDOestante.jpg"><!--imagem do fundo da estante -->
+      <div class="divtitulo"><!-- div do titulo-->
+           <h2 id="h2">Organize na ordem certa!</h2>
       </div>
-      <img id="estante" src="../imagens/estante.png"><!--estante em si -->
+
+    <img id="estante" src="../imagens/estante.png"><!--estante em si -->
     <div class="divestante">
           <!--div de cada livro com sua classe e data-color -->
         <div class="livro vermelho" data-color="vermelho"></div>
@@ -32,6 +39,7 @@
     </div>
     <button id="botao">Testar Combinação</button><!--botao de testar combinação -->
 </div>
+<script src="../JavaScript.js/Fase2.js"></script><!-- linka o HTML ao JS da Fase2 -->
     
 </body>
 </html>
