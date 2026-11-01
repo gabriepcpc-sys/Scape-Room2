@@ -31,6 +31,8 @@
     font-family: 'VT323', cursive; /*tipo da fonte*/
     color: rgb(255, 255, 255); /*cor da fonte*/
     text-shadow: 5px 5px 10px rgb(2, 2, 2); /*sombra da fonte*/
+    margin-bottom: 0%; /*remove a margem inferior do parágrafo*/
+    margin-top: 2%; /*adiciona uma margem superior de 2% ao parágrafo*/
   }
   h1{
     font-size: 30px; /*tamanho da fonte*/
@@ -49,6 +51,27 @@
   .ListaSite{
     list-style-type:square; /*tipo de marcador da lista*/
     color: rgb(241, 205, 0); /*cor do marcador da lista*/
+    display: grid; /*faz com que os itens da lista sejam exibidos em uma grade*/
+    grid-template-rows: repeat(4, 1fr); /*faz com que os itens da lista sejam exibidos em duas colunas de largura igual*/
+    grid-auto-flow: column; /*faz com que os itens da lista sejam exibidos em colunas*/
+    column-gap: 40px; /*adiciona espaçamento entre as colunas da lista*/
+  }
+  
+  #nome, #email, #mensagem {
+    font-size: 13px; /*define o tamanho da fonte dos campos de entrada*/
+    width: 95%; /*faz com que os campos de entrada ocupem toda a largura disponível*/
+    padding: 5px; /*adiciona espaçamento interno aos campos de entrada*/
+    margin-bottom: 10px; /*adiciona espaçamento inferior entre os campos de entrada*/
+    border: 1px solid #ccc; /*define a borda dos campos de entrada*/
+    border-radius: 5px; /*arredonda os cantos dos campos de entrada*/
+    box-sizing: border-box; /*inclui o padding e a borda na largura total do elemento*/
+  }
+  
+  label {
+    font-size: 20px; /*define o tamanho da fonte dos rótulos*/
+    font-weight: bold; /*define a espessura da fonte dos rótulos*/
+    display: block; /*faz com que os rótulos ocupem toda a largura disponível*/
+    margin-bottom: 5px; /*adiciona espaçamento inferior entre os rótulos e os campos de entrada*/
   }
 
   #FundoHistória{
@@ -77,10 +100,10 @@
     flex-direction: column; /*deixa conteudo da caixa em coluna*/
     gap: 10px;/*espaco entre os elementos da caixa*/
   }
-
+  
   #FundoContato{
-    width: 1536px; /*o elemento tem 1536 pixels de largura */
-    height: 1024px; /*o elemento tem 1024 pixels de altura */
+    width: 1672px; /*o elemento tem 1536 pixels de largura */
+    height: 941px; /*o elemento tem 1024 pixels de altura */
     position: relative;
     z-index: 0; /*camada onde o elemento está posicionado */
     border: 10px solid rgb(93, 209, 26);
@@ -93,7 +116,7 @@
     top: 2%; /*o objeto esta a 25% do topo */
     left: 49%; /*o objeto esta a 49% da esquerda */
     width: 650px; /*a largura do objeto é 300 pixels */
-    height: 85%; /*a altura do objeto é 50% */
+    height: 90%; /*a altura do objeto é 50% */
     margin-left: -325px; /*com distancia negativa o elemento fica centralizado */
     background-color: rgba(207, 127, 21, 0.808);/*deixa o fundo da caixa translucida e escura pq a cor é preto*/
     padding: 20px; /*deixa espaco ao redor do texto*/

@@ -12,13 +12,15 @@
           src="../imagens/fundo1fase2.png"><!--chama a imagem -->
 
      <img id="preto" 
+          onclick="avancar2()"
           src="../imagens/preto.jpg"><!--chama a imagem -->
 
      <img id="estanteDaSala" 
           onclick="avancar()"
           src="../imagens/EstanteDaSala.png"><!--chama a imagem -->
           
-          <img id="objetoEstranho" src="../imagens/pistas livros/objetoEstranho.png">
+          <img id="objetoEstranho" 
+          src="../imagens/pistas livros/objetoEstranho.png">
 </div>
 
 
@@ -41,8 +43,9 @@
         <div class="livro branco"  data-color="branco"></div>
     </div>
     <button id="botao">Testar Combinação</button><!--botao de testar combinação -->
-    <button id="botaoVoltar">Voltar</button><!--botao para voltar-->
+    <button id="botaoVoltar" onclick="voltar()">Voltar</button><!--botao para voltar-->
 </div>
+
 <div id="Fase2Fundo3" style="display: none;">
   <!--Chama as 5 imagens do fundo3-->
   <img id="fase2fundo3" class="fundo3" src="../imagens/fase2fundo3.png">
@@ -52,6 +55,7 @@
   <img id="caixa" src="../imagens/pistas livros/caixa.png">
   <img id="saco" src="../imagens/pistas livros/saco.png">
 </div>
+
 <script src="../JavaScript.js/Fase2.js"></script><!-- linka o HTML ao JS da Fase2 -->
     
 </body>
