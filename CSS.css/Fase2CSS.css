@@ -19,15 +19,33 @@
 position: absolute;
     z-index: 2; /*  camada onde o elemento esta posicionado  */
     top: 450px; /* Ajuste para ficar na altura boa*/
-    width: 170px; /* Largura do botão */
+    width: 180px; /* Largura do botão */
     left: 820px; /* Ajuste para não ficar muito no canto */
     background-color: #4a4e4d7c; /*cor de fundo do botao*/
     color: #f7f4f4;/*cor da fonte*/
     font-family: 'Creepster', cursive; /* chama a fonte creepster*/
-    font-size: 20px; /*tamanho da fonte*/
+    font-size: 30px; /*tamanho da fonte*/
     letter-spacing: 2px;/*espaçamento entre as letras*/
     border: 5px solid #1b2922;/*configuerações da borda*/
     border-radius: 10px;/*arredondamento da borda*/
+}
+#botaoVoltar{
+    position: absolute;
+     z-index: 2; /*  camada onde o elemento esta posicionado  */
+    top: 960px; /* Ajuste para ficar na altura boa*/
+    width: 140px; /* Largura do botão */
+    left: 430px; /* Ajuste para não ficar muito no canto */
+    background-color: #4a4e4d7c; /*cor de fundo do botao*/
+    color: #f7f4f4;/*cor da fonte*/
+    font-family: 'Creepster', cursive; /* chama a fonte creepster*/
+    font-size: 30px; /*tamanho da fonte*/
+    letter-spacing: 2px;/*espaçamento entre as letras*/
+    border: 5px solid #1b2922;/*configuerações da borda*/
+    border-radius: 10px;/*arredondamento da borda*/
+}
+#botaoVoltar:hover{
+     background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
+    box-shadow: 0 0 15px rgb(63, 5, 87);/*faz o brilho no botao ao passar o mouse por cima */
 }
 #sala1{
     position: relative;
@@ -46,6 +64,17 @@ position: absolute;
 }
 #preto:hover{
     box-shadow: 0 0 15px rgba(121, 4, 4, 0.61)/*brilho ao passar o cursor*/
+}
+#objetoEstranho{
+    position: absolute;/**/
+    z-index: 2;/*camada do elemento*/
+    top: 370px;/*esta a 370px do topo*/
+    height: 170px;/*tem 170px de altura*/
+    width: 170px;/*tem 170px de largura*/
+    left: 125px;/*esta a 125px da esquerda*/
+}
+#objetoEstranho:hover{
+filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
 }
 #estanteDaSala{
     position: absolute;
@@ -101,3 +130,75 @@ position: absolute;
 .roxo {background-color: indigo;}
 .preto {background-color: black;}
 .branco {background-color: white;}
+#Tabua{
+    position: absolute;
+    z-index: 2;/*camada*/
+    width: 100px;/*tem 100px de largura*/
+    height: 900px;/*tem 900px de altura*/
+    top: -15px;/*esta a -15px do topo*/
+    left:-1px;/*esta a -1px da esquerda*/
+}
+#Tabua:hover{
+ filter: drop-shadow( 0 0 15px rgb(0, 0, 0));/*sombra ao passar o cursor*/
+}
+#fase2fundo3{
+    position: relative;
+    z-index: 0;
+    width: 1672px ;
+    height: 941px;
+}
+#barril{
+position: absolute;
+z-index: 2;
+left: 280px;
+top: 690px;
+width: 140px;
+height: 140px;
+}
+#barril:hover{
+filter: drop-shadow( 0 0 10px rgba(11, 3, 238, 0.695));/*sombra ao passar o cursor*/
+}
+#armadura{
+position: absolute;
+z-index: 2;
+left: 1570px;
+top: 510px;
+width: 110px;
+height: 300px;
+}
+#armadura:hover{
+filter: drop-shadow( 0 0 10px rgba(237, 3, 3, 0.642));/*sombra ao passar o cursor*/
+}
+#baner{
+position: absolute;
+z-index: 2;
+left: 740px;
+top: 360px;
+width: 100px;
+height: 250px;
+}
+#baner:hover{
+filter: drop-shadow( 0 0 10px rgba(242, 239, 239, 0.793));/*sombra ao passar o cursor*/    
+}
+#caixa{
+position: absolute;
+z-index: 2;
+left: 1220px;
+top: 690px;
+width: 150px;
+height: 150px;
+}
+#caixa:hover{
+filter: drop-shadow( 0 0 10px rgb(5, 215, 12));/*sombra ao passar o cursor*/    
+}
+#saco{
+position: absolute;
+z-index: 2;
+left: 230px;
+top: 355px;
+width: 120px;
+height: 180px;
+}
+#saco:hover{
+filter: drop-shadow( 0 0 10px rgb(131, 4, 159));/*sombra ao passar o cursor*/    
+}
