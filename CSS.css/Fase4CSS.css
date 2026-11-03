@@ -1,0 +1,25 @@
+#sala-das-portas{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+}
+.porta{
+    position: absolute;
+    z-index: 1;
+    top: 300px;/*a imagem esta a 300 pixels do topo */
+    width: 300px; /*a imagem tem 300 pixels de largura */
+    height: 450px;/*a imagem tem 450 pixels de altura*/
+}
+#porta1{
+left: 407px;/*a imagem esta a 407 pixels da esquerda */
+}
+#porta2{
+left: 695px;/*a imagem esta a 695 pixels da esquerda */ 
+}
+#porta3{
+left: 980px;/*a imagem esta a 980 pixels da esquerda */
+}
+.porta:hover{
+    filter: drop-shadow(rgb(255, 255, 255) 0 0 25px);
+}

@@ -51,7 +51,7 @@ function apagarFogo(){
        console.log("Você não tem a pá para apagar o fogo!");
        return;
     }
-    document.getElementById('FundoFase1').src="../imagens/Fundo1Fase1FogoApagado.png"; // Altera a imagem de fundo para a versão com o fogo apagado
+    document.getElementById('FundoFase1').src="../imagens/fundo1fase1-FOGOAPAGADO.png"; // Altera a imagem de fundo para a versão com o fogo apagado
     var fogo = document.getElementById('FogoEsquerda');
     fogo.remove(); // Remove o fogo após apagá-lo
     var chaveEscondida = document.getElementById('ChaveFase1');
