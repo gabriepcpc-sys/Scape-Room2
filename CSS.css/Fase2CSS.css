@@ -15,7 +15,34 @@
     width: 1000px; /*a imagem tem 1000 pixels de largura */
     height: 1000px; /*a imagem tem 1000 pixels de altura */
 }
-#botao{
+#placa{
+    z-index: 2;
+    position: absolute;
+    top: 630px;
+    left: 730px;
+    width: 350px;
+    height: 200px;
+}
+#placa:hover{
+filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
+}
+    #olhos1{
+        position: absolute;
+        z-index: 2;
+        top: 20px;
+        width: 100px;
+        height: 100px;
+        left: 1500px;
+    }
+      #olhos2{
+        position: absolute;
+        z-index: 2;
+        top: 320px;
+        width: 80px;
+        height: 80px;
+        left: 1020px;
+    }
+#botao{    
 position: absolute;
     z-index: 2; /*  camada onde o elemento esta posicionado  */
     top: 450px; /* Ajuste para ficar na altura boa*/
