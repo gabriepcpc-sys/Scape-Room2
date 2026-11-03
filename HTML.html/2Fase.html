@@ -32,15 +32,15 @@
 
     <img id="estante" src="../imagens/Estante.png"><!--estante em si -->
       <img id="Tabua" src="../imagens/pistas livros/tabuaDeMadeira.png">
-    <div class="divestante">
+    <div id="divestante" class="divestante">
           <!--div de cada livro com sua classe e data-color -->
-        <div class="livro vermelho" data-color="vermelho"></div>
-        <div class="livro verde"  data-color="verde" ></div>
-        <div class="livro azul"  data-color="azul"></div>
-        <div class="livro roxo"  data-color="roxo"></div>
-        <div class="livro amarelo"  data-color="amarelo"></div>
-        <div class="livro preto"  data-color="preto"></div>
-        <div class="livro branco"  data-color="branco"></div>
+        <div class="livro verde"  data-color="verde" onclick="mandarParaFrente(this)"></div>
+        <div class="livro vermelho" data-color="vermelho" onclick="mandarParaFrente(this)"></div>
+        <div class="livro azul"  data-color="azul" onclick="mandarParaFrente(this)"  ></div>
+        <div class="livro roxo"  data-color="roxo" onclick="mandarParaFrente(this)"></div>
+        <div class="livro amarelo"  data-color="amarelo" onclick="mandarParaFrente(this)"></div>
+        <div class="livro preto"  data-color="preto" onclick="mandarParaFrente(this)"></div>
+        <div class="livro branco"  data-color="branco" onclick="mandarParaFrente(this)"></div>
     </div>
     <button id="botao">Testar Combinação</button><!--botao de testar combinação -->
     <button id="botaoVoltar" onclick="voltar()">Voltar</button><!--botao para voltar-->
@@ -57,6 +57,5 @@
 </div>
 
 <script src="../JavaScript.js/Fase2.js"></script><!-- linka o HTML ao JS da Fase2 -->
-    
 </body>
 </html>
