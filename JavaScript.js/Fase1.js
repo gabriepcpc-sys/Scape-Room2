@@ -22,15 +22,33 @@ function atualizarInventario() {
     var lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
     lista.innerHTML = "";// Limpa a lista visual antes de preenchê-la novamente
     for (var i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
-        
-        lista.innerHTML += "<li>" + inventario[i] + "</li>"; // Adiciona cada item do inventário à lista do HTML
+        var item = inventario[i]; // Pega o item atual do inventário
+        var imagem = item.imagem; // Pega a imagem do item atual
+        var nome = item.nome; // Pega o nome do item atual
+        lista.innerHTML += `<li>
+                     <img src="${imagem}" 
+                        alt="${nome}" 
+                        style='width: 50px; height: 50px; 
+                        margin-right: 10px;'>${nome}
+                    </li>`; // Adiciona cada item do inventário à lista do HTML com imagem e nome
+        //
     }
 }
 
+function temItem(nome) {
+
+    return inventario.some(function(item) {
+        return item.nome === nome;
+    });
+
+}
+
 function pegarChave() {// Função para pegar a chave na fase 1
-    if (!inventario.includes("Chave")) {
-        inventario.push("Chave");
-        console.log("Chave adicionada ao inventário!");
+    if (!temItem("Chave")) {
+        inventario.push({
+            "nome": "Chave",
+            "imagem": "../imagens/objeto-fase1.png"});
+             console.log("Chave adicionada ao inventário!");
     }
     var chave = document.getElementById('ChaveFase1');
     chave.remove(); // Remove a chave após pegá-la
@@ -38,8 +56,11 @@ function pegarChave() {// Função para pegar a chave na fase 1
  }
 
  function pegarPá() {// Função para pegar a pá na fase 1
-    if (!inventario.includes("Pá")) {
-        inventario.push("Pá");
+    if (!temItem("Pá")) {
+        inventario.push({
+            "nome": "Pá",
+            "imagem": "../imagens/Oobjeto2-fase1.png"
+        });
         console.log("Pá adicionada ao inventário!");
     }
     var pá = document.getElementById('PaFase1');
@@ -47,7 +68,7 @@ function pegarChave() {// Função para pegar a chave na fase 1
     atualizarInventario(); // Atualiza o inventário na tela
 }
 function apagarFogo(){
-    if (!inventario.includes("Pá")) {
+    if (!temItem("Pá")) {
        console.log("Você não tem a pá para apagar o fogo!");
        return;
     }
@@ -73,7 +94,7 @@ function mostrarMensagem() {
 }
 
 function abrirPorta(){
-    if (!inventario.includes("Chave")) {
+    if (!temItem("Chave")) {
         mostrarMensagem();
         return;
     }
