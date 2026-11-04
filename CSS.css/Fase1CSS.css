@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');/*importa a fonte redaction50*/
+
+
 #Fase1Fundo1{
     position: relative; /**/
     z-index: 0; /*camada onde o elemento está posicionado */
@@ -82,4 +85,17 @@
 }
 #PortaFase1:hover{
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));/*cria o contorno*/
+}
+#fechada{
+position: absolute;
+z-index: 3;
+top:100px;
+color: white;
+font-size: 50px;
+font-family: 'Redaction 50';
+top: 800px;
+left: 350px;
+color: #FFFFFF;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+color: #FFFFFF;
 }
