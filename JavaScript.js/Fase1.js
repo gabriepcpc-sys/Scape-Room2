@@ -59,9 +59,22 @@ function apagarFogo(){
     atualizarInventario(); // Atualiza o inventário na tela
 }
 
+function mostrarMensagem() {
+
+    var mensagem = document.getElementById("mensagemPorta");
+
+    // Mostra a mensagem
+    mensagem.style.display = "block";
+
+    // Esconde depois de 5 segundos
+    setTimeout(function() {
+        mensagem.style.display = "none";
+    }, 5000);
+}
+
 function abrirPorta(){
     if (!inventario.includes("Chave")) {
-        console.log("Você não tem a chave para abrir a porta!");
+        mostrarMensagem();
         return;
     }
     // Se tiver a chave, vai para a próxima fase

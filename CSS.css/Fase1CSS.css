@@ -86,7 +86,7 @@
 #PortaFase1:hover{
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));/*cria o contorno*/
 }
-#fechada{
+#mensagemPorta{
 position: absolute;
 z-index: 3;
 top:100px;
