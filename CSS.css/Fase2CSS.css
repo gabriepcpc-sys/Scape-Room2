@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
+@import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');/*importa a fonte redaction50*/
 
 #FUNDOestante{
     position: absolute;
@@ -26,6 +27,24 @@
 #placa:hover{
 filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
 }
+#parabens{
+    position: absolute;
+    z-index: 3;
+    color: rgb(30, 255, 0);
+    top: 850px;
+    left: 15px;
+    font-family: 'Redaction 50', cursive;
+    font-size: 38px;
+}
+#pessimo{
+    position: absolute;
+    z-index: 3;
+    color: rgb(255, 0, 0);
+    top: 840px;
+    left: 220px;
+    font-family: 'Redaction 50', cursive;
+    font-size: 45px;
+}
     #olhos1{
         position: absolute;
         z-index: 2;
@@ -41,6 +60,7 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
         width: 80px;
         height: 80px;
         left: 1020px;
+
     }
 #botao{    
 position: absolute;
