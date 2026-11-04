@@ -36,7 +36,8 @@ function testarCombinação() {
             } 
         }
         if(total === 7) {
-document.getElementById("CertaCombinação").style.display = "block";        } else {
+            document.getElementById("CertaCombinação").style.display = "block";        
+        } else {
            // alert('A ordem dos livros está incorreta. Tente novamente.');
         }
      }
