@@ -1,0 +1,15 @@
+#fase3-fundo1{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+    
+}
+#pedestal{
+    position: absolute;
+    z-index: 1;
+    top: 405px;
+    left: 245px;
+    width: 280px;
+    height: 300px;
+}

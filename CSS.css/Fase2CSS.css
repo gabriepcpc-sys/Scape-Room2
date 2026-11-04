@@ -48,21 +48,13 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
     font-family: 'Redaction 50', cursive;
     font-size: 45px;
 }
-    #olhos1{
+      #olhos{
         position: absolute;
         z-index: 2;
-        top: 20px;
+        top: 330px;
         width: 100px;
-        height: 100px;
-        left: 1500px;
-    }
-      #olhos2{
-        position: absolute;
-        z-index: 2;
-        top: 320px;
-        width: 80px;
-        height: 80px;
-        left: 1020px;
+        height: 50px;
+        left: 1015px;
 
     }
 #botaoTestar{    
