@@ -13,7 +13,8 @@ function avancar2() {
 function voltar() {
     // Lógica para voltar para a primeira tela da fase 2
     document.getElementById("Fase2Fundo2").style.display = "none";
-    document.getElementById("Fase2Fundo2").style.display = "none";
+    document.getElementById("Fase2Fundo3").style.display = "none";
+    document.getElementById("pessimo").style.display = "none";
     document.getElementById("Fase2Fundo1").style.display = "block";
 }
 
@@ -36,24 +37,11 @@ function testarCombinação() {
             } 
         }
         if(total === 7) {
-            document.getElementById("CertaCombinação").style.display = "block";        
+            document.getElementById("parabens").style.display = "block";  
+            document.getElementById("pessimo").style.display = "none";  
+            document.getElementById("botaoTestar").style.display = "none";    
         } else {
-           // alert('A ordem dos livros está incorreta. Tente novamente.');
-        }
-     }
-
-     function testarCombinação1() {
-        total = 0;// Variável para contar o número de livros na ordem correta
-        for(let i = 0; i < livros.length; i++) {// Itera sobre cada livro na estante
-            const livroSelecionado = livros[i];// Seleciona o livro atual
-            const corSelecionada = livroSelecionado.getAttribute('data-color');// Obtém a cor do livro atual
-            if (corSelecionada === coresCertas[i]) {// Verifica se a cor do livro atual está na posição correta
-
-               total++;// Incrementa o contador se a cor estiver correta
-            } 
-        }
-        if(total === 7) {
-            document.getElementById("CertaCombinação").style.display = "block";
-            //alert('Parabéns! Você acertou a ordem dos livros!');
+           document.getElementById("pessimo").style.display = "block";
+           document.getElementById("parabens").style.display = "none";
         }
      }

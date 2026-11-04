@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../CSS.css/Fase2CSS.css"><!-- linka a fase 2 ao seu CSS -->
 </head>
 <body>
-<div id="Fase2Fundo1" class="fundo1" style="display: none;"><!-- div do quarto 1 com id,classe e display -->
+<div id="Fase2Fundo1" class="fundo1"><!-- div do quarto 1 com id,classe e display -->
      <img id="sala1" 
           src="../imagens/fundo1-fase2.png"><!--chama a imagem -->
 
@@ -24,13 +24,13 @@
 </div>
 
 
-    <div id="Fase2Fundo2" style="display: non;"><!-- div da parte da estante-->
+    <div id="Fase2Fundo2" style="display: none;"><!-- div da parte da estante-->
          <img id="FUNDOestante" src="../imagens/fundo-estante.jpg"><!--imagem do fundo da estante -->
       <div class="divtitulo"><!-- div do titulo-->
            <h2 id="h2">Organize na ordem certa!</h2>
       </div>
 
-    <img id="estante" src="../imagens/Estante.png"><!--estante em si -->
+    <img id="estante" src="../imagens/estante.png"><!--estante em si -->
     <img id="Tabua" src="../imagens/pistas livros/tabuaDeMadeira.png">
     <div id="divestante" class="divestante">
           <!--div de cada livro com sua classe e data-color -->
@@ -41,8 +41,11 @@
         <div class="livro amarelo"  data-color="amarelo" onclick="mandarParaFrente(this)"></div>
         <div class="livro preto"  data-color="preto" onclick="mandarParaFrente(this)"></div>
         <div class="livro branco"  data-color="branco" onclick="mandarParaFrente(this)"></div>
+        <div><p id="parabens" style="display: none;">Parabéns! Você conseguiu organizar os livros na ordem certa!</p></div>
+        <div><p id="pessimo" style="display: none;">Péssimo! A ordem está errada!</p></div>
+
     </div>
-    <button id="botao" onclick="testarCombinação()">Testar Combinação</button><!--botao de testar combinação -->
+    <button id="botaoTestar" onclick="testarCombinação()">Testar Combinação</button><!--botao de testar combinação -->
     <button id="botaoVoltar" onclick="voltar()">Voltar</button><!--botao para voltar-->
 </div>
 
@@ -54,13 +57,10 @@
   <img id="baner" src="../imagens/pistas livros/Banner.png">
   <img id="caixa" src="../imagens/pistas livros/caixa.png">
   <img id="saco" src="../imagens/pistas livros/saco.png">
-  <img id="placa" src="../imagens/placa-fase2.png">
-</div>
-<div><p id="parabens" style="display: none;">Parabéns! Você conseguiu organizar os livros na ordem certa!</p></div>
-<div><p id="pessimo" style="display: none;">Péssimo! A ordem está errada!</p></div>
-<div id="CertaCombinação" style="display: none;"><!-- div da caixa de dialogo -->
-     |<p id="paragrafo">Parabéns! Você conseguiu organizar os livros na ordem certa!</p><!-- paragrafo da caixa de dialogo -->
-     <img ><!-- imagem da caixa de dialogo -->
+  <img id="placa" 
+       onclick="voltar()"
+       src="../imagens/placa-fase2.png">
+  
 </div>
 
 <script src="../JavaScript.js/Fase2.js"></script><!-- linka o HTML ao JS da Fase2 -->

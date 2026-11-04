@@ -29,15 +29,18 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
 }
 #parabens{
     position: absolute;
+    position: fixed;
     z-index: 3;
     color: rgb(30, 255, 0);
     top: 850px;
     left: 15px;
     font-family: 'Redaction 50', cursive;
     font-size: 38px;
+    
 }
 #pessimo{
     position: absolute;
+    position: fixed;
     z-index: 3;
     color: rgb(255, 0, 0);
     top: 840px;
@@ -62,7 +65,7 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
         left: 1020px;
 
     }
-#botao{    
+#botaoTestar{    
 position: absolute;
     z-index: 2; /*  camada onde o elemento esta posicionado  */
     top: 450px; /* Ajuste para ficar na altura boa*/
@@ -134,7 +137,7 @@ filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
      filter: drop-shadow( 0 0 10px rgba(255, 255, 255, 0.5));/*sombra ao passar o cursor*/
 }
 
-#botao:hover {
+#botaoTestar:hover {
     background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
     box-shadow: 0 0 15px rgb(202, 19, 19);/*faz o brilho no botao ao passar o mouse por cima */
     
