@@ -1,70 +1,90 @@
+  @import url('https://fonts.googleapis.com/css2?family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
   #FundoSite{
     width: 1536px; /*o elemento tem 1536 pixels de largura */
     height: 1024px; /*o elemento tem 1024 pixels de altura */
     position: relative;
-    z-index: 0; /*camada onde o elemento está posicionado */
+    z-index: 10; /*camada onde o elemento está posicionado */
     overflow: hidden; /*esconde o que estiver fora do elemento*/
-    background: linear-gradient(rgba(176, 18, 18, 0.683), rgba(140, 12, 183, 0.429));/*deixa o fundo da caixa translucida e escura pq a cor é preto*/
-    top: 100px;
+    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(237, 231, 230, 0.485)), url('../imagens/fundo-site.png');
+    top: 90px;
 }
   #barra{
     z-index: 3; /*camada onde o elemento está posicionado */
     position: absolute;
     top: 0px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(rgb(89, 31, 19)));
+    background-color: black;
     width:  1536px;
     height: 100px;
-    border: solid 10px red;
   }
   
-  .ConteudoSite{
-
+  /*.ConteudoSite{
   position: absolute;
-    z-index: 1; /*camada onde o elemento está posicionado */
-    top:5%; /*o objeto esta a 25% do topo */
-    left: 49%; /*o objeto esta a 49% da esquerda */
-    width: 650px; /*a largura do objeto é 300 pixels */
-    height: 85%; /*a altura do objeto é 50% */
-    margin-left: -300px; /*com distancia negativa o elemento fica centralizado */
-    
-    padding: 20px; /*deixa espaco ao redor do texto*/
-    border: 3px solid rgba(212, 183, 183, 0.85); /*borda da caixa*/
-    border-radius: 15px; /*arredondamento da caixa*/
-    backdrop-filter: blur(3px); /*deixa o fundo da caixa borrado*/
-    display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
-    flex-direction: column; /*deixa conteudo da caixa em coluna*/
-    gap: 10px;/*espaco entre os elementos da caixa*/
-  }
-
-  p{
-    font-size: 22px; /*tamanho da fonte*/
-    font-family: 'VT323', cursive; /*tipo da fonte*/
+    /*  z-index: 1; /*camada onde o elemento está posicionado */
+     /* top:5%; /*o objeto esta a 25% do topo */
+     /* left: 49%; /*o objeto esta a 49% da esquerda */
+     /* width: 650px; /*a largura do objeto é 300 pixels */
+    /*  height: 85%; /*a altura do objeto é 50% */
+    /*  margin-left: -300px; /*com distancia negativa o elemento fica centralizado */
+    /*  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(237, 42, 3));
+    /*  padding: 20px; /*deixa espaco ao redor do texto*/
+    /*  border: 3px solid rgba(212, 183, 183, 0.85); /*borda da caixa*/
+    /*  border-radius: 15px; /*arredondamento da caixa*/
+    /*  /*  backdrop-filter: blur(3px); /*deixa o fundo da caixa borrado*/
+     /* display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
+     /* flex-direction: column; /*deixa conteudo da caixa em coluna*/
+     /* gap: 10px;/*espaco entre os elementos da caixa*/
+    /*}*/
+  #textao{
+    font-size: 50px; /*tamanho da fonte*/
+    font-family: 'New Rocker', cursive; /*tipo da fonte*/
     color: rgb(255, 255, 255); /*cor da fonte*/
-    text-shadow: 5px 5px 10px rgb(2, 2, 2); /*sombra da fonte*/
+    text-align: center; /*alinha o texto ao centro*/
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -10px 40px #F00; /*sombra da fonte*/
     margin-bottom: 0%; /*remove a margem inferior do parágrafo*/
+    margin-top: 80px; /*adiciona uma margem superior de 80px ao parágrafo*/
+  }
+  #Historia,#Cenários,#Itens,#Desenvolvedores,#Contato,#Menu{
+    font-size: 30px; /*tamanho da fonte*/
+    font-family: 'New Rocker', cursive; /*tipo da fonte*/
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); 
+    color: transparent;
+    margin-bottom: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.8));
     margin-top: 2%; /*adiciona uma margem superior de 2% ao parágrafo*/
   }
+  #Historia:hover, #Cenários:hover, #Itens:hover, #Desenvolvedores:hover, #Contato:hover, #Menu:hover {
+    filter: drop-shadow(0px 0px 10px rgb(255, 217, 0)); /*sombra dourada ao passar o mouse */
+}
   h1{
-    font-size: 30px; /*tamanho da fonte*/
-    font-family: 'VT323', cursive; /*tipo da fonte*/
-    color: rgb(0, 0, 0); /*cor da fonte*/
-    text-shadow: 5px 5px 10px rgba(202, 188, 175, 0.623); /*sombra da fonte*/
+    color: rgba(240, 11, 11, 0.678);
+    justify-content: center; /*alinha o texto ao centro*/
+    display: flex;/*deixa o elemento editavel de forma flexivel*/
+    text-align: center; /*alinha o texto ao centro*/
+    font-size: 100px; /*tamanho da fonte*/
+    font-family: 'New Rocker', cursive; /*tipo da fonte*/
+    text-shadow: 0px 0px 10px rgb(224, 228, 224); /*sombra da fonte*/
   }
 
   h2{
     font-size: 25px; /*tamanho da fonte*/
-    font-family: 'VT323', cursive; /*tipo da fonte*/
+    font-family: 'Redaction 35', cursive; /*tipo da fonte*/
     color: rgb(0, 0, 0); /*cor da fonte*/
     text-shadow: 5px 5px 10px rgba(202, 188, 175, 0.623); /*sombra da fonte*/
   }
 
   .ListaSite{
-    list-style-type:square; /*tipo de marcador da lista*/
+    list-style: none; /*tira o marcador da lista*/
     color: rgb(241, 205, 0); /*cor do marcador da lista*/
-    display: grid; /*faz com que os itens da lista sejam exibidos em uma grade*/
-    grid-template-rows: repeat(4, 1fr); /*faz com que os itens da lista sejam exibidos em duas colunas de largura igual*/
-    grid-auto-flow: column; /*faz com que os itens da lista sejam exibidos em colunas*/
-    column-gap: 40px; /*adiciona espaçamento entre as colunas da lista*/
+    display: flex; /*faz com que os itens da lista fiquem na horizontal*/
+    flex-direction: row; /*faz com que os itens da lista sejam exibidos em uma linha*/
+    gap: 40px; /*adiciona espaçamento entre os itens da lista*/
+    align-items: center; /*alinha os itens da lista verticalmente ao centro*/
+    justify-content: center; /*alinha os itens da lista horizontalmente ao centro*/
   }
   
   #nome, #email, #mensagem {
@@ -136,4 +156,7 @@
     display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
     flex-direction: column; /*deixa conteudo da caixa em coluna*/
     gap: 10px;/*espaco entre os elementos da caixa*/
+  }
+  .ListaSite a{
+  text-decoration: none;
   }
