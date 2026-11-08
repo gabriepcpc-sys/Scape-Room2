@@ -53,11 +53,26 @@
 <div id="Fase2Fundo3" style="display: none;">
   <!--Chama as 5 imagens do fundo3-->
   <img id="fase2fundo3" class="fundo3" src="../imagens/fase2-fundo3.png">
-  <img id="barril" src="../imagens/pistas livros/barril.png">
-  <img id="armadura" src="../imagens/pistas livros/armadura.png">
-  <img id="baner" src="../imagens/pistas livros/Banner.png">
-  <img id="caixa" src="../imagens/pistas livros/caixa.png">
-  <img id="saco" src="../imagens/pistas livros/saco.png">
+  <img id="barril" 
+       onclick="pegarBarril()"
+       src="../imagens/pistas livros/barril.png">
+
+  <img id="armadura" 
+       onclick="pegarArmadura()"
+       src="../imagens/pistas livros/armadura.png">
+
+  <img id="baner" 
+       onclick="pegarBanner()"
+       src="../imagens/pistas livros/Banner.png">
+
+  <img id="caixa"
+       onclick="pegarCaixa()"
+       src="../imagens/pistas livros/caixa.png">
+
+  <img id="saco"
+       onclick="pegarSaco()"
+       src="../imagens/pistas livros/saco.png">
+
   <img id="placa" 
        onclick="voltar()"
        src="../imagens/placa-fase2.png">
@@ -67,6 +82,7 @@
 <div id="inventario"> <!-- div que guarda o inventário -->
         <h3>Inventário</h3> <!-- titulo do inventário -->
     <ul id="listaInventario"></ul> <!-- id do inventário -->
+</div>
 <script src="../JavaScript.js/Fase2.js"></script><!-- linka o HTML ao JS da Fase2 -->
 </body>
 </html>

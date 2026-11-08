@@ -26,15 +26,17 @@ function atualizarInventario() {
     lista.innerHTML = "";// Limpa a lista visual antes de preenchê-la novamente
     for (var i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
         var item = inventario[i]; // Pega o item atual do inventário
-        var imagem = item.imagem; // Pega a imagem do item atual
-        var nome = item.nome; // Pega o nome do item atual
+        var numero = item.numero; // Pega o número do item atual
+        var cor = item.cor; // Pega o nome do item atual
         lista.innerHTML += `<li>
-                     <img src="${imagem}" 
-                        alt="${nome}" 
-                        style='width: 50px; height: 50px; 
-                        margin-right: 10px;'>${nome}
+                     <span style="
+                        color: ${cor};
+                        font-size: 30px;
+                        font-weight: bold;">
+                        ${numero}
+                     </span>
                     </li>`; // Adiciona cada item do inventário à lista do HTML com imagem e nome
-        //
+
     }
 }
 
@@ -46,17 +48,70 @@ function temItem(nome) {
 
 }
 
+function pegarBarril() {// Função para pegar a armadura na fase 2
+    if (!temItem("barril")) { // Verifica se o item já está no inventário
+        inventario.push({
+            "nome": "barril",
+            "numero": "1",
+            "cor": "blue"
+        });
+        console.log("Barril adicionado ao inventário!");
+    }
+    // armadura.remove();
+    atualizarInventario(); // Atualiza o inventário na tela
+    document.getElementById("barril").classList.add("coletado"); // Oculta o item na tela após ser pego
+}
+
 function pegarArmadura() {// Função para pegar a armadura na fase 2
-    if (!temItem("armadura")) {
+    if (!temItem("armadura")) { // Verifica se o item já está no inventário
         inventario.push({
             "nome": "Armadura",
-            "imagem": "../imagens/pistas livros/Armadura.png"
+            "numero": "2",
+            "cor": "red"
         });
         console.log("Armadura adicionada ao inventário!");
     }
-    var armadura = document.getElementById('ArmaduraFase2');
-    armadura.remove();
     atualizarInventario(); // Atualiza o inventário na tela
+    document.getElementById("armadura").classList.add("coletado"); // Oculta o item na tela após ser pego
+}
+
+function pegarBanner() {// Função para pegar o banner na fase 2
+    if (!temItem("baner")) { // Verifica se o item já está no inventário
+        inventario.push({
+            "nome": "baner",
+            "numero": "3",
+            "cor": "white"
+        });
+        console.log("Banner adicionado ao inventário!");
+    }
+    atualizarInventario(); // Atualiza o inventário na tela
+    document.getElementById("banner").classList.add("coletado"); // Oculta o item na tela após ser pego
+}
+
+function pegarCaixa(){
+    if (!temItem("caixa")) { // Verifica se o item já está no inventário
+        inventario.push({
+            "nome": "Caixa",
+            "numero": "4",
+            "cor": "green"
+        });
+        console.log("Caixa adicionada ao inventário!");
+    }
+    atualizarInventario(); // Atualiza o inventário na tela
+    document.getElementById("caixa").classList.add("coletado"); // Oculta o item na tela após ser pego
+}
+
+function pegarSaco(){
+    if (!temItem("saco")) { // Verifica se o item já está no inventário
+        inventario.push({
+            "nome": "Saco",
+            "numero": "5",
+            "cor": "purple"
+        });
+        console.log("Saco adicionado ao inventário!");
+    }
+    atualizarInventario(); // Atualiza o inventário na tela
+    document.getElementById("saco").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
 
 

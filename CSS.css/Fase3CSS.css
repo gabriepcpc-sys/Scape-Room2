@@ -244,3 +244,7 @@ height: 180px;
 #saco:hover{
 filter: drop-shadow( 0 0 10px rgb(131, 4, 159));/*sombra ao passar o cursor*/    
 }
+
+.coletado{
+    filter: none !important; /*remove a sombra do item quando ele é coletado*/
+}
