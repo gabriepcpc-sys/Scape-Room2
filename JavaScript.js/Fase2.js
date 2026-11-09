@@ -101,6 +101,19 @@ function pegarCaixa(){
     document.getElementById("caixa").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
 
+function pegarObjetoEstranho(){
+    if (!temItem("objetoEstranho")) { // Verifica se o item já está no inventário
+        inventario.push({
+            "nome": "objetoEstranho",
+            "numero": "3",
+            "cor": "yellow"
+        });
+        console.log("Objeto Estranho adicionado ao inventário!");
+    }
+    atualizarInventario(); // Atualiza o inventário na tela
+    document.getElementById("objetoEstranho").classList.add("coletado"); // Oculta o item na tela após ser pego
+}
+
 function pegarSaco(){
     if (!temItem("saco")) { // Verifica se o item já está no inventário
         inventario.push({
