@@ -85,7 +85,7 @@ function pegarBanner() {// Função para pegar o banner na fase 2
         console.log("Banner adicionado ao inventário!");
     }
     atualizarInventario(); // Atualiza o inventário na tela
-    document.getElementById("banner").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("baner").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
 
 function pegarCaixa(){
