@@ -128,6 +128,14 @@ filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
 #estanteDaSala:hover{
      filter: drop-shadow( 0 0 10px rgba(255, 255, 255, 0.5));/*sombra ao passar o cursor*/
 }
+#olhos{
+position: absolute;
+z-index: 1;
+top: 350px;
+left: 901px;
+width: 62px;
+height: 65px;
+}
 
 #botaoTestar:hover {
     background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
@@ -176,12 +184,12 @@ filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
     position: absolute;
     z-index: 2;/*camada*/
     width: 100px;/*tem 100px de largura*/
-    height: 900px;/*tem 900px de altura*/
-    top: -15px;/*esta a -15px do topo*/
-    left:-1px;/*esta a -1px da esquerda*/
+    height: 905px;/*tem 905px de altura*/
+    top: 0px;/*esta a 0px do topo*/
+    left:0px;/*esta a px da esquerda*/
 }
 #Tabua:hover{
- filter: drop-shadow( 0 0 15px rgb(0, 0, 0));/*sombra ao passar o cursor*/
+ filter: drop-shadow( 0 0 25px rgb(0, 0, 0));/*sombra ao passar o cursor*/
 }
 #fase2fundo3{
     position: relative;
@@ -243,6 +251,14 @@ height: 180px;
 }
 #saco:hover{
 filter: drop-shadow( 0 0 10px rgb(131, 4, 159));/*sombra ao passar o cursor*/    
+}
+#olhos2{
+position: absolute;
+z-index: 1;
+top: 255px;
+left: 566px;
+width: 58px;
+height: 80px;
 }
 
 .coletado{

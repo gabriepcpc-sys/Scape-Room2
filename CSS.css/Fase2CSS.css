@@ -38,3 +38,15 @@ filter: drop-shadow(0 0 10px rgba(8, 199, 212, 0.993)); /*cria a sombra do esque
 #porta-masmora:hover{
 filter: drop-shadow(0 0 20px rgba(2, 103, 110, 0.993)); /*cria a sombra do esqueleto ao passar o mouse*/
 }
+#porta{
+position: absolute;
+z-index: 1;
+top: 480px;
+left: 1095px;
+width: 230px;
+height: 300px
+}
+#porta:hover{
+  filter: drop-shadow(0 0 50px rgba(6, 194, 169, 0.671)); /*cria a sombra do esqueleto ao passar o mouse*/
+  
+}
