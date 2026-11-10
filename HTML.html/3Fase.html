@@ -34,16 +34,19 @@
       </div>
 
     <img id="estante" src="../imagens/estante.png"><!--estante em si -->
-    <img id="Tabua" src="../imagens/pistas livros/tabuaDeMadeira.png">
+    <img id="Tabua" 
+         onclick="pegarTabua()"
+         src="../imagens/pistas livros/tabuaDeMadeira.png">
+         
     <div id="divestante" class="divestante">
           <!--div de cada livro com sua classe e data-color -->
-        <div class="livro verde"  data-color="verde" onclick="mandarParaFrente(this)"></div>
-        <div class="livro vermelho" data-color="vermelho" onclick="mandarParaFrente(this)"></div>
+          <div class="livro branco"  data-color="branco" onclick="mandarParaFrente(this)"></div>
         <div class="livro azul"  data-color="azul" onclick="mandarParaFrente(this)"  ></div>
-        <div class="livro roxo"  data-color="roxo" onclick="mandarParaFrente(this)"></div>
         <div class="livro amarelo"  data-color="amarelo" onclick="mandarParaFrente(this)"></div>
+        <div class="livro vermelho" data-color="vermelho" onclick="mandarParaFrente(this)"></div>
+        <div class="livro roxo"  data-color="roxo" onclick="mandarParaFrente(this)"></div>
         <div class="livro preto"  data-color="preto" onclick="mandarParaFrente(this)"></div>
-        <div class="livro branco"  data-color="branco" onclick="mandarParaFrente(this)"></div>
+        <div class="livro verde"  data-color="verde" onclick="mandarParaFrente(this)"></div>
         <div><p id="parabens" style="display: none;">Parabéns! Você conseguiu organizar os livros na ordem certa!</p></div>
         <div><p id="pessimo" style="display: none;">Péssimo! A ordem está errada!</p></div>
 
@@ -52,7 +55,7 @@
     <button id="botaoVoltar" onclick="voltar()">Voltar</button><!--botao para voltar-->
 </div>
 
-<div id="Fase2Fundo3" style="display: non;">
+<div id="Fase2Fundo3">
      <img id="olhos2" src="../imagens/olhos-vermelhos.gif">
   <!--Chama as 5 imagens do fundo3-->
   <img id="fase2fundo3" class="fundo3" src="../imagens/fase2-fundo3.png">
@@ -86,6 +89,6 @@
         <h3>Inventário</h3> <!-- titulo do inventário -->
     <ul id="listaInventario"></ul> <!-- id do inventário -->
 </div>
-<script src="../JavaScript.js/Fase2.js"></script><!-- linka o HTML ao JS da Fase2 -->
+<script src="../JavaScript.js/Fase3.js"></script><!-- linka o HTML ao JS da Fase3 -->
 </body>
 </html>

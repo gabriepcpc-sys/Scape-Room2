@@ -26,10 +26,9 @@ function atualizarInventario() {
         var imagem = item.imagem; // Pega a imagem do item atual
         var nome = item.nome; // Pega o nome do item atual
         lista.innerHTML += `<li>
-                     <img src="${imagem}" 
-                        alt="${nome}" 
+                     <img src="${imagem}"  
                         style='width: 50px; height: 50px; 
-                        margin-right: 10px;'>${nome}
+                        margin-right: 10px;'>
                     </li>`; // Adiciona cada item do inventário à lista do HTML com imagem e nome
         //
     }

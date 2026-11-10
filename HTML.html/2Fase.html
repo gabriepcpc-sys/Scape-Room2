@@ -7,21 +7,24 @@
       <link rel="stylesheet" href="../CSS.css/Fase2CSS.css"><!-- linka a fase 2 ao seu CSS -->
 </head>
 <body>
-    <div id="masmoraDIV" style="display:none">
-<img id="fase3-fundo1" src="../imagens/fase3-fundo1.png">
-<img id="pedestal" src="../imagens/pedestal.png">
-<img id="esqueleto" src="../imagens/esqueleto.png">
-<img id="porta-masmora" src="../imagens/porta-masmora.png">
-    </div>
-
-    <div id="fundo1" style="display:non">
-    <img id="fundo1" src="../imagens/fase2-inicio.png">
-    <img id="porta" src="../imagens/porta-pra-masmora.png">
+    
+    <div id="fundo1">
+        <img id="fundo1" src="../imagens/fase2-inicio.png">
+        <img id="porta" 
+             onclick="portaMasmorra()"
+             src="../imagens/porta-pra-masmora.png">
     </div>
     
-
+    <div id="masmoraDIV" style="display: none;">
+            <img id="fase3-fundo1" src="../imagens/fase3-fundo1.png">
+            <img id="pedestal" src="../imagens/pedestal.png">
+            <img id="esqueleto" src="../imagens/esqueleto.png">
+            <img id="porta-masmora" src="../imagens/porta-masmora.png">
+    </div>
+    
     <div id="minigame" style="display: non">
         
     </div>
+    <script src="../JavaScript.js/Fase2.js"></script>
     </body>
 </html> 
