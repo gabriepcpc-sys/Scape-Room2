@@ -18,6 +18,40 @@ function voltar() {
     document.getElementById("Fase2Fundo1").style.display = "block";
 }
 
+let tempo = 120;
+let intervalo;
+
+function iniciarTemporizador(){
+    tempo = 10;
+    atualizarTemporizador();
+    intervalo = setInterval(function(){
+        tempo--;
+        atualizarTemporizador();
+        if(tempo<=0){
+            clearInterval(intervalo);// Para o temporizador quando o tempo chega a zero
+            document.getElementById("Fase2Fundo1").style.display = "none";
+            document.getElementById("Fase2Fundo2").style.display = "none";
+            document.getElementById("Fase2Fundo3").style.display = "none";
+            document.getElementById("inventario").style.display = "none";
+            document.getElementById("cavaleiro").style.display = "block"; // Exibe a tela de fim de jogo
+        }
+
+     }, 1000);
+    }
+    iniciarTemporizador(); // Inicia o temporizador ao carregar a página
+
+    function atualizarTemporizador(){
+        let minutos = Math.floor(tempo / 60);
+        let segundos = tempo % 60;
+        document.getElementById("temporizador").textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+
+    }
+
+
+
+
+
+
 var inventario = []; // Array para armazenar os itens do inventário
 
 function atualizarInventario() {
@@ -160,6 +194,7 @@ function testarCombinação() {
             } 
         }
         if(total === 7) {
+            clearInterval(intervalo); // Para o temporizador quando a combinação está correta
             document.getElementById("parabens").style.display = "block";  
             document.getElementById("pessimo").style.display = "none";  
             document.getElementById("botaoTestar").style.display = "none";    
