@@ -61,3 +61,43 @@ height: 300px
   filter: drop-shadow(0 0 50px rgba(6, 194, 169, 0.671)); /*cria a sombra do esqueleto ao passar o mouse*/
   
 }
+#minigame-fundo{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+}
+#cartas {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 4 colunas de tamanho igual */
+    grid-template-rows: repeat(3, 1fr);    /* 3 linhas de tamanho igual */
+    row-gap: 10px;
+    column-gap: 60px;                           /* Espaço entre cada carta */
+    
+    /* Posiciona a grade no centro do container do minigame */
+    position: absolute;
+    top: 125px;
+    left: 170px;
+    width: 400px;                            /* Ajuste a largura para caber no quadro cinzento */
+    height: 500px;                           /* Ajuste a altura para caber no quadro cinzento */
+}
+.carta {
+    background-color: #1a1a2e;            /* Cor de fundo da carta */
+    border: 2px solid #d4af37;             /* Borda dourada */
+    border-radius: 20px;
+    
+    /* Centraliza o emoji dentro da carta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;                       /* Tamanho do emoji */
+    cursor: pointer;
+    user-select: none;
+    width: 110px;
+    height: 110px;                     /* Impede que o jogador selecione o emoji como texto */
+}
+.carta:hover{
+    transform: scale(1.1);                 /* Aumenta a carta ao passar o mouse */
+    transition: transform 0.2s;            /* Animação suave */
+}
