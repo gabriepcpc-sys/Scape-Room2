@@ -169,7 +169,7 @@ height: 65px;
     width: 25px; /*largura de 25px*/
     height: 150px; /*altura de 150px*/
     border-radius: 5px; /*bordas arredondadas*/
-    cursor: grab; /*cursor de mãozinha aberta */
+    cursor: pointer; /*cursor de mãozinha aberta */
     border: 6px solid rgba(0, 0, 0, 0.7);/*configuração da borda*/
 }
 /*define as cores dos livros*/
@@ -255,10 +255,10 @@ filter: drop-shadow( 0 0 10px rgb(131, 4, 159));/*sombra ao passar o cursor*/
 #olhos2{
 position: absolute;
 z-index: 1;
-top: 255px;
+top: 270px;
 left: 566px;
 width: 58px;
-height: 80px;
+height: 82px;
 }
 
 .coletado{

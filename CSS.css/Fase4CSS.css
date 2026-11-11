@@ -4,22 +4,42 @@
     width: 1672px;
     height: 941px;
 }
-.porta{
+#porta{
     position: absolute;
     z-index: 1;
-    top: 300px;/*a imagem esta a 300 pixels do topo */
-    width: 300px; /*a imagem tem 300 pixels de largura */
-    height: 450px;/*a imagem tem 450 pixels de altura*/
-}
-#porta1{
-left: 407px;/*a imagem esta a 407 pixels da esquerda */
-}
-#porta2{
-left: 695px;/*a imagem esta a 695 pixels da esquerda */ 
-}
-#porta3{
-left: 980px;/*a imagem esta a 980 pixels da esquerda */
+    top: 250px;/*a imagem esta a 300 pixels do topo */
+    width: 370px; /*a imagem tem 300 pixels de largura */
+    height: 470px;/*a imagem tem 450 pixels de altura*/
+    left: 645px;/*a imagem esta a 695 pixels da esquerda */ 
 }
 .porta:hover{
-    filter: drop-shadow(rgb(255, 255, 255) 0 0 25px);
+    filter: drop-shadow(rgba(202, 196, 196, 0.747) 0px 0px 25px);
+}
+#bauaberto{
+    position: absolute;
+    z-index: 2;
+    width: 150px;
+    height: 180px;
+    top: 670px;
+    left: 1527px;
+}
+#baufechado{
+    position: absolute;
+    z-index: 4;
+    width: 150px;
+    height: 180px;
+    top: 670px;
+    left: 1527px;
+}
+#pena{
+    position: absolute;
+    z-index: 3;
+    width: 80px;
+    height: 60px;
+    top: 715px;
+    left: 1580px;
+    transform: rotate(50deg);
+}
+#pena:hover{
+        filter: drop-shadow(rgb(245, 242, 242) 0px 0px 5px);
 }
