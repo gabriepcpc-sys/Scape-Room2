@@ -8,8 +8,8 @@
 </head>
 <body>
     
-    <div id="fundo1" style="display: none;">
-        <img id="fundo1" src="../imagens/fase2-inicio.png" >
+    <div id="fundo1">
+        <img id="imagemfundo1" src="../imagens/fase2-inicio.png" >
         <img id="porta" 
              onclick="portaMasmorra()"
              src="../imagens/porta-pra-masmora.png">
@@ -17,37 +17,35 @@
     
     <div id="masmoraDIV" style="display: none;">
             <img id="fase3-fundo1" src="../imagens/fase3-fundo1.png">
-            <img id="pedestal" src="../imagens/pedestal.png">
+            <img id="pedestal" onclick="entrarMinigame()" src="../imagens/pedestal.png">
             <img id="esqueleto" src="../imagens/esqueleto.png">
             <img id="porta-masmora" src="../imagens/porta-masmora.png">
             <img id="voltar" onclick="voltarDaMasmorra()" src="../imagens/esqueleto-volter-fase2.png">
     </div>
     
-    <div id="minigame" style="display: non">
+    <div id="minigame" style="display: none">
         <img id="minigame-fundo" src="../imagens/fundo-minigame.png">
         <div id="cartas">
-            <div id="cartas">
-    <div class="carta">💀</div>
-    <div class="carta">💀</div>
-    <div class="carta">⚔️</div>
-    <div class="carta">⚔️</div>
-    <div class="carta">🗝️</div>
-    <div class="carta">🗝️</div>
-    <div class="carta">🌑</div>
-    <div class="carta">🌑</div>
-    <div class="carta">🔥</div>
-    <div class="carta">🔥</div>
-    <div class="carta">🕯️</div>
-    <div class="carta">🕯️</div>
-    <div class="carta">⚜️</div>
-    <div class="carta">⚜️</div>
-    <div class="carta">📜</div>
-    <div class="carta">📜</div>
-    <div class="carta">🛡️</div>
-    <div class="carta">🛡️</div>
-
-</div>
+            <div class="carta"><span class="conteudoCarta">💀</span></div>
+            <div class="carta"><span class="conteudoCarta">💀</span></div>
+            <div class="carta"><span class="conteudoCarta">⚔️</span></div>
+            <div class="carta"><span class="conteudoCarta">⚔️</span></div>
+            <div class="carta"><span class="conteudoCarta">🗝️</span></div>
+            <div class="carta"><span class="conteudoCarta">🗝️</span></div>
+            <div class="carta"><span class="conteudoCarta">🌑</span></div>
+            <div class="carta"><span class="conteudoCarta">🌑</span></div>
+            <div class="carta"><span class="conteudoCarta">🔥</span></div>
+            <div class="carta"><span class="conteudoCarta">🔥</span></div>
+            <div class="carta"><span class="conteudoCarta">🕯️</span></div>
+            <div class="carta"><span class="conteudoCarta">🕯️</span></div>
+            <div class="carta"><span class="conteudoCarta">⚜️</span></div>
+            <div class="carta"><span class="conteudoCarta">⚜️</span></div>
+            <div class="carta"><span class="conteudoCarta">📜</span></div>
+            <div class="carta"><span class="conteudoCarta">📜</span></div>
+            <div class="carta"><span class="conteudoCarta">🛡️</span></div>
+            <div class="carta"><span class="conteudoCarta">🛡️</span></div>
         </div>
+        <p id="mensagemMemoria" style="display: none;">"Parabéns! Você encontrou todos os pares!"</p>
     </div>
     <script src="../JavaScript.js/Fase2.js"></script>
     </body>

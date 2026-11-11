@@ -101,3 +101,26 @@ height: 300px
     transform: scale(1.1);                 /* Aumenta a carta ao passar o mouse */
     transition: transform 0.2s;            /* Animação suave */
 }
+
+.conteudoCarta{
+    display: none; /*Esconde os ícones inicialmente*/
+}
+
+.carta.virada .conteudoCarta,
+.carta.encontrada .conteudoCarta{
+    display: block;
+}
+
+/*Símbolo que aparece no verso da carta*/
+.carta::before{
+    content: "?";
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*Esconde o símbolo de interrogação qua a carta é aberta*/
+.carta.virada::before,
+.carta.encontrada::before{
+    display: none;
+}
