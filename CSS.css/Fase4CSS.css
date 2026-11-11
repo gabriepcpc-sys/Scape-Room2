@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=VT323&display=swap');
+
 #sala-das-portas{
     position: relative;
     z-index: 0;
@@ -43,3 +45,61 @@
 #pena:hover{
         filter: drop-shadow(rgb(245, 242, 242) 0px 0px 5px);
 }
+/*FINAL BOM*/
+#jardim{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+}
+#seta{
+    position: absolute;
+    z-index: 1;
+    top: 700px;
+    left: 410px;
+    width: 100px;
+    height: 80px;
+    transform: rotate(10deg);
+}
+#seta:hover{
+        filter: drop-shadow(rgba(245, 242, 242, 0.849) 0px 0px 10px);
+}
+#gato{
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    top: 480px;
+    left: 830px;
+}
+#gato:hover{
+        filter: drop-shadow(rgba(245, 242, 242, 0.849) 0px 0px 10px);
+}
+#caixa-de-dialogo{
+    /*ajustando a imagem*/
+    background-image: url('../imagens/caixa-de-dialogo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*espasçamento interno*/
+    padding: 20px 60px;
+    box-sizing: border-box;
+    /*flexbox para centralizar tudo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*tamanho da imagem*/
+    width: 1000px;
+    height: 300px;
+    /*posicionamento na tela*/
+    position: absolute;
+    top: 900px;
+    left: 380px;
+}
+.p{
+    font-family: VT323;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+/*------------------------*/

@@ -70,23 +70,21 @@ height: 300px
 #cartas {
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 4 colunas de tamanho igual */
+    grid-template-columns: repeat(6, 1fr); /* 6 colunas de tamanho igual */
     grid-template-rows: repeat(3, 1fr);    /* 3 linhas de tamanho igual */
-    row-gap: 10px;
-    column-gap: 60px;                           /* Espaço entre cada carta */
-    
+    row-gap: 10px;  /*espaço entre as linhas*/
+    column-gap: 60px;    /* Espaço entre as colunas*/
     /* Posiciona a grade no centro do container do minigame */
     position: absolute;
-    top: 125px;
-    left: 170px;
-    width: 400px;                            /* Ajuste a largura para caber no quadro cinzento */
-    height: 500px;                           /* Ajuste a altura para caber no quadro cinzento */
+    top: 250px;
+    left: 340px;
+    width: 400px;                            
+    height: 500px;                         
 }
 .carta {
     background-color: #1a1a2e;            /* Cor de fundo da carta */
     border: 2px solid #d4af37;             /* Borda dourada */
     border-radius: 20px;
-    
     /* Centraliza o emoji dentro da carta */
     display: flex;
     justify-content: center;
