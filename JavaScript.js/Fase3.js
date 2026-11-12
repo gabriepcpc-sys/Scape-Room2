@@ -22,7 +22,7 @@ let tempo = 120;
 let intervalo;
 
 function iniciarTemporizador(){
-    tempo = 9910;
+    tempo = 10;
     atualizarTemporizador();
     intervalo = setInterval(function(){
         tempo--;

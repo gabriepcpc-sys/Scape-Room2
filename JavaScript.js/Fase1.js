@@ -40,7 +40,7 @@ function alternarHistorico(){
 
 
 
-var inventario = []; // Array para armazenar os itens do inventário
+let inventario = []; // Array para armazenar os itens do inventário
 
 function atualizarInventario() {
     
@@ -89,7 +89,7 @@ function pegarChave() {// Função para pegar a chave na fase 1
         });
         console.log("Pá adicionada ao inventário!");
     }
-    var pá = document.getElementById('PaFase1');
+    let pá = document.getElementById('PaFase1');
     pá.remove(); // Remove a pá após pegá-la
     atualizarInventario(); // Atualiza o inventário na tela
 }
@@ -100,9 +100,9 @@ function apagarFogo(){
        return;
     }
     document.getElementById('FundoFase1').src="../imagens/fundo1fase1-FOGOAPAGADO.png"; // Altera a imagem de fundo para a versão com o fogo apagado
-    var fogo = document.getElementById('FogoEsquerda');
+    let fogo = document.getElementById('FogoEsquerda');
     fogo.remove(); // Remove o fogo após apagá-lo
-    var chaveEscondida = document.getElementById('ChaveFase1');
+    let chaveEscondida = document.getElementById('ChaveFase1');
     chaveEscondida.style.display = "block"; // Exibe a chave após apagar o fogo
     adicionarHistorico("Você apagou o fogo!");
     atualizarInventario(); // Atualiza o inventário na tela
