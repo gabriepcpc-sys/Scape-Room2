@@ -158,9 +158,10 @@ color: #FFFFFF;
     display: flex;
     flex-direction: column-reverse;
 
-    overflow-x: scroll ;
-    overflow-y: scroll;
-    
+    overflow-x: hidden ;
+    overflow-y: auto;
+
+    scrollbar-width: none;
 }
 
 
@@ -228,8 +229,8 @@ color: #FFFFFF;
 
 
 /* Título do histórico */
-#conteudoHistorico h3 {
-    color: #d4af37;
+#diarioDeBordo h3 {
+    color: #fdfdfd;
 
     font-family: 'Redaction 50', cursive;
     font-size: 18px;

@@ -15,6 +15,29 @@ function entrarMinigame(){
     iniciarJogo();
 }
 
+function adicionarHistorico(texto){
+    let lista = document.getElementById("listaHistorico");
+
+    lista.innerHTML += `<li>
+    <p>${texto}</p>
+    </li>`
+}
+
+function alternarHistorico(){
+    let painel = document.getElementById("diarioDeBordo");
+    let seta = document.getElementById("setaHistorico");
+    let aberto = painel.classList.toggle("aberto");//Adiciona ou remove a classe aberto
+    if(aberto){
+        seta.textContent = "↓";
+        painel.style.display = "block";
+    }
+    else{
+        seta.textContent = "↑";
+        painel.style.display = "none";
+    }
+}
+ 
+
 const MemoriaItens = [
     "💀",
     "💀",
