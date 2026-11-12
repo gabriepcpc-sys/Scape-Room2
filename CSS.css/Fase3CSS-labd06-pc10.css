@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
+@import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');/*importa a fonte redaction50*/
+
+#FUNDOestante{
+    position: absolute;
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1024px; /*largura de 1024*/
+    height: 1024px; /*altura de 1024*/
+
+}
+#estante{
+    position:absolute;
+    z-index: 1;/*camada onde o elemento está posicionado */
+    top: 30px; /*a imagem esta a 30 pixels do topo */
+    left: 10px; /*a imagem esta a 10 pixels da esquerda */
+    width: 1000px; /*a imagem tem 1000 pixels de largura */
+    height: 1000px; /*a imagem tem 1000 pixels de altura */
+}
+#placa{
+    z-index: 2;
+    position: absolute;
+    top: 630px;
+    left: 730px;
+    width: 350px;
+    height: 200px;
+}
+#placa:hover{
+filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
+}
+#parabens{
+    position: absolute;
+    position: fixed;
+    z-index: 3;
+    color: rgb(30, 255, 0);
+    top: 850px;
+    left: 15px;
+    font-family: 'Redaction 50', cursive;
+    font-size: 38px;
+    
+}
+#pessimo{
+    position: absolute;
+    position: fixed;
+    z-index: 3;
+    color: rgb(255, 0, 0);
+    top: 840px;
+    left: 220px;
+    font-family: 'Redaction 50', cursive;
+    font-size: 45px;
+}
+      #olhos{
+        position: absolute;
+        z-index: 2;
+        top: 330px;
+        width: 100px;
+        height: 50px;
+        left: 1015px;
+
+    }
+#botaoTestar{    
+position: absolute;
+    z-index: 2; /*  camada onde o elemento esta posicionado  */
+    top: 450px; /* Ajuste para ficar na altura boa*/
+    width: 180px; /* Largura do botão */
+    left: 820px; /* Ajuste para não ficar muito no canto */
+    background-color: #4a4e4d7c; /*cor de fundo do botao*/
+    color: #f7f4f4;/*cor da fonte*/
+    font-family: 'Creepster', cursive; /* chama a fonte creepster*/
+    font-size: 30px; /*tamanho da fonte*/
+    letter-spacing: 2px;/*espaçamento entre as letras*/
+    border: 5px solid #1b2922;/*configuerações da borda*/
+    border-radius: 10px;/*arredondamento da borda*/
+}
+#botaoVoltar{
+    position: absolute;
+     z-index: 2; /*  camada onde o elemento esta posicionado  */
+    top: 960px; /* Ajuste para ficar na altura boa*/
+    width: 140px; /* Largura do botão */
+    left: 430px; /* Ajuste para não ficar muito no canto */
+    background-color: #4a4e4d7c; /*cor de fundo do botao*/
+    color: #f7f4f4;/*cor da fonte*/
+    font-family: 'Creepster', cursive; /* chama a fonte creepster*/
+    font-size: 30px; /*tamanho da fonte*/
+    letter-spacing: 2px;/*espaçamento entre as letras*/
+    border: 5px solid #1b2922;/*configuerações da borda*/
+    border-radius: 10px;/*arredondamento da borda*/
+}
+#botaoVoltar:hover{
+     background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
+    box-shadow: 0 0 15px rgb(63, 5, 87);/*faz o brilho no botao ao passar o mouse por cima */
+}
+#sala1{
+    position: relative;
+    z-index: 0;/*camada onde o bjeto vai estar*/
+    width: 1672px;/*a sala tem 1672 px de largura*/
+    height: 941px;/*a sala tem 941px de altura*/
+}
+#preto{
+    position: absolute;
+    z-index: 1;/*camada em que o elemento esta*/
+    top: 220px;/*esta a 220px do topo*/
+    left: 670px;/*esta a 670px da esquerda*/
+    width: 125px;/*tem 125px de largura*/
+    height: 390px;/*tem 390px de altura*/
+    border-radius: 100px 100px 60px 60px;/*configuração do arrendondamento*/
+}
+#preto:hover{
+    box-shadow: 0 0 15px rgba(121, 4, 4, 0.61)/*brilho ao passar o cursor*/
+}
+#objetoEstranho{
+    position: absolute;/**/
+    z-index: 2;/*camada do elemento*/
+    top: 370px;/*esta a 370px do topo*/
+    height: 170px;/*tem 170px de altura*/
+    width: 170px;/*tem 170px de largura*/
+    left: 125px;/*esta a 125px da esquerda*/
+}
+#objetoEstranho:hover{
+filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
+}
+#estanteDaSala{
+    position: absolute;
+    z-index: 1;/*camada onde o elemento esta*/
+    top: 175px;/*esta a 175px do topo*/
+    left: 1355px;/*esta a 1355px da esquerda*/
+    height:500px ;/*tem 500px de altura*/
+}
+#estanteDaSala:hover{
+     filter: drop-shadow( 0 0 10px rgba(255, 255, 255, 0.5));/*sombra ao passar o cursor*/
+}
+#olhos{
+position: absolute;
+z-index: 1;
+top: 350px;
+left: 901px;
+width: 62px;
+height: 65px;
+}
+
+#botaoTestar:hover {
+    background-color: #3b3d3c;/*troca a cor de fundo ao passar o mouse por cima*/
+    box-shadow: 0 0 15px rgb(202, 19, 19);/*faz o brilho no botao ao passar o mouse por cima */
+    
+}
+#h2{
+    color: #ff3c00;/*cor do titulo*/
+    text-align: center;/*alinhamento do titulo*/
+    font-family: 'Creepster', cursive;/* chama a fonte creepster*/
+    font-size: 80px;/*tamanho da fonte*/
+    letter-spacing: 2px;/*espaçamento entre as letra*/
+}
+.divtitulo{
+    position: absolute;
+    z-index: 2; /*camada onde o elemento está posicionado */
+    top: 10px; /*a div do titulo esta a 10px do topo*/
+    left:60px;/*a div do titulo esta a 60px da esquerda*/
+    width: 900px;/*a div do titulo tem 90px de largura*/
+}
+.divestante{
+    position: absolute;
+    display: flex;/*diz que os elementos dentro da div são flexiveis*/
+    gap: 5px;/*espaçamento entre os elementos de 5px*/
+    top: 420px;/*a div esta a 420px do topo*/
+    left:355px ;/*a div esta a 355px da esquerda */
+
+}
+.livro {
+    z-index: 3; /*camada onde o elemento está posicionado */
+    width: 25px; /*largura de 25px*/
+    height: 150px; /*altura de 150px*/
+    border-radius: 5px; /*bordas arredondadas*/
+    cursor: pointer; /*cursor de mãozinha aberta */
+    border: 6px solid rgba(0, 0, 0, 0.7);/*configuração da borda*/
+}
+/*define as cores dos livros*/
+.vermelho { background-color: red; }
+.amarelo { background-color:yellow; }
+.verde { background-color: green; }
+.azul { background-color: blue; }
+.roxo {background-color: indigo;}
+.preto {background-color: black;}
+.branco {background-color: white;}
+#Tabua{
+    position: absolute;
+    z-index: 2;/*camada*/
+    width: 100px;/*tem 100px de largura*/
+    height: 905px;/*tem 905px de altura*/
+    top: 0px;/*esta a 0px do topo*/
+    left:0px;/*esta a px da esquerda*/
+}
+#Tabua:hover{
+ filter: drop-shadow( 0 0 25px rgb(0, 0, 0));/*sombra ao passar o cursor*/
+}
+#fase2fundo3{
+    position: relative;
+    z-index: 0;
+    width: 1672px ;
+    height: 941px;
+}
+#barril{
+position: absolute;
+z-index: 2;
+left: 280px;
+top: 690px;
+width: 140px;
+height: 140px;
+}
+#barril:hover{
+filter: drop-shadow( 0 0 10px rgba(11, 3, 238, 0.695));/*sombra ao passar o cursor*/
+}
+#armadura{
+position: absolute;
+z-index: 2;
+left: 1570px;
+top: 510px;
+width: 110px;
+height: 300px;
+}
+#armadura:hover{
+filter: drop-shadow( 0 0 10px rgba(237, 3, 3, 0.642));/*sombra ao passar o cursor*/
+}
+#baner{
+position: absolute;
+z-index: 2;
+left: 740px;
+top: 360px;
+width: 100px;
+height: 250px;
+}
+#baner:hover{
+filter: drop-shadow( 0 0 10px rgba(242, 239, 239, 0.793));/*sombra ao passar o cursor*/    
+}
+#caixa{
+position: absolute;
+z-index: 2;
+left: 1220px;
+top: 690px;
+width: 150px;
+height: 150px;
+}
+#caixa:hover{
+filter: drop-shadow( 0 0 10px rgb(5, 215, 12));/*sombra ao passar o cursor*/    
+}
+#saco{
+position: absolute;
+z-index: 2;
+left: 230px;
+top: 355px;
+width: 120px;
+height: 180px;
+}
+#saco:hover{
+filter: drop-shadow( 0 0 10px rgb(131, 4, 159));/*sombra ao passar o cursor*/    
+}
+#olhos2{
+position: absolute;
+z-index: 1;
+top: 270px;
+left: 566px;
+width: 58px;
+height: 82px;
+}
+#tapete{
+    position: absolute;
+    z-index: 2;
+    top: 400px;
+    left: 950px;
+    width: 300px;
+    height: 400px;
+    transform: rotate(-10deg);
+}
+.coletado{
+    filter: none !important; /*remove a sombra do item quando ele é coletado*/
+}
+
+#inventario{
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    left: 55px;
+}
+#listaInventario{
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    left: 55px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;    
+
+    list-style: none;
+    padding:10px;
+    margin:0;
+
+    width: 195px;
+    height: 95px;
+    background-color: gray;
+    border: 3px solid;
+    border-radius: 8px;
+}
+
+#inventario h3{
+    color: white;
+    font-family: 'Creepster', cursive;
+    font-size: 20px;
+}
+
+#listaInventario li{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(100, 100, 100, 0.4);
+    border: 2px solid #75634d;
+    border-radius: 5px;
+}
+
+#cavaleiro{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    text-align: center;
+}
