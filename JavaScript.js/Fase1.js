@@ -15,6 +15,49 @@ function voltar() {
     document.getElementById("voltar").style.display = "none";
 }
 
+function adicionarHistorico(texto){
+    let lista = document.getElementById("listaHistorico");
+
+    lista.innerHTML += `<li>
+    <p>${texto}</p>
+    </li>`
+}
+
+function alternarHistorico(){
+    let painel = document.getElementById("diarioDeBordo");
+    let seta = document.getElementById("setaHistorico");
+    let aberto = painel.classList.toggle("aberto");//Adiciona ou remove a classe aberto
+    if(aberto){
+        seta.textContent = "↓";
+        painel.style.display = "block";
+    }
+    else{
+        seta.textContent = "↑";
+        painel.style.display = "none";
+    }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var inventario = []; // Array para armazenar os itens do inventário
 
 function atualizarInventario() {
@@ -46,10 +89,12 @@ function pegarChave() {// Função para pegar a chave na fase 1
     if (!temItem("Chave")) {
         inventario.push({
             "nome": "Chave",
-            "imagem": "../imagens/objeto-fase1.png"});
+            "imagem": "../imagens/objeto-fase1.png"
+        });
              console.log("Chave adicionada ao inventário!");
+             adicionarHistorico("Você encontrou uma chave escondida!")
     }
-    var chave = document.getElementById('ChaveFase1');
+    let chave = document.getElementById('ChaveFase1');
     chave.remove(); // Remove a chave após pegá-la
     atualizarInventario(); // Atualiza o inventário na tela
  }
@@ -68,6 +113,7 @@ function pegarChave() {// Função para pegar a chave na fase 1
 }
 function apagarFogo(){
     if (!temItem("Pá")) {
+       adicionarHistorico("Você tentou apagar o fogo, mas precisa encontrar uma pá primeiro!");
        console.log("Você não tem a pá para apagar o fogo!");
        return;
     }
@@ -76,16 +122,20 @@ function apagarFogo(){
     fogo.remove(); // Remove o fogo após apagá-lo
     var chaveEscondida = document.getElementById('ChaveFase1');
     chaveEscondida.style.display = "block"; // Exibe a chave após apagar o fogo
+    adicionarHistorico("Você apagou o fogo!");
     atualizarInventario(); // Atualiza o inventário na tela
 }
 
 function mostrarMensagem() {
 
-    var mensagem = document.getElementById("mensagemPorta");
+    let mensagem = document.getElementById("mensagemPorta");
+    let texto = "Acho que essa porta precisa de uma chave...";
 
     // Mostra a mensagem
+    mensagem.textContent = texto;
     mensagem.style.display = "block";
 
+    adicionarHistorico(texto);//Regista no diário de bordo
     // Esconde depois de 5 segundos
     setTimeout(function() {
         mensagem.style.display = "none";

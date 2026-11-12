@@ -58,7 +58,19 @@
     <div id="inventario"> <!-- div que guarda o inventário -->
         <h3>Inventário</h3> <!-- titulo do inventário -->
     <ul id="listaInventario"></ul> <!-- id do inventário -->
-</div>
+    </div>
+
+    <div id="diarioDeBordo" style="display: none;" >
+        <h3>Histórico de Acontecimentos</h3>
+        <ul id="listaHistorico"></ul>
+    </div>
+
+    <button id="botaoHistorico" onclick="alternarHistorico()">
+
+        <span>Diário de bordo</span>
+        <span id="setaHistorico">↑</span>
+    </button>
+    
     <script src="../JavaScript.js/Fase1.js"></script><!-- linka o HTML ao JS da Fase1 -->
     
 </body>

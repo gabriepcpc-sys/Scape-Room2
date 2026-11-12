@@ -93,7 +93,7 @@
     height: 300px;
     /*posicionamento na tela*/
     position: absolute;
-    top: 900px;
+    top: 650px;
     left: 380px;
 }
 .p{
@@ -102,4 +102,20 @@
     color: rgb(255, 255, 255);
     margin: 0;
 }
+#frase1{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
+
+#frase2{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
+
 /*------------------------*/
