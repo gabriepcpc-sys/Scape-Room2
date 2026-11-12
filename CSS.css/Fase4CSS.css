@@ -117,5 +117,60 @@
     width: 750px;
     left: 125px;
 }
+#jardim2{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+}
+#gato2{
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    top: 430px;
+    left: 640px;
+}
+#gato2:hover{
+        filter: drop-shadow(rgba(245, 242, 242, 0.849) 0px 0px 10px);
+}
+#caixa-de-dialogo2{
+    /*ajustando a imagem*/
+    background-image: url('../imagens/caixa-de-dialogo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*espasçamento interno*/
+    padding: 20px 60px;
+    box-sizing: border-box;
+    /*flexbox para centralizar tudo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*tamanho da imagem*/
+    width: 1000px;
+    height: 300px;
+    /*posicionamento na tela*/
+    position: absolute;
+    top: 650px;
+    left: 380px;
+}
+#portao{
+    position: absolute;
+    z-index: 2;
+    top: 350px;
+    left: 1330px;
+    width: 300px;
+    height: 400px;
+}
+#portao:hover{
+        filter: drop-shadow(rgba(245, 242, 242, 0.63) 0px 0px 30px);
+}
+#jardim3{
+    position: relative;
+    z-index: 0;
+    width: 1672px;
+    height: 941px;
+}
 
 /*------------------------*/

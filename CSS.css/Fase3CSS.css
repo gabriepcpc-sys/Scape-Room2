@@ -260,7 +260,14 @@ left: 566px;
 width: 58px;
 height: 82px;
 }
-
+#placa2{
+    position: absolute;
+    z-index: 2;
+    top: 350px;
+    left: 950px;
+    width: 150px;
+    height: 70px;
+}
 .coletado{
     filter: none !important; /*remove a sombra do item quando ele é coletado*/
 }
