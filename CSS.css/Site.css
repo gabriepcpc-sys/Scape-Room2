@@ -12,7 +12,7 @@
     top: 90px;
 }
   #barra{
-    z-index: 3; /*camada onde o elemento está posicionado */
+    z-index: 20; /*camada onde o elemento está posicionado */
     position: absolute;
     top: 0px;
     background-color: black;
@@ -46,7 +46,7 @@
     margin-bottom: 0%; /*remove a margem inferior do parágrafo*/
     margin-top: 80px; /*adiciona uma margem superior de 80px ao parágrafo*/
   }
-  #Historia,#Site-inicio,#Cenários,#Itens,#Desenvolvedores,#Contato,#Menu{
+  #Historia,#Site-inicio,#Cenários,#Itens,#Desenvolvedores,#Voltar,#Contato,#Menu{
     font-size: 30px; /*tamanho da fonte*/
     font-family: 'New Rocker', cursive; /*tipo da fonte*/
     background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); 
@@ -57,7 +57,7 @@
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.8));
     margin-top: 2%; /*adiciona uma margem superior de 2% ao parágrafo*/
   }
-  #Historia:hover, #Cenários:hover, #Itens:hover, #Desenvolvedores:hover, #Contato:hover, #Menu:hover {
+  #Historia:hover, #Cenários:hover, #Itens:hover, #Desenvolvedores:hover,#Voltar:hover, #Contato:hover, #Menu:hover {
     filter: drop-shadow(0px 0px 10px rgb(255, 217, 0)); /*sombra dourada ao passar o mouse */
 }
   h1{
@@ -182,3 +182,39 @@
   .ListaSite a{
   text-decoration: none;
   }
+
+
+.lista-cenarios-itens:hover ul{
+    display: flex;
+}
+
+.lista-cenarios-itens ul{
+  display: none;
+  position: absolute;
+  top: 100%;
+  list-style: none; /* Remove as bolinhas brancas da lista*/
+  margin: 0;
+  background-color: rgba(10, 2, 2, 0.867);
+  border: 2px solid rgba(212, 175, 55, 0.8);
+  border-radius: 10px;
+  min-width: 180px;
+  padding:0 15px ;
+  gap:10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.lista-cenarios-itens{
+  position: relative;
+}
+.lista-cenarios-itens ul li a {
+    color: #FCF6BA;
+    font-family: 'New Rocker', cursive;
+    font-size: 35px;  
+    display: block;
+    padding: 6px 0;
+    text-decoration: none;
+}
+.lista-cenarios-itens ul li a:hover {
+    color: #ff3333;
+}
