@@ -260,13 +260,17 @@ left: 566px;
 width: 58px;
 height: 82px;
 }
-#placa2{
+#escudo{
     position: absolute;
     z-index: 2;
-    top: 350px;
-    left: 950px;
-    width: 150px;
-    height: 70px;
+    top: 330px;
+    left: 1020px;
+    width: 70px;
+    height: 100px;
+    transform: rotate(120deg);
+}
+#escudo:hover{
+filter: drop-shadow( 0 0 10px rgb(204, 191, 207));/*sombra ao passar o cursor*/    
 }
 .coletado{
     filter: none !important; /*remove a sombra do item quando ele é coletado*/
