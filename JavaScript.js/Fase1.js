@@ -40,24 +40,6 @@ function alternarHistorico(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var inventario = []; // Array para armazenar os itens do inventário
 
 function atualizarInventario() {

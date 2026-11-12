@@ -260,7 +260,15 @@ left: 566px;
 width: 58px;
 height: 82px;
 }
-
+#tapete{
+    position: absolute;
+    z-index: 2;
+    top: 400px;
+    left: 950px;
+    width: 300px;
+    height: 400px;
+    transform: rotate(-10deg);
+}
 .coletado{
     filter: none !important; /*remove a sombra do item quando ele é coletado*/
 }
