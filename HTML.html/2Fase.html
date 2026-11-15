@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <div id="fundo1" style="display: non;">
+    <div id="fundo1" style="display: none;">
         <img id="imagemfundo1" src="../imagens/fase2-inicio.png" >
         <img id="porta" 
              onclick="portaMasmorra()"
@@ -23,7 +23,7 @@
             <img id="voltar" onclick="voltarDaMasmorra()" src="../imagens/esqueleto-volter-fase2.png">
     </div>
     
-    <div id="minigame" style="display: none;">
+    <div id="minigame" style="display: non;">
         <img id="minigame-fundo" src="../imagens/fundo-minigame.png">
         <div id="cartas">
             <div class="carta"><span class="conteudoCarta">💀</span></div>
@@ -46,6 +46,7 @@
             <div class="carta"><span class="conteudoCarta">🛡️</span></div>
         </div>
         <p id="mensagemMemoria" style="display: none;">"Parabéns! Você encontrou todos os pares!"</p>
+        <button id="botao" onclick="Voltar()">Voltar</button>
     </div>
 
     <div id="diarioDeBordo" style="display: none;" >
