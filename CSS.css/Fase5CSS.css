@@ -155,6 +155,31 @@
     top: 650px;
     left: 380px;
 }
+
+#frase3{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
+
+#frase4{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
+
+#frase5{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
+
 #portao{
     position: absolute;
     z-index: 2;

@@ -36,3 +36,29 @@ function interagirGargula(){
     },10000);
 
 }
+
+function interagirGargula2(){
+    document.getElementById("caixa-de-dialogo2").style.display = "block";
+    let fala3 = document.getElementById("frase3");
+    let fala4 = document.getElementById("frase4");
+    let fala5 = document.getElementById("frase5");
+    
+    fala3.style.display = "block";
+    let gargula = document.getElementById("gato2");
+    gargula.style.pointerEvents = 'none';
+
+    setTimeout(function(){
+        fala3.style.display = "none";
+        fala4.style.display = "block";
+        setTimeout(function(){
+            fala4.style.display = "none";
+            fala5.style.display = "block";
+            setTimeout(function(){
+                fala5.style.display = "none";
+                document.getElementById("seta").style.display = "block";
+                document.getElementById("caixa-de-dialogo2").style.display = "none";
+                gargula.style.pointerEvents = 'auto';
+            },10000);
+        },10000);
+    },10000);
+}
