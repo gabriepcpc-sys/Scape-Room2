@@ -80,7 +80,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
-    /*espasçamento interno*/
+    /*espaçamento interno*/
     padding: 20px 60px;
     box-sizing: border-box;
     /*flexbox para centralizar tudo*/
@@ -205,4 +205,23 @@
     z-index: 0;
     width: 1670px;
     height: 941px;
+}
+#cavaleiros{
+    position: absolute;
+    z-index: 1;
+    top: 280px;
+    left: 390px;
+    width: 850px;
+    height: 580px; 
+}
+#elmo{
+    position: absolute;
+    z-index: 2;
+    width: 90px;
+    top: 700px;
+    left: 800px;
+
+}
+#elmo:hover{
+        filter: drop-shadow(rgb(1, 110, 253) 0px 0px 20px);
 }
