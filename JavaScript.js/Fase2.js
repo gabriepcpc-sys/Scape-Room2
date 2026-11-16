@@ -14,6 +14,11 @@ function entrarMinigame(){
     document.getElementById("minigame").style.display="block";
     iniciarJogo();
 }
+function sairMinigame(){
+    document.getElementById("minigame").style.display="none";
+    document.getElementById("masmoraDIV").style.display = "block";
+    
+}
 
 function adicionarHistorico(texto){
     let lista = document.getElementById("listaHistorico");
@@ -125,6 +130,7 @@ function virarCarta(elemento) {
             if(encontradas.length === elementosCartas.length){//Se todas as cartas foram encontradas
                 jogoAtivo = false;
                 document.getElementById("mensagemMemoria").style.display="block";
+                adicionarHistorico("Você encontrou todos os pares do minigame de memória!");
                 
             }
 
