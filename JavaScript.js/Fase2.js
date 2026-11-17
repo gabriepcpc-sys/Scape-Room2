@@ -20,6 +20,27 @@ function sairMinigame(){
     
 }
 
+function interagirEsqueleto(){
+    document.getElementById("caixa-de-dialogo").style.display="block";
+    document.getElementById("frase1").style.display="block";
+    document.getElementById("esqueleto").style.pointerEvents="none";
+    document.getElementById("pedestal").style.pointerEvents="none"
+    document.getElementById("voltar").style.pointerEvents="none";
+    document.getElementById("porta-masmora").style.pointerEvents="none";
+    setTimeout(function(){
+        document.getElementById("frase1").style.display="none";
+        document.getElementById("frase2").style.display="block";
+        setTimeout(function(){
+            document.getElementById("frase2").style.display="none";
+            document.getElementById("caixa-de-dialogo").style.display="none";
+            document.getElementById("esqueleto").style.pointerEvents="auto";
+            document.getElementById("pedestal").style.pointerEvents="auto";
+            document.getElementById("voltar").style.pointerEvents="auto";
+            document.getElementById("porta-masmora").style.pointerEvents="auto";
+        },10000)
+    },10000)
+}
+
 function adicionarHistorico(texto){
     let lista = document.getElementById("listaHistorico");
 

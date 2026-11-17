@@ -97,8 +97,9 @@ filter: drop-shadow(0 0 15px rgb(254, 255, 255)); /*cria a sombra do esqueleto a
     height: 300px;
     /*posicionamento na tela*/
     position: absolute;
-    top: 950px;
+    top: 650px;
     left: 380px;
+    z-index: 10;
 }
 .p{
     font-family: VT323;
