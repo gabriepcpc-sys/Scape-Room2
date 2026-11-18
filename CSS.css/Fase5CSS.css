@@ -197,6 +197,14 @@
     width: 1672px;
     height: 941px;
 }
+#zona{
+    position: absolute;
+    z-index: 2;
+    top: 650px;
+    left: 600px;
+    width: 550px;
+    height: 250px;
+}
 
 /*------------------------*/
 
@@ -226,8 +234,32 @@
         filter: drop-shadow(rgb(1, 110, 253) 0px 0px 20px);
 }
 #fundo2{
-    position: absolute;
+    position: relative;
     z-index: 0;
     width: 1670px;
     height: 941px;
+}
+/*------------------------*/
+#fundo1-finalsecreto{
+    position: relative;
+    z-index: 0;
+    width: 1671px;
+    height: 941px;
+}
+#fundo2-finalsecreto{
+    position: relative;
+    z-index: 0;
+    width: 1671px;
+    height: 941px;
+}
+#porta-secreto{
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 600px;
+    top: 210px;
+    left: 1120px;
+}
+#porta-secreto:hover{
+        filter: drop-shadow(rgb(34, 89, 151) 0px 0px 30px);
 }
