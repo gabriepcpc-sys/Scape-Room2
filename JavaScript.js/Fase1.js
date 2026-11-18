@@ -1,20 +1,3 @@
-function avancar() {
-    // Lógica para avançar para a próxima tela da fase 1
-    document.getElementById("Fase1Fundo1").style.display = "none";
-        document.getElementById("Fase1Fundo2").style.display = "block";
-
-    // Exibe o botão "retroceder" quando avançar
-    document.getElementById("voltar").style.display = "inline-block";
-}
-function voltar() {
-    // Lógica para voltar para a tela anterior da fase 1
-    document.getElementById("Fase1Fundo2").style.display = "none";
-        document.getElementById("Fase1Fundo1").style.display = "block";
-
-    // Oculta o botão "retroceder" novamente
-    document.getElementById("voltar").style.display = "none";
-}
-
 function adicionarHistorico(texto){
     let lista = document.getElementById("listaHistorico");
 
@@ -36,9 +19,25 @@ function alternarHistorico(){
         painel.style.display = "none";
     }
 }
- 
 
+function avancar() {
+    adicionarHistorico("Você entrou no castelo!");
+    // Lógica para avançar para a próxima tela da fase 1
+    document.getElementById("Fase1Fundo1").style.display = "none";
+    document.getElementById("Fase1Fundo2").style.display = "block";
 
+    // Exibe o botão "retroceder" quando avançar
+    document.getElementById("voltar").style.display = "inline-block";
+}
+function voltar() {
+    adicionarHistorico("Você saiu do castelo!");
+    // Lógica para voltar para a tela anterior da fase 1
+    document.getElementById("Fase1Fundo2").style.display = "none";
+        document.getElementById("Fase1Fundo1").style.display = "block";
+
+    // Oculta o botão "retroceder" novamente
+    document.getElementById("voltar").style.display = "none";
+}
 
 let inventario = []; // Array para armazenar os itens do inventário
 
@@ -88,6 +87,7 @@ function pegarChave() {// Função para pegar a chave na fase 1
             "imagem": "../imagens/Oobjeto2-fase1.png"
         });
         console.log("Pá adicionada ao inventário!");
+        adicionarHistorico("Você encontrou uma pá!");
     }
     let pá = document.getElementById('PaFase1');
     pá.remove(); // Remove a pá após pegá-la
@@ -95,7 +95,7 @@ function pegarChave() {// Função para pegar a chave na fase 1
 }
 function apagarFogo(){
     if (!temItem("Pá")) {
-       adicionarHistorico("Você tentou apagar o fogo, mas precisa encontrar uma pá primeiro!");
+       adicionarHistorico("Você tentou apagar o fogo!");
        console.log("Você não tem a pá para apagar o fogo!");
        return;
     }

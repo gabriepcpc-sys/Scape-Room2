@@ -66,6 +66,21 @@ height: 300px
   filter: drop-shadow(0 0 50px rgba(6, 194, 169, 0.671)); /*cria a sombra do esqueleto ao passar o mouse*/
   
 }
+
+#mensagemPorta{
+position: absolute;
+z-index: 3;
+top:100px;
+color: white;
+font-size: 50px;
+font-family: 'Redaction 50';
+top: 800px;
+left: 350px;
+color: #FFFFFF;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+color: #FFFFFF;
+}
+
 #espada{
     position: absolute;
     z-index: 2;

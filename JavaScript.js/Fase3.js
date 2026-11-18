@@ -22,7 +22,7 @@ let tempo = 120;
 let intervalo;
 
 function iniciarTemporizador(){
-    tempo = 10;
+    tempo = 1000;
     atualizarTemporizador();
     intervalo = setInterval(function(){
         tempo--;
@@ -111,6 +111,7 @@ function pegarBarril() {// Função para pegar a armadura na fase 2
     }
     // armadura.remove();
     atualizarInventario(); // Atualiza o inventário na tela
+    adicionarHistorico("Você encontrou o número do barril!");
     document.getElementById("barril").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
 
@@ -123,6 +124,7 @@ function pegarArmadura() {// Função para pegar a armadura na fase 2
         });
         console.log("Armadura adicionada ao inventário!");
     }
+    adicionarHistorico("Você encontrou o número da armadura!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("armadura").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
@@ -136,6 +138,7 @@ function pegarBanner() {// Função para pegar o banner na fase 2
         });
         console.log("Banner adicionado ao inventário!");
     }
+    adicionarHistorico("Você encontrou o número do banner!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("baner").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
@@ -149,6 +152,7 @@ function pegarCaixa(){
         });
         console.log("Caixa adicionada ao inventário!");
     }
+    adicionarHistorico("Você encontrou o número da caixa!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("caixa").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
@@ -162,6 +166,7 @@ function pegarObjetoEstranho(){
         });
         console.log("Objeto Estranho adicionado ao inventário!");
     }
+    adicionarHistorico("Você encontrou o número do relógio!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("objetoEstranho").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
@@ -175,6 +180,7 @@ function pegarSaco(){
         });
         console.log("Saco adicionado ao inventário!");
     }
+    adicionarHistorico("Você encontrou o número do saco!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("saco").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
@@ -186,8 +192,9 @@ function pegarTabua(){
             "numero": "6",
             "cor": "black"
             });
-        console.log("Tabua adicionada ao inventário!");
+        console.log("Tábua adicionada ao inventário!");
     }
+    adicionarHistorico("Você encontrou o número da tábua!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("Tabua").classList.add("coletado"); // Oculta o item na tela após ser pego
 }
@@ -198,7 +205,7 @@ function mandarParaFrente(element) {
         let tudo =  document.getElementById('divestante').innerHTML;// Armazena o conteúdo atual da estante
         document.getElementById('divestante').innerHTML = element.outerHTML + tudo; // Adiciona o livro selecionado à frente da estante
 }
-function testarCombinação() {       
+function testarCombinação() {    
         const coresCertas = ['azul', 'verde', 'vermelho', 'roxo', 'amarelo', 'preto', 'branco'];
         const livros = document.querySelectorAll('.livro');// Seleciona todos os livros na estante
         //validação para ver se a ordem das cores está correta Com for normal   
@@ -220,4 +227,6 @@ function testarCombinação() {
            document.getElementById("pessimo").style.display = "block";
            document.getElementById("parabens").style.display = "none";
         }
+        let inventario= document.getElementById("inventario");
+       inventario.style.classList.add("posicaoNovaInvetario");
      }
