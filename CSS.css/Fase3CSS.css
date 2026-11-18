@@ -455,8 +455,7 @@ filter: drop-shadow( 0 0 10px rgb(204, 191, 207));/*sombra ao passar o cursor*/
     border-radius: 5px;
 }
 
-.posicaoNovaInventario{
-    position: absolute;
+#inventario.posicaoNovaInventario{
     z-index: 4;
     top: 700px;
     left: 10px;

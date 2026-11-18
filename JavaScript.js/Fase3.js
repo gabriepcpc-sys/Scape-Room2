@@ -220,6 +220,7 @@ function testarCombinação() {
         }
         if(total === 7) {
             clearInterval(intervalo); // Para o temporizador quando a combinação está correta
+            adicionarHistorico("Parabéns! Você acertou as ordens dos livros!");
             document.getElementById("parabens").style.display = "block";  
             document.getElementById("pessimo").style.display = "none";  
             document.getElementById("botaoTestar").style.display = "none";    
@@ -228,5 +229,5 @@ function testarCombinação() {
            document.getElementById("parabens").style.display = "none";
         }
         let inventario= document.getElementById("inventario");
-       inventario.style.classList.add("posicaoNovaInvetario");
+        inventario.classList.add("posicaoNovaInventario");
      }
