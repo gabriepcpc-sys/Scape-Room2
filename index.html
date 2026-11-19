@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="../CSS.css/menuCSS.css"><!-- linka o menu ao seu CSS -->
 </head>
 <body>
-    <div id="FundoMenu"> <!-- div principal onde guarda a imagem do menu-->           
-        <video id="videoMenu" autoplay muted loop playsinline src="/Videos/Menu.mp4"></video>
+    <div id="FundoMenu" 
+         onmouseenter="iniciarVideo()"
+         onclick="iniciarVideo()"> <!-- div principal onde guarda a imagem do menu-->           
+        <video id="videoMenu" autoplay loop playsinline src="/Videos/Menu.mp4"></video>
         <div class="titulo">
             <h1>TRAUBIM</h1><!-- titulo do menu-->
             </div>
