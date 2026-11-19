@@ -1,12 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /*importa a fonte VT323*/
 
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 #FundoMenu{
-    width: 1537px; /*o elemento tem 1537 pixels de largura */
-    height: 1023px; /*o elemento tem 1023 pixels de altura */
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    z-index: 0; /*camada onde o elemento está posicionado */
-    overflow: hidden; /*esconde o que estiver fora do elemento*/
+    z-index: 0;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+#videoMenu{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
 }
 .button{
     position: relative;
