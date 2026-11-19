@@ -97,7 +97,7 @@
     left: 380px;
 }
 .p{
-    font-family: VT323;
+    font-family: 'VT323';
     font-size: 30px;
     color: rgb(255, 255, 255);
     margin: 0;
@@ -179,7 +179,6 @@
     width: 750px;
     left: 125px;
 }
-
 #portao{
     position: absolute;
     z-index: 2;
@@ -238,6 +237,35 @@
     z-index: 0;
     width: 1670px;
     height: 941px;
+}
+#caixa-de-dialogo-finalruim{
+    /*ajustando a imagem*/
+    background-image: url('../imagens/caixa-de-dialogo-finalruim.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*espasçamento interno*/
+    padding: 20px 60px;
+    box-sizing: border-box;
+    /*flexbox para centralizar tudo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*tamanho da imagem*/
+    width: 1000px;
+    height: 300px;
+    /*posicionamento na tela*/
+    position: absolute;
+    top: 650px;
+    left: 380px;
+}
+#frase1-finalruim{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
 }
 /*------------------------*/
 #fundo1-finalsecreto{
