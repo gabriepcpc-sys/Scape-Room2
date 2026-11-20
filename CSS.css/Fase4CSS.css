@@ -72,4 +72,13 @@ filter: drop-shadow( 0 0 25px rgb(236, 8, 8));/*sombra ao passar o cursor*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: not-allowed;
+}
+
+.casa.parede{
+    background-image: url('../imagens/cavaleiro-xadrez.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: not-allowed;
 }
