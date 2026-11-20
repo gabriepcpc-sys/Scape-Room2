@@ -132,3 +132,28 @@ function abrirPorta(){
     // Se tiver a chave, vai para a próxima fase
      window.location.href = "2Fase.html";
 }
+
+// Função para ajustar o jogo ao tamanho da tela
+function ajustarTela() {
+
+    // Dimensões originais do cenário
+    let larguraBase = 1671;
+    let alturaBase = 941;
+
+    // Calcula a escala necessária
+    let escalaLargura = window.innerWidth / larguraBase;
+    let escalaAltura = window.innerHeight / alturaBase;
+
+    // Escolhe a menor escala para o cenário caber na tela
+    let escala = Math.min(escalaLargura, escalaAltura);
+
+    // Aplica a escala ao palco
+    document.getElementById("todosCenarios").style.transform =
+        "scale(" + escala + ")";
+}
+
+// Executa a função quando o tamanho da janela mudar
+window.onresize = ajustarTela;
+
+// Executa a função inicialmente, quando a página carregar
+ajustarTela();

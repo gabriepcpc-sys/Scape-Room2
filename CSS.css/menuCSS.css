@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /*importa a fonte VT323*/
 
-<<<<<<< HEAD
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-=======
 body {
     margin: 0;
     overflow: hidden;
@@ -29,7 +23,6 @@ body {
     height: 100%;
     object-fit: cover;
     
->>>>>>> a89b855be2b3530cf240c51d968043a439ae40d9
 }
 #video{
     position: fixed;

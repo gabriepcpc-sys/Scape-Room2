@@ -10,61 +10,69 @@
     <!-- <img id="avançar" onclick="avancar()" src="../imagens/Avançar.png"> --> <!-- botao que chama a função avançar -->
    <!-- <img id="voltar" onclick="voltar()" style="display: none;" src="../imagens/Voltar.png"> --> <!-- botao que chama a função retroceder e esta escondido -->
 
-        
+    <div id="areaJogo">
 
-    <div id="Fase1Fundo1"><!-- div principal onde guarda a imagem da fase -->
-        <img id="FundoFase1" 
-             src="../imagens/fundo1-fase1.png" > <!-- a imagem em si-->
+        <div id="todosCenarios">
 
-        <img id="portafundo1fase1" 
-             onclick="avancar()"
-             src="../imagens/porta-fundo1fase1.png  ">
-             
+            <div id="Fase1Fundo1"><!-- div principal onde guarda a imagem da fase -->
+                <img id="FundoFase1" 
+                src="../imagens/fundo1-fase1.png" > <!-- a imagem em si-->
+                
+                <img id="portafundo1fase1" 
+                onclick="avancar()"
+                src="../imagens/porta-fundo1fase1.png  ">
+                
+                
+                <img onclick="apagarFogo()" id="FogoEsquerda" 
+                src="../imagens/Fogos.gif"> <!-- botao que chama a função apagarfogo e chama o gif -->
+                
+                <img id="FogoDireita" 
+                src="../imagens/Fogos.gif"><!-- chama o fogo da esquerda -->
 
-        <img onclick="apagarFogo()" id="FogoEsquerda" 
-             src="../imagens/Fogos.gif"> <!-- botao que chama a função apagarfogo e chama o gif -->
-
-        <img id="FogoDireita" 
-             src="../imagens/Fogos.gif"><!-- chama o fogo da esquerda -->
-
- <!-- função que faz a chave poder ser pega com onclick e chama a imagem--> 
-        <img 
-            style="display: none;"
-             onclick="pegarChave()" 
+                <!-- função que faz a chave poder ser pega com onclick e chama a imagem--> 
+                <img 
+                style="display: none;"
+                onclick="pegarChave()" 
              id="ChaveFase1" 
              src="../imagens/objeto-fase1.png">
-    </div>
-
-    <div id="Fase1Fundo2" style="display: none;"> <!-- div que guarda a imagem da segunda fase e esta escondida -->
-
-        <img  src="../imagens/fundo2-fase1.png"><!-- a imagem em si -->
-
-        <img onclick="pegarPá()" 
-             id="PaFase1" 
-             src="../imagens/Oobjeto2-fase1.png"><!-- chama a função que faz a pa poder ser pega e chama a imagem -->
-
-            <img id="PortaFase1" 
-                 src="../imagens/porta-fundo2fase1.png"
-                 onclick="abrirPorta()"> <!-- chama a imagem da porta-->
+            </div>
+            
+            <div id="Fase1Fundo2" style="display: none;"> <!-- div que guarda a imagem da segunda fase e esta escondida -->
         
-        <img id="placa" 
-             src="../imagens/placa-.png" 
-             onclick="voltar()"> <!-- Chama a imagem da placa-->
+        <img  src="../imagens/fundo2-fase1.png"><!-- a imagem em si -->
+        
+        <img onclick="pegarPá()" 
+        id="PaFase1" 
+        src="../imagens/Oobjeto2-fase1.png"><!-- chama a função que faz a pa poder ser pega e chama a imagem -->
+        
+            <img id="PortaFase1" 
+            src="../imagens/porta-fundo2fase1.png"
+            onclick="abrirPorta()"> <!-- chama a imagem da porta-->
+            
+            <img id="placa" 
+            src="../imagens/placa-.png" 
+            onclick="voltar()"> <!-- Chama a imagem da placa-->
+            
+            <div><p id="mensagemPorta" style="display: none;">Acho que essa porta precisa de uma chave...</p></div>
 
-        <div><p id="mensagemPorta" style="display: none;">Acho que essa porta precisa de uma chave...</p></div>
+            </div>
 
         </div>
 
+    </div>
+
     <div id="inventario"> <!-- div que guarda o inventário -->
-        <h3>Inventário</h3> <!-- titulo do inventário -->
+                <h3>Inventário</h3> <!-- titulo do inventário -->
     <ul id="listaInventario"></ul> <!-- id do inventário -->
     </div>
-
+    
     <div id="diarioDeBordo" style="display: none;" >
         <h3 id="">Histórico de Acontecimentos</h3>
+    <div>   
         <ul id="listaHistorico"></ul>
     </div>
-
+    </div>
+    
     <button id="botaoHistorico" onclick="alternarHistorico()">
 
         <span>Diário de bordo</span>
