@@ -75,7 +75,7 @@
     font-size: 100px; /*tamanho da fonte*/
     font-family: 'New Rocker', cursive; /*tipo da fonte*/
     text-shadow: 0px 0px 10px rgb(224, 228, 224); /*sombra da fonte*/
-    padding-top: 180px;
+    padding-top: 10px;
   }
 
   h2{
@@ -255,13 +255,14 @@
 #fundo-cenarios-itens{
   position: absolute;
   z-index: 0;
+  align-items: center;
   box-sizing: border-box; /* Impede que o padding aumente a largura de 100% e crie barra horizontal */
   /* Controla a distância do topo, direita, baixo e esquerda */
   padding-top: 50px;     /* Empurra as imagens para baixo */
-  padding-left: 50px;   /* Empurra as imagens para a direita */
+  padding-left: 200px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 30px;
   width: 100%;
   min-height: 100%;
     top: 90px;
@@ -309,16 +310,82 @@ linear-gradient(
       border: 2px solid rgba(196, 156, 24, 0.8);
       border-radius: 40px;
     }
-/*---------------------*/
-/*---CENARIO/ITEM 2---*/
+    .fundos.item{
+    object-fit: contain; /* Itens mantêm a proporção original */
+    padding: 1px;
+    }
+      .fundo1{
+      background-image:
+      linear-gradient(
+        to bottom right,
+        #000000a8 12%,
+        #200669fa 35%,
+        #040664 60%,
+        #000000 100%
+        );
+      width: 700px;
+      height: 400px;
+      border: 2px solid rgba(196, 156, 24, 0.8);
+      border-radius: 40px;
+    }
+    .fundo1.item{
+    object-fit: contain; /* Itens mantêm a proporção original */
+    padding: 1px;
+    }
+    #t{
+    font-size: 50px; /*tamanho da fonte*/
+    font-family: 'Redaction 35', cursive; /*tipo da fonte*/
+    color: rgb(255, 255, 255); /*cor da fonte*/
+    text-align: center; /*alinha o texto ao centro*/
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -10px 40px #F00; /*sombra da fonte*/
+    margin-bottom: 0%; /*remove a margem inferior do parágrafo*/
+    margin-top: 80px; /*adiciona uma margem superior de 80px ao parágrafo*/
+    }
+  #FundoDesenvolvedores {
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(237, 231, 230, 0.226)), url('../imagens/fundo-menu.png');
+    box-sizing: border-box;
+}
+.container-devs {
+    display: flex;
+    flex-direction: row;        /* Coloca os dois blocos lado a lado */
+    justify-content: center;    /* Centraliza o conjunto na tela */
+    align-items: flex-start;
+    flex-wrap: wrap;            /* Quebra linha automaticamente se a tela for muito estreita */
+    gap: 200px;                 /* Espaçamento entre os dois desenvolvedores */
+    margin-top: 70px;
+}
 
-/*---------------------*/
-/*---CENARIO/ITEM 3---*/
+.card-dev {
+    display: flex;
+    flex-direction: column;     /* Deixa o nome em cima e a foto embaixo */
+    align-items: center;        /* Centraliza o nome exatamente acima da foto */
+    gap: 20px;                  /* Espaço entre o nome e a foto */
+}
 
-/*---------------------*/
-/*---CENARIO/ITEM 4---*/
+.nome-dev {
+    font-size: 42px;
+    font-family: 'New Rocker', cursive;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.8));
+    text-align: center;
+    margin: 0;
+}
 
-/*---------------------*/
-/*---CENARIO/ITEM 5---*/
+.foto-dev {
+    width: 700px;               /* Deixa as duas fotos com a mesma largura */
+    height: 1000px;              /* Deixa as duas fotos com a mesma altura */
+    object-fit: cover;          /* Preenche o quadro sem esticar o rosto */
+    border: 3px solid rgba(212, 175, 55, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
 
-/*---------------------*/
+
