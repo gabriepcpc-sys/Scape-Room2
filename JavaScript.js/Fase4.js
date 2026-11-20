@@ -1,7 +1,14 @@
+function entrarTabuleiro(){
+    document.getElementById("fundo-1").style.display="none";
+    document.getElementById("fundo-2").style.display="block";
+}
+
+
 const tabuleiro = document.getElementById("xadrez");
 //variávei que guardam posição atual do persoagem
 let linhaAtual=0;
 let colunaAtual=0;
+let jogoAtivo = true;
 
 const labirinto = [
 
@@ -43,7 +50,6 @@ for (let linha = 0; linha < 8; linha++) {
     tabuleiro.innerHTML +=casas;
     atualizarGargula();
             
-let jogoAtivo = true;
 
 function verificarVitoria(){
     if(linhaAtual === 7 && colunaAtual === 4){

@@ -43,7 +43,7 @@ let inventario = []; // Array para armazenar os itens do inventário
 
 function atualizarInventario() {
     
-    var lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
+    let lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
     lista.innerHTML = "";// Limpa a lista visual antes de preenchê-la novamente
     for (var i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
         var item = inventario[i]; // Pega o item atual do inventário

@@ -12,6 +12,7 @@ function avancar2() {
 
 function voltar() {
     // Lógica para voltar para a primeira tela da fase 2
+    document.getElementById("mensagemPorta").style.display = "none";
     document.getElementById("Fase2Fundo2").style.display = "none";
     document.getElementById("Fase2Fundo3").style.display = "none";
     document.getElementById("pessimo").style.display = "none";
@@ -20,9 +21,10 @@ function voltar() {
 
 let tempo = 120;
 let intervalo;
+let jogoAtivo=true;
 
 function iniciarTemporizador(){
-    tempo = 1000;
+    tempo = 120;
     atualizarTemporizador();
     intervalo = setInterval(function(){
         tempo--;
@@ -220,6 +222,7 @@ function testarCombinação() {
         }
         if(total === 7) {
             clearInterval(intervalo); // Para o temporizador quando a combinação está correta
+            jogoAtivo=false;
             adicionarHistorico("Parabéns! Você acertou as ordens dos livros!");
             document.getElementById("parabens").style.display = "block";  
             document.getElementById("pessimo").style.display = "none";  
@@ -230,4 +233,27 @@ function testarCombinação() {
         }
         let inventario= document.getElementById("inventario");
         inventario.classList.add("posicaoNovaInventario");
+     }
+
+function mostrarMensagem() {
+    let mensagem = document.getElementById("mensagemPorta");
+    let texto = "Acho que preciso achar a ordem correta antes...";
+
+    // Mostra a mensagem
+    mensagem.textContent = texto;
+    mensagem.style.display = "block";
+
+    adicionarHistorico(texto);//Regista no diário de bordo
+    // Esconde depois de 5 segundos
+    setTimeout(function() {
+        mensagem.style.display = "none";
+    }, 5000);
+}
+
+function avancarFase4(){
+        if(jogoAtivo===true){
+        mostrarMensagem();
+        return;
+    }
+    window.location.href = "4Fase.html";
      }

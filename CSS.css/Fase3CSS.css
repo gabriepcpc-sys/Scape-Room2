@@ -254,7 +254,7 @@ filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
 #estanteDaSala{
     position: absolute;
     z-index: 1;/*camada onde o elemento esta*/
-    top: 175px;/*esta a 175px do topo*/
+    top: 195px;/*esta a 175px do topo*/
     left: 1355px;/*esta a 1355px da esquerda*/
     height:500px ;/*tem 500px de altura*/
 }
@@ -378,7 +378,7 @@ filter: drop-shadow( 0 0 10px rgb(5, 215, 12));/*sombra ao passar o cursor*/
 position: absolute;
 z-index: 2;
 left: 230px;
-top: 355px;
+top: 373px;
 width: 120px;
 height: 180px;
 }
@@ -473,4 +473,17 @@ filter: drop-shadow( 0 0 10px rgb(204, 191, 207));/*sombra ao passar o cursor*/
 
     background-color: black;
     text-align: center;
+}
+#mensagemPorta{
+position: absolute;
+z-index: 3;
+top:100px;
+color: white;
+font-size: 50px;
+font-family: 'Redaction 50';
+top: 800px;
+left: 350px;
+color: #FFFFFF;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+color: #FFFFFF;
 }
