@@ -1,7 +1,29 @@
+function entrarTabuleiro(){
+    document.getElementById("fundo-1").style.display="none";
+    document.getElementById("fundo-2").style.display="block";
+}
+
+
 const tabuleiro = document.getElementById("xadrez");
 //variávei que guardam posição atual do persoagem
 let linhaAtual=0;
 let colunaAtual=0;
+let jogoAtivo = true;
+
+const labirinto = [
+
+    [0, 1, 0, 0, 0, 1, 0, 0],
+    [0, 1, 0, 1, 0, 1, 0, 1],
+    [0, 0, 0, 1, 0, 0, 0, 1],
+    [1, 1, 0, 1, 1, 1, 0, 1],
+    [0, 0, 0, 0, 1, 0, 0, 0],
+    [1, 0, 0, 1, 0, 1, 1, 0],
+    [0, 0, 1, 1, 0, 0, 0, 0],
+    [1, 1, 0, 1, 0, 1, 1, 1]
+
+];
+
+let casas="";
 
 for (let linha = 0; linha < 8; linha++) {
     for (let coluna = 0; coluna < 8; coluna++) {
@@ -11,11 +33,30 @@ for (let linha = 0; linha < 8; linha++) {
         if ((linha + coluna) % 2 === 0) {
             cor = 'clara';
         }  
-        let casa = `<div class="casa ${cor}" data-linha="${linha}" data-coluna="${coluna}"> </div>`//Cria o HTML da casa e guarda coordenadas e cores
-        tabuleiro.innerHTML +=casa;
+        //verifica se a casa é uma parede ou um caminho
+        let tipo ='caminho';
+
+        if(labirinto[linha][coluna]===1){
+            tipo ='parede';
+        }
+        // Cria o HTML da casa com sua cor, tipo e coordenadas
+        let casa = `<div class="casa ${cor} ${tipo}"
+                        data-linha="${linha}"
+                        data-coluna="${coluna}"> 
+                        </div>`
+            casas += casa;
+        }
+    }
+    tabuleiro.innerHTML +=casas;
+    atualizarGargula();
+            
+
+function verificarVitoria(){
+    if(linhaAtual === 7 && colunaAtual === 4){
+        jogoAtivo = false;
+        document.getElementById("mensagemVitoria").style.display = "block";
     }
 }
-atualizarGargula();
 
 function atualizarGargula(){
 
@@ -32,6 +73,10 @@ function atualizarGargula(){
 }
 
 function andarGargula(event){
+    //Impede movimentações depois da vitória
+    if (!jogoAtivo) {
+        return;
+    }
     //Guarda a posição atual antes da movimentação
     let novaLinha = linhaAtual;
     let novaColuna = colunaAtual;
@@ -62,17 +107,19 @@ function andarGargula(event){
     event.preventDefault();
 
     // Verifica se o personagem continua dentro do tabuleiro
-    if (
-        novaLinha >= 0 && novaLinha <= 7 &&
-        novaColuna >= 0 && novaColuna <= 7
-    ) {
-
+    if (novaLinha >= 0 && novaLinha <= 7 && novaColuna >= 0 && novaColuna <= 7) {
+        if(labirinto[novaLinha][novaColuna]===1){
+            return;
+        }
         // Atualiza a posição do personagem
         linhaAtual = novaLinha;
         colunaAtual = novaColuna;
 
         // Atualiza a posição visual
         atualizarGargula();
+
+        verificarVitoria();
+
 
     }
 }

@@ -69,7 +69,7 @@
      <img id="olhos2" src="../imagens/olhos-vermelhos.gif">
   <!--Chama as 5 imagens do fundo3-->
   <img id="fase2fundo3" class="fundo3" src="../imagens/fundo3-fase3.png">
-  <img id="escudo" src="../imagens/escudo-fase3.png">
+  <img id="escudo" onclick="avancarFase4()" src="../imagens/escudo-fase3.png">
   <img id="barril" 
        onclick="pegarBarril()"
        src="../imagens/pistas livros/barril.png">
@@ -107,6 +107,8 @@
     </div>
 
     <button id="botaoHistorico" onclick="alternarHistorico()">
+
+     <div><p id="mensagemPorta" style="display: none;">Acho que preciso achar a ordem correta antes...</p></div>
 
         <span>Diário de bordo</span>
         <span id="setaHistorico">↑</span>

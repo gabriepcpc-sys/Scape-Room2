@@ -72,4 +72,26 @@ filter: drop-shadow( 0 0 25px rgb(236, 8, 8));/*sombra ao passar o cursor*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    cursor: not-allowed;
+}
+
+.casa.parede{
+    background-image: url('../imagens/cavaleiro-xadrez.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: not-allowed;
+}
+#mensagemVitoria{
+position: absolute;
+z-index: 3;
+top:100px;
+color: white;
+font-size: 50px;
+font-family: 'Redaction 50';
+top: 800px;
+left: 350px;
+color: #FFFFFF;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+color: #FFFFFF;
 }

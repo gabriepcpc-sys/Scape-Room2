@@ -13,7 +13,7 @@
         <img id="porta" 
              onclick="portaMasmorra()"
              src="../imagens/porta-pra-masmora.png">
-             <img id="espada" src="../imagens/espada-fase2.png">
+             <img id="espada" onclick="pegarEspada()" src="../imagens/espada-fase2.png">
     </div>
     
     <div id="masmoraDIV" style="display: none;">
@@ -24,7 +24,7 @@
             <img id="voltar" onclick="voltarDaMasmorra()" src="../imagens/esqueleto-volter-fase2.png">
             <div id="caixa-de-dialogo" style="display: none;">
                 <p class="p" id="frase1" style="display: none;">É bom você se apressar se não quiser ficar igual aquele cara da placa... Ele era bem parecido com você, antes de ficar preso aqui pra sempre...</p>
-                <p class="p escondido" id="frase2" style="display: none;">A memoria dele não era boa, isso o condenou... Mas enfim, coloque alguma arma no fogo do pedestal, só assim poderá escapar...</p>
+                <p class="p escondido" id="frase2" style="display: none;">A memória dele não era boa, isso o condenou... Mas enfim, coloque alguma arma no fogo do pedestal, só assim poderá escapar...</p>
             </div>
     </div>
     
@@ -55,6 +55,15 @@
     </div>
 
     <div><p id="mensagemPorta" style="display: none;">Acho que preciso ajudar esse esqueleto antes...</p></div>
+
+    <div><p id="mensagemPedestal" style="display: none;">É necessário colocar alguma arma primeiro!</p></div>
+
+    <div id="inventario"> <!-- div que guarda o inventário -->
+        <h3>Inventário</h3> <!-- titulo do inventário -->
+    <ul id="listaInventario"></ul> <!-- id do inventário -->
+    </div>
+
+
 
     <div id="diarioDeBordo" style="display: none;" >
         <h3 id="">Histórico de Acontecimentos</h3>

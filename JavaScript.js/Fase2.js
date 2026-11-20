@@ -1,6 +1,46 @@
+let inventario = [];
+
+function atualizarInventario() {
+    
+    let lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
+    lista.innerHTML = "";// Limpa a lista visual antes de preenchê-la novamente
+    for (var i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
+        var item = inventario[i]; // Pega o item atual do inventário
+        var imagem = item.imagem; // Pega a imagem do item atual
+        var nome = item.nome; // Pega o nome do item atual
+        lista.innerHTML += `<li>
+        <img src="${imagem}"  
+        style='width: 50px; height: 50px; 
+        margin-right: 10px;'>
+        </li>`; // Adiciona cada item do inventário à lista do HTML com imagem e nome
+        //
+    }
+}
+
+function temItem(nome) {
+    
+    return inventario.some(function(item) {
+        return item.nome === nome;
+    });
+
+}
+
+function pegarEspada(){
+    if(!temItem("Espada")){
+        inventario.push({
+            "nome": "Espada",
+            "imagem": "../imagens/espada-fase2.png"
+        });
+        adicionarHistorico("Você pegou uma espada!");
+    }
+    let espada = document.getElementById('espada');
+    espada.remove();
+    atualizarInventario();
+}
+
 function adicionarHistorico(texto){
     let lista = document.getElementById("listaHistorico");
-
+    
     lista.innerHTML += `<li>
     <p>${texto}</p>
     </li>`
@@ -20,6 +60,8 @@ function alternarHistorico(){
     }
 }
 
+document.getElementById("pedestal").style.pointerEvents="none"
+
 function portaMasmorra() {
     adicionarHistorico("Você entrou na masmorra!");
     document.getElementById("masmoraDIV").style.display = "block";
@@ -28,14 +70,21 @@ function portaMasmorra() {
 
 function voltarDaMasmorra() {
     adicionarHistorico("Você saiu da masmorra!");
+    document.getElementById("mensagemPorta").style.display = "none";
+    document.getElementById("mensagemPedestal").style.display = "none";
     document.getElementById("masmoraDIV").style.display = "none";
     document.getElementById("minigame").style.display="none";
     document.getElementById("fundo1").style.display = "block";
 }
 
 function entrarMinigame(){
+    if (!temItem("Espada")) {
+        mostrarMensagem2();
+        return;
+    }
     adicionarHistorico("Você entrou no minigame!");
     document.getElementById("masmoraDIV").style.display = "none";
+    document.getElementById("mensagemPorta").style.display = "none";
     document.getElementById("minigame").style.display="block";
     iniciarJogo();
 }
@@ -51,17 +100,18 @@ function interagirEsqueleto(){
     document.getElementById("caixa-de-dialogo").style.display="block";
     document.getElementById("frase1").style.display="block";
     document.getElementById("mensagemPorta").style.display="none";
+    document.getElementById("inventario").style.display = "none";
     document.getElementById("esqueleto").style.pointerEvents="none";
-    document.getElementById("pedestal").style.pointerEvents="none"
     document.getElementById("voltar").style.pointerEvents="none";
     document.getElementById("porta-masmora").style.pointerEvents="none";
     setTimeout(function(){
         document.getElementById("frase1").style.display="none";
         document.getElementById("frase2").style.display="block";
-        adicionarHistorico("Esqueleto: A memoria dele não era boa, isso o condenou... Mas enfim, coloque alguma arma no fogo do pedestal, só assim poderá escapar...")
+        adicionarHistorico("Esqueleto: A memória dele não era boa, isso o condenou... Mas enfim, coloque alguma arma no fogo do pedestal, só assim poderá escapar...")
         setTimeout(function(){
             document.getElementById("frase2").style.display="none";
             document.getElementById("caixa-de-dialogo").style.display="none";
+            document.getElementById("inventario").style.display = "block"; 
             document.getElementById("pedestal").style.pointerEvents="auto";
             document.getElementById("voltar").style.pointerEvents="auto";
             document.getElementById("porta-masmora").style.pointerEvents="auto";
@@ -157,6 +207,7 @@ function virarCarta(elemento) {
 
             if(encontradas.length === elementosCartas.length){//Se todas as cartas foram encontradas
                 jogoAtivo = false;
+                document.getElementById("pedestal").style.pointerEvents = "none";
                 document.getElementById("mensagemMemoria").style.display="block";
                 adicionarHistorico("Você encontrou todos os pares do minigame de memória!");
                 
@@ -177,7 +228,8 @@ function virarCarta(elemento) {
 }
 
 function mostrarMensagem() {
-
+    
+    document.getElementById("mensagemPedestal").style.display = "none";
     let mensagem = document.getElementById("mensagemPorta");
     let texto = "Acho que preciso ajudar esse esqueleto antes...";
 
@@ -191,6 +243,23 @@ function mostrarMensagem() {
         mensagem.style.display = "none";
     }, 5000);
 }
+
+function mostrarMensagem2(){
+    document.getElementById("mensagemPorta").style.display = "none";
+    let mensagem = document.getElementById("mensagemPedestal");
+    let texto = "É necessário colocar alguma arma primeiro!"
+
+    mensagem.textContent = texto;
+    mensagem.style.display = "block";
+
+    adicionarHistorico(texto);//Regista no diário de bordo
+    // Esconde depois de 5 segundos
+    setTimeout(function() {
+        mensagem.style.display = "none";
+    }, 5000);
+}
+
+
 
 function avancarFase3(){
     if(jogoAtivo===true){
