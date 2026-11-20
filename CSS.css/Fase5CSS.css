@@ -291,3 +291,12 @@
 #porta-secreto:hover{
         filter: drop-shadow(rgb(34, 89, 151) 0px 0px 30px);
 }
+#mensagem{
+position: absolute;
+z-index: 2;
+color: rgb(255, 255, 255);
+font-family: 'VT323';
+font-size: 40px;
+top: 800px;
+left: 50px;
+}

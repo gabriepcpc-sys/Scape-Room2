@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=VT323&display=swap');
+
+
 #fundo1{
     position: absolute;
     z-index: 0;
@@ -94,4 +97,49 @@ left: 350px;
 color: #FFFFFF;
 text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 color: #FFFFFF;
+}
+#caixa-de-dialogo-finalruim{
+    /*ajustando a imagem*/
+    background-image: url('../imagens/caixa-de-dialogo-finalruim.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*espasçamento interno*/
+    padding: 20px 60px;
+    box-sizing: border-box;
+    /*flexbox para centralizar tudo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*tamanho da imagem*/
+    width: 1000px;
+    height: 300px;
+    /*posicionamento na tela*/
+    position: absolute;
+    top: 650px;
+    left: 380px;
+}
+.p{
+    font-family: 'VT323';
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+}
+#fundo-3{
+    position: relative;
+    z-index: 0;
+    width: 1671px;
+    height: 941px;
+}
+#coroa{
+position: absolute;
+    z-index: 0;
+    width: 140px;
+    height: 100px;
+    top: 510px;
+    left: 780px;
+}
+#coroa:hover {
+filter: drop-shadow( 0 0 35px rgb(1, 247, 255));/*sombra ao passar o cursor*/
 }
