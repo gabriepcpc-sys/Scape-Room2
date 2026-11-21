@@ -1,5 +1,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Redaction+35:ital,wght@0,400;0,700;1,400&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');  
   *{
     padding: 0;
     margin: 0;
@@ -53,7 +54,7 @@
      /* gap: 10px;/*espaco entre os elementos da caixa*/
     /*}*/
   
-  #Historia,#Site-inicio,#Cenários,#Itens,#Desenvolvedores,#Voltar,#Contato,#Menu{
+  #Historia,#Site-inicio,#Cenários,#Itens,#Desenvolvedores,#Voltar,#Contato,#Menu,#ia{
     font-size: 30px; /*tamanho da fonte*/
     font-family: 'New Rocker', cursive; /*tipo da fonte*/
     background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); 
@@ -64,7 +65,7 @@
     filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.8));
     margin-top: 2%; /*adiciona uma margem superior de 2% ao parágrafo*/
   }
-  #Historia:hover, #Cenários:hover, #Itens:hover, #Desenvolvedores:hover,#Voltar:hover, #Contato:hover, #Menu:hover {
+  #Historia:hover, #Cenários:hover, #Itens:hover, #Desenvolvedores:hover,#Voltar:hover, #Contato:hover, #Menu:hover, #ia:hover {
     filter: drop-shadow(0px 0px 10px rgb(255, 217, 0)); /*sombra dourada ao passar o mouse */
 }
   h1{
@@ -387,5 +388,44 @@ linear-gradient(
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
-
-
+#titulo2{
+      color: rgb(255, 255, 255);
+    justify-content: center; /*alinha o texto ao centro*/
+    display: flex;/*deixa o elemento editavel de forma flexivel*/
+    text-align: center; /*alinha o texto ao centro*/
+    font-size: 100px; /*tamanho da fonte*/
+    font-family: 'New Rocker', cursive; /*tipo da fonte*/
+    text-shadow: 0px 0px 30px rgb(255, 1, 1); /*sombra da fonte*/
+    padding-top: 10px;
+}
+#table{
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 1500px;
+  margin: 40px auto;
+}
+#table,#table th,#table td{
+  font-family: 'Silkscreen';
+  border: 2px solid rgba(212, 175, 55, 0.8);
+  color: white;
+}
+.iass{
+    text-shadow: 0 -1px 4px #ff8585, 0 -2px 10px rgb(174, 0, 255), 0 -10px 20px #ff00ea73, 0 -10px 40px #F00; /*sombra da fonte*/
+}
+#table th{
+      text-shadow: 0 -1px 4px #0ca4e0, 0 -2px 10px rgb(255, 196, 0), 0 -10px 20px #250ac2, 0 -10px 40px rgba(55, 0, 255, 0); /*sombra da fonte*/
+}
+.ias{
+      text-shadow: 0 -1px 4px #0ca4e0, 0 -2px 10px rgb(255, 196, 0), 0 -10px 20px #250ac2, 0 -10px 40px rgba(55, 0, 255, 0); /*sombra da fonte*/
+}
+#FundoIA{
+    width: 100%; /*o elemento tem 100% da largura */
+    min-height: 100vh;
+    height: 100%; /*o elemento tem 1024 pixels de altura */
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10; /*camada onde o elemento está posicionado */
+    overflow: hidden; /*esconde o que estiver fora do elemento*/
+    background-image: linear-gradient(rgb(0, 0, 0), rgba(237, 231, 230, 0.226)), url('../imagens/fundo-site.png');
+    top: 90px;
+}

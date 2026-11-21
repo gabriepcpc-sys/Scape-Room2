@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap'); /*importa a fonte creepster*/
 @import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');/*importa a fonte redaction50*/
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=VT323&display=swap');
 
 #FUNDOestante{
     position: absolute;
@@ -318,8 +319,8 @@ height: 65px;
     z-index: 2;/*camada*/
     width: 100px;/*tem 100px de largura*/
     height: 905px;/*tem 905px de altura*/
-    top: 0px;/*esta a 0px do topo*/
-    left:0px;/*esta a px da esquerda*/
+    top: 4px;/*esta a 0px do topo*/
+    left: -7px;/*esta a px da esquerda*/
 }
 #Tabua:hover{
  filter: drop-shadow( 0 0 25px rgb(0, 0, 0));/*sombra ao passar o cursor*/
@@ -486,4 +487,25 @@ left: 350px;
 color: #FFFFFF;
 text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 color: #FFFFFF;
+}
+#botao{
+    position: absolute;
+    background-color: rgba(112, 4, 4, 0.863); /*cor do botao*/
+    z-index: 4; /*camada onde o elemento está posicionado */
+    border: 3px solid rgb(0,0,0); /*edita a borda do botao*/
+    padding: 5px 5px; /*deixa espaco ao redor do texto*/
+    font-size:60px; /*tamanho da fonte*/
+    font-family: 'New Rocker';
+    color: rgb(0, 0, 0); /*cor da fonte*/
+    width: 200px; /*ocupa 100% da largura */
+    height: 90px;
+    cursor:pointer; /*faz o cursor do mouse virar uma mãozinha ao passar por cima do botao*/
+    top: 770px;
+    left: 735px;
+}
+#botao:hover{
+   box-shadow: 0 0 15px rgb(248, 247, 247);/*faz o brilho no botao ao passar o mouse por cima */
+   background-color: rgb(238, 4, 4);/*muda a cor do botao ao passar o mouse por cima*/
+    transform: scale(1.1);                 /* Aumenta o botao ao passar o mouse */
+    transition: transform 0.2s; 
 }

@@ -162,7 +162,7 @@ font-family: 'Redaction 50';
 top: 800px;
 left: 350px;
 color: #FFFFFF;
-text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(7, 205, 219), 0 -10px 20px #00d9ff, 0 -18px 40px rgb(0, 255, 149);
 color: #FFFFFF;
 }
 
