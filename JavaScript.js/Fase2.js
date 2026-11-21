@@ -52,11 +52,9 @@ function alternarHistorico(){
     let aberto = painel.classList.toggle("aberto");//Adiciona ou remove a classe aberto
     if(aberto){
         seta.textContent = "↓";
-        painel.style.display = "block";
     }
     else{
         seta.textContent = "↑";
-        painel.style.display = "none";
     }
 }
 
@@ -99,6 +97,9 @@ function interagirEsqueleto(){
     adicionarHistorico("Esqueleto: É bom você se apressar se não quiser ficar igual aquele cara da placa... Ele era bem parecido com você, antes de ficar preso aqui pra sempre...");
     document.getElementById("caixa-de-dialogo").style.display="block";
     document.getElementById("frase1").style.display="block";
+
+    document.getElementById("diarioDeBordo").classList.remove("aberto");
+    document.getElementById("botaoHistorico").style.display="none";
     document.getElementById("mensagemPorta").style.display="none";
     document.getElementById("inventario").style.display = "none";
     document.getElementById("esqueleto").style.pointerEvents="none";
@@ -114,6 +115,7 @@ function interagirEsqueleto(){
             document.getElementById("inventario").style.display = "block"; 
             document.getElementById("pedestal").style.pointerEvents="auto";
             document.getElementById("voltar").style.pointerEvents="auto";
+            document.getElementById("botaoHistorico").style.display="flex";
             document.getElementById("porta-masmora").style.pointerEvents="auto";
 
         },10000)
@@ -207,6 +209,7 @@ function virarCarta(elemento) {
 
             if(encontradas.length === elementosCartas.length){//Se todas as cartas foram encontradas
                 jogoAtivo = false;
+                document.getElementById("botao").style.display = "block";
                 document.getElementById("pedestal").style.pointerEvents = "none";
                 document.getElementById("mensagemMemoria").style.display="block";
                 adicionarHistorico("Você encontrou todos os pares do minigame de memória!");
@@ -232,7 +235,8 @@ function mostrarMensagem() {
     document.getElementById("mensagemPedestal").style.display = "none";
     let mensagem = document.getElementById("mensagemPorta");
     let texto = "Acho que preciso ajudar esse esqueleto antes...";
-
+    document.getElementById("diarioDeBordo").classList.remove("aberto");
+    document.getElementById("botaoHistorico").style.display="none";
     // Mostra a mensagem
     mensagem.textContent = texto;
     mensagem.style.display = "block";
@@ -241,13 +245,16 @@ function mostrarMensagem() {
     // Esconde depois de 5 segundos
     setTimeout(function() {
         mensagem.style.display = "none";
-    }, 5000);
+        document.getElementById("botaoHistorico").style.display="flex";
+    }, 3000);
 }
 
 function mostrarMensagem2(){
     document.getElementById("mensagemPorta").style.display = "none";
     let mensagem = document.getElementById("mensagemPedestal");
     let texto = "É necessário colocar alguma arma primeiro!"
+    document.getElementById("diarioDeBordo").classList.remove("aberto");
+    document.getElementById("botaoHistorico").style.display="none";
 
     mensagem.textContent = texto;
     mensagem.style.display = "block";
@@ -256,10 +263,9 @@ function mostrarMensagem2(){
     // Esconde depois de 5 segundos
     setTimeout(function() {
         mensagem.style.display = "none";
-    }, 5000);
+        document.getElementById("botaoHistorico").style.display="flex";
+    }, 3000);
 }
-
-
 
 function avancarFase3(){
     if(jogoAtivo===true){
@@ -268,5 +274,30 @@ function avancarFase3(){
     }
     window.location.href = "3Fase.html";
 }
+
+// Função para ajustar o jogo ao tamanho da tela
+function ajustarTela() {
+
+    // Dimensões originais do cenário
+    let larguraBase = 1671;
+    let alturaBase = 941;
+
+    // Calcula a escala necessária
+    let escalaLargura = window.innerWidth / larguraBase;
+    let escalaAltura = window.innerHeight / alturaBase;
+
+    // Escolhe a menor escala para o cenário caber na tela
+    let escala = Math.min(escalaLargura, escalaAltura);
+
+    // Aplica a escala ao palco
+    document.getElementById("todosCenarios").style.transform =
+        "scale(" + escala + ")";
+}
+
+// Executa a função quando o tamanho da janela mudar
+window.onresize = ajustarTela;
+
+// Executa a função inicialmente, quando a página carregar
+ajustarTela();
 
 

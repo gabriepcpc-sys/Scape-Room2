@@ -120,6 +120,15 @@ color: #FFFFFF;
     top: 650px;
     left: 380px;
 }
+
+#frase1-finalruim{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
+
 .p{
     font-family: 'VT323';
     font-size: 30px;

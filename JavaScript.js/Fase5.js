@@ -7,12 +7,78 @@ function voltarBom(){
     document.getElementById("finalbom").style.display = "none";
 }
 
+function avancarParte2(){
+    document.getElementById("fundo1").style.display = "none";
+    document.getElementById("fundo2").style.display = "block";
+}
+
+function avancarParte3(){
+    document.getElementById("fundo2").style.display = "none";
+    document.getElementById("fundo3").style.display = "block";
+}
+
+function videoBom(){
+    let video = document.getElementById("video-finalbom");
+    video.style.display = "block";
+    video.play();
+
+}
+
 function abrirBau(){
     document.getElementById("baufechado").style.display = "none";
     document.getElementById("bauaberto").style.display = "block";
     document.getElementById("pena").style.display = "block";
 }
 
+function adicionarHistorico(texto){
+    let lista = document.getElementById("listaHistorico");
+
+    lista.innerHTML += `<li>
+    <p>${texto}</p>
+    </li>`
+}
+
+function alternarHistorico(){
+    let painel = document.getElementById("diarioDeBordo");
+    let seta = document.getElementById("setaHistorico");
+    let aberto = painel.classList.toggle("aberto");//Adiciona ou remove a classe aberto
+    if(aberto){
+        seta.textContent = "↓";
+        
+    }
+    else{
+        seta.textContent = "↑";
+       
+    }
+}
+
+
+let inventario = []; // Array para armazenar os itens do inventário
+
+function atualizarInventario() {
+    
+    let lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
+    lista.innerHTML = "";// Limpa a lista visual antes de preenchê-la novamente
+    for (var i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
+        var item = inventario[i]; // Pega o item atual do inventário
+        var imagem = item.imagem; // Pega a imagem do item atual
+        var nome = item.nome; // Pega o nome do item atual
+        lista.innerHTML += `<li>
+                     <img src="${imagem}"  
+                        style='width: 50px; height: 50px; 
+                        margin-right: 10px;'>
+                    </li>`; // Adiciona cada item do inventário à lista do HTML com imagem e nome
+        //
+    }
+}
+
+function temItem(nome) {
+
+    return inventario.some(function(item) {
+        return item.nome === nome;
+    });
+
+}
 
 function interagirGargula(){
     document.getElementById("caixa-de-dialogo").style.display = "block";
@@ -31,7 +97,15 @@ function interagirGargula(){
             fala2.style.display = "none";
             document.getElementById("seta").style.display = "block";
             document.getElementById("caixa-de-dialogo").style.display = "none";
-            gargula.style.pointerEvents = 'auto';
+
+            inventario.push({
+                "nome":"Galao",
+                "imagem":"../imagens/galao-fase5.png"
+            });
+            console.log("Galão adicionado ao inventário! ")
+            adicionarHistorico("Você recebeu um galão de gasolina!");
+            atualizarInventario();
+
         },10000)
     },10000);
 
@@ -57,7 +131,14 @@ function interagirGargula2(){
                 fala5.style.display = "none";
                 document.getElementById("seta").style.display = "block";
                 document.getElementById("caixa-de-dialogo2").style.display = "none";
-                gargula.style.pointerEvents = 'auto';
+                
+                inventario.push({
+                "nome":"Tocha",
+                "imagem":"../imagens/tocha-fase5.png"
+            });
+            console.log("Tocha adicionado ao inventário! ")
+            adicionarHistorico("Você recebeu uma tocha!");
+            atualizarInventario();
             },10000);
         },10000);
     },10000);

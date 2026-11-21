@@ -1,6 +1,10 @@
 function entrarTabuleiro(){
-    document.getElementById("fundo-1").style.display="none";
-    document.getElementById("fundo-2").style.display="block";
+    document.getElementById("caixa-de-dialogo-finalruim").style.display = "block";
+    setTimeout(function(){
+        document.getElementById("caixa-de-dialogo-finalruim").style.display = "none";
+        document.getElementById("fundo-1").style.display="none";
+        document.getElementById("fundo-2").style.display="block";
+    },10000);
 }
 
 

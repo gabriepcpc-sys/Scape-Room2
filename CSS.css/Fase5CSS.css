@@ -45,6 +45,194 @@
 #pena:hover{
         filter: drop-shadow(rgb(245, 242, 242) 0px 0px 5px);
 }
+
+#inventario{
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    left: 55px;
+}
+#listaInventario{
+    position: absolute;
+    z-index: 4;
+    top: 50px;
+    left: 55px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;    
+
+    list-style: none;
+    padding:10px;
+    margin:0;
+
+    width: 150px;
+    height: 50px;
+    background-color: gray;
+    border: 3px solid;
+    border-radius: 8px;
+}
+
+#inventario h3{
+    color: white;
+    font-family: 'Creepster', cursive;
+    font-size: 20px;
+}
+
+#listaInventario li{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(100, 100, 100, 0.4);
+    border: 2px solid #75634d;
+    border-radius: 5px;
+}
+
+/* Computador de bordo */
+#diarioDeBordo {
+    position: fixed;
+    z-index: 10;
+
+    left: 20px;
+    bottom: 45px;
+
+    width: 300px;
+    height: 200px;
+
+    display: none;
+    
+    flex-direction: column-reverse;
+    
+}
+
+#diarioDeBordo.aberto{
+    display: flex;
+}
+
+/* Botão que abre e fecha o histórico */
+#botaoHistorico {
+    position: fixed;
+    z-index: 11;
+
+    left: 20px;
+    bottom: 5px;
+
+    width: 300px;
+    height: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background-color: #24170f;
+    color: white;
+
+    border: 2px solid #a17b48;
+    border-radius: 8px;
+
+    font-family: 'Redaction 50', cursive;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+
+/* Seta do botão */
+#setaHistorico {
+    font-size: 25px;
+}
+
+
+/* Área do histórico fechada */
+#conteudoHistorico {
+    width: 100%;
+
+    max-height: 0;
+    opacity: 0;
+    
+    overflow: hidden;
+
+    background-color: rgba(20, 12, 10, 0.95);
+
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+
+    overflow-x: hidden ;
+    overflow-y: auto;
+
+    scrollbar-width: none;
+    box-sizing: border-box;
+}
+
+/* Área do histórico aberta */
+#diarioDeBordo.aberto #conteudoHistorico {
+    max-height: 300px;
+    opacity: 1;
+
+    
+    overflow-y: auto;
+    
+    padding: 12px;
+
+    border: 2px solid #a17b48;
+    border-bottom: none;
+
+    border-radius: 8px 8px 0 0;
+}
+
+
+/* Título do histórico */
+#diarioDeBordo h3 {
+    color: #fdfdfd;
+
+    font-family: 'Redaction 50', cursive;
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+
+/* Lista de mensagens */
+#listaHistorico {
+    list-style: none;
+    
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* Cada mensagem registrada */
+#listaHistorico li {
+    color: white;
+
+    background-color: rgba(100, 75, 45, 0.3);
+
+    border-left: 3px solid #d4af37;
+
+    padding: 10px;
+
+    font-family: 'Redaction 50', cursive;
+    font-size: 16px;
+}
+
+
+/* Mensagem quando o histórico estiver vazio */
+#listaHistorico:empty::after {
+    content: "Nenhum acontecimento registrado.";
+
+    color: #aaa;
+    font-size: 13px;
+}
+
+
 /*FINAL BOM*/
 #jardim{
     position: relative;
@@ -64,6 +252,16 @@
 #seta:hover{
         filter: drop-shadow(rgba(245, 242, 242, 0.849) 0px 0px 10px);
 }
+
+#avancarparte2 {
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    left: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 #gato{
     position: absolute;
     z-index: 1;
@@ -204,6 +402,18 @@
     width: 550px;
     height: 250px;
 }
+
+#video-finalbom{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover;/* Faz o mesmo papel do background-size: cover */
+    background-color: black;
+}
+
 
 /*------------------------*/
 

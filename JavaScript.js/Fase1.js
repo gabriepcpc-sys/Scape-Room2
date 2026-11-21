@@ -12,11 +12,11 @@ function alternarHistorico(){
     let aberto = painel.classList.toggle("aberto");//Adiciona ou remove a classe aberto
     if(aberto){
         seta.textContent = "↓";
-        painel.style.display = "block";
+        
     }
     else{
         seta.textContent = "↑";
-        painel.style.display = "none";
+       
     }
 }
 
@@ -25,6 +25,10 @@ function avancar() {
     // Lógica para avançar para a próxima tela da fase 1
     document.getElementById("Fase1Fundo1").style.display = "none";
     document.getElementById("Fase1Fundo2").style.display = "block";
+    document.getElementById("areaJogo").style.setProperty(
+    "--fundo-lateral",
+    "url('../imagens/fundo2-fase1.png')"
+);
 
     // Exibe o botão "retroceder" quando avançar
     document.getElementById("voltar").style.display = "inline-block";
@@ -33,10 +37,13 @@ function voltar() {
     adicionarHistorico("Você saiu do castelo!");
     // Lógica para voltar para a tela anterior da fase 1
     document.getElementById("Fase1Fundo2").style.display = "none";
-        document.getElementById("Fase1Fundo1").style.display = "block";
-
+    document.getElementById("Fase1Fundo1").style.display = "block";
     // Oculta o botão "retroceder" novamente
     document.getElementById("voltar").style.display = "none";
+    document.getElementById("areaJogo").style.setProperty(
+    "--fundo-lateral",
+    "url('../imagens/fundo1-fase1.png')"
+);
 }
 
 let inventario = []; // Array para armazenar os itens do inventário
