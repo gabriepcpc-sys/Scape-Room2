@@ -160,6 +160,29 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
     color: #aaa;
     font-size: 13px;
 }
+#temporizador {
+    position: absolute;
+    top: 20px;
+    left: 800px;
+    z-index: 50;
+
+    font-family: 'New Rocker', cursive;
+    font-size: 42px;
+    letter-spacing: 3px;
+
+    /* Texto em degradê dourado */
+    background: linear-gradient(to bottom, #FCF6BA, #BF953F, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* Moldura escura */
+    padding: 10px 26px;
+    border: 2px solid rgba(212, 175, 55, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), inset 0 0 12px rgba(105, 6, 19, 0.8);
+    background-color: rgba(12, 2, 2, 0.88);
+}
 
 #parabens{
     position: absolute;
@@ -389,7 +412,7 @@ filter: drop-shadow( 0 0 10px rgb(131, 4, 159));/*sombra ao passar o cursor*/
 #olhos2{
 position: absolute;
 z-index: 1;
-top: 270px;
+top: 253px;
 left: 566px;
 width: 58px;
 height: 82px;
@@ -397,7 +420,7 @@ height: 82px;
 #escudo{
     position: absolute;
     z-index: 2;
-    top: 330px;
+    top: 310px;
     left: 1020px;
     width: 70px;
     height: 100px;
