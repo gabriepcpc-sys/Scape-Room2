@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=VT323&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
 
 #fundo1{
     position: absolute;
@@ -88,14 +92,13 @@ filter: drop-shadow( 0 0 25px rgb(236, 8, 8));/*sombra ao passar o cursor*/
 #mensagemVitoria{
 position: absolute;
 z-index: 3;
-top:100px;
 color: white;
 font-size: 50px;
 font-family: 'Redaction 50';
-top: 800px;
-left: 350px;
+top: 1130px;
+left: 270px;
 color: #FFFFFF;
-text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(153, 0, 255), 0 -10px 20px #00eeff, 0 -18px 40px rgb(17, 0, 255);
 color: #FFFFFF;
 }
 #caixa-de-dialogo-finalruim{
@@ -146,8 +149,8 @@ position: absolute;
     z-index: 0;
     width: 140px;
     height: 100px;
-    top: 510px;
-    left: 780px;
+    top: 500px;
+    left: 770px;
 }
 #coroa:hover {
 filter: drop-shadow( 0 0 35px rgb(1, 247, 255));/*sombra ao passar o cursor*/
