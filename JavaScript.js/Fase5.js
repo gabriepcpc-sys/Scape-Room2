@@ -1,8 +1,11 @@
 function decidirFinal(){
-    if(tempoExcedido===true){
+    let tempoExcedido = sessionStorage.getItem("tempoExcedido");
+    console.log("Tempo excedido:", tempoExcedido);
+
+    if(tempoExcedido==="true"){
         avancarRuim();
     }
-    else{
+    else if(tempoExcedido==="false"){
         avancarBom();
     }
 }
@@ -158,6 +161,38 @@ function interagirGargula2(){
 //====FINAL RUIM====//
 
 function avancarRuim(){
+    document.getElementById("fase3portas").style.display = "none";
     document.getElementById("finalruim").style.display = "block";
+}
+
+function pegarElmo(){
+    document.getElementById("elmo").style.display = "none";
+    document.getElementById("fundo1-finalruim").style.display = "none";
+
+    document.getElementById("fundo2-finalruim").style.display = "block";
+    document.getElementById("caixa-de-dialogo-finalruim").style.display = "block";
+    document.getElementById("frase1-finalruim").style.display = "block";
+    setTimeout(function(){
+        document.getElementById("frase1-finalruim").style.display = "none";
+        document.getElementById("caixa-de-dialogo-finalruim").style.display = "none";
+
+        document.getElementById("fundo2-finalruim").style.display = "none";
+        document.getElementById("fundo3-finalruim").style.display = "block";
+
+        document.getElementById("caixa-de-dialogo-finalruim2").style.display = "block";
+        document.getElementById("frase2-finalruim").style.display = "block";
+        setTimeout(function(){
+            document.getElementById("frase2-finalruim").style.display = "none";
+            document.getElementById("frase3-finalruim").style.display = "block";
+            setTimeout(function(){
+                document.getElementById("frase3-finalruim").style.display = "none";
+                document.getElementById("fundo3-finalruim").style.display = "none";
+                document.getElementById("caixa-de-dialogo-finalruim2").style.display = "none";
+                document.getElementById("fundo4-finalruim").style.display = "block";
+        },10000);
+            
+                
+            },10000)
+    },10000)
 }
 

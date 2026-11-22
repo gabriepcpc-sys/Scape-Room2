@@ -27,14 +27,13 @@
     <div id="finalbom" style="display: none;"><!-- div do final bom com id e display -->
         <div id="fundo1">
             <img id="jardim" src="../imagens/fundo2-fase5-finalbom.png">
-            <img id="seta" onclick="voltarBom()" src="../imagens/seta-fase5.png">
+            <img id="seta" onclick="avancarParte2()" src="../imagens/seta-fase5.png">
             <img id="galao" src="../imagens/galao-fase5.png" style="display: none;">
             <img id="gato" onclick="interagirGargula()" src="../imagens/gato-fase5.png">
             <div id="caixa-de-dialogo"style="display: none;">
             <p class="p" id="frase1" style="display: none;">Eu vi você entrando no castelo, e ouvi seus barulhos... Vi que você escapou do monstro, e conseguiu achar a ordem certa bem rápido...</p>
             <p class="p escondido" id="frase2" style="display: none;">Suponho que você queira fugir... vou te ajudar, mas prometa queimar esse maldito lugar, as raízes da grande árvore cercam o castelo inteiro. Ao queimar ela, a base do castelo cai junto...</p>
         </div>
-            <button style="z-index: 9999;" id="avancarparte2" onclick="avancarParte2() ">AVANÇAR</button>
         </div>
         <div id="fundo2" style="display:none;">
             <img id="jardim2" src="../imagens/fundo3-fase5-finalbom.png">
@@ -56,16 +55,16 @@
     
     <div id="finalruim" style="display: none;"><!-- div do final ruim com id e display -->
         <img style="display: none;" id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
-        <img style="display: none;" id="elmo" src="../imagens/elmo-fase5finalruim.png">
-        <img style="display: none;" id="fundo1-finalruim" src="../imagens/fundo1-fase5-finalruim.png">
+        <img id="elmo" onclick="pegarElmo()" src="../imagens/elmo-fase5finalruim.png">
+        <img id="fundo1-finalruim" src="../imagens/fundo1-fase5-finalruim.png">
         <img style="display: none;" id="fundo2-finalruim" src="../imagens/fundo2-fase5finalruim.png">
         <div id="caixa-de-dialogo-finalruim" style="display: none;">
             <p class="p" id="frase1-finalruim" style="display: none;">Quase... Quase que você escapou, por que você pegou o elmo?! Enfim, o rei quer falar com você... Somos os cavaleiros particulares dele, e se viemos até aqui, pode ter certeza que o final que você está agora, não é bom...</p>    
         </div>
         <img style="display: none;" id="fundo3-finalruim" src="../imagens/fundo3-fase5finalruim.png">
-        <div id="caixa-de-dialogo-finalruim" style="display: non;">
+        <div id="caixa-de-dialogo-finalruim2" style="display: none;">
             <p class="p" id="frase2-finalruim" style="display: none;">Foi um milagre você ter sobrevivido na terceira parte do castelo... Achei que meu cavaleiro ia te matar... você viu ele te observando né?</p>
-            <p class="p escondido" id="frase3-finalruim" style="display: non;">Isso não importa mais, até porque você demorou. Demorou muito para acertar a ordem daqueles livros. Você gostou de ficar lá? Se sim, aproveite, porque daqui de dentro você não sai mais...</p>
+            <p class="p escondido" id="frase3-finalruim" style="display: none;">Isso não importa mais, até porque você demorou. Demorou muito para acertar a ordem daqueles livros. Você gostou de ficar lá? Se sim, aproveite, porque daqui de dentro você não sai mais...</p>
         </div>
         <img style="display: none;" id="fundo4-finalruim" src="../imagens/fundo4-fase5finalruim.png">
     </div>
@@ -91,7 +90,6 @@
         <span id="setaHistorico">↑</span>
     </button>
 
-    <script src="../JavaScript.js/Fase3.js"></script>
     <script src="../JavaScript.js/Fase5.js"></script>
 </body>
 </html>

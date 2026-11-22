@@ -1,3 +1,4 @@
+sessionStorage.removeItem("tempoExcedido");
 function avancar() {
     // Lógica para avançar para a segunda tela da fase 2
     document.getElementById("Fase2Fundo1").style.display = "none";
@@ -29,11 +30,13 @@ function reiniciar(){
 let tempo = 120;
 let intervalo;
 let jogoAtivo=true;
-let inicioFase3 = Date.now();
+let inicioFase3;
 
 function iniciarTemporizador(){
     tempo = 120;
+    inicioFase3 = Date.now();
     atualizarTemporizador();
+
     intervalo = setInterval(function(){
         tempo--;
         atualizarTemporizador();
@@ -61,11 +64,8 @@ function iniciarTemporizador(){
     function verificarTempoFase3() {
     let tempoDecorrido = Date.now() - inicioFase3;// Calcula quanto tempo passou desde o início da fase
     let limiteTempo = 90 * 1000;// Limite de tempo: 1 minuto e 30 segundos
-    let tempoExcedido = false;
-    // Verifica se o jogador ultrapassou o limite
-    if(tempoDecorrido > limiteTempo){
-        tempoExcedido = true;
-    }
+    // Retorna true ou false dependendo do tempo
+    return tempoDecorrido > limiteTempo;
 }
 
     function adicionarHistorico(texto){
@@ -274,5 +274,11 @@ function avancarFase4(){
         mostrarMensagem();
         return;
     }
+
+    let tempoExcedido = verificarTempoFase3();
+
+    sessionStorage.setItem("tempoExcedido",tempoExcedido);
+
+
     window.location.href = "4Fase.html";
      }
