@@ -464,7 +464,7 @@ filter: drop-shadow( 0 0 10px rgb(204, 191, 207));/*sombra ao passar o cursor*/
 
 
 #cavaleiro{
-    position: fixed;
+    position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
@@ -491,7 +491,7 @@ color: #FFFFFF;
 #botao{
     position: absolute;
     background-color: rgba(112, 4, 4, 0.863); /*cor do botao*/
-    z-index: 4; /*camada onde o elemento está posicionado */
+    z-index: 15; /*camada onde o elemento está posicionado */
     border: 3px solid rgb(0,0,0); /*edita a borda do botao*/
     padding: 5px 5px; /*deixa espaco ao redor do texto*/
     font-size:60px; /*tamanho da fonte*/

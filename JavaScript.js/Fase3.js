@@ -19,9 +19,17 @@ function voltar() {
     document.getElementById("Fase2Fundo1").style.display = "block";
 }
 
+function reiniciar(){
+    document.getElementById("botao").style.display = "none";
+    document.getElementById("Fase2Fundo1").style.display = "block";
+    document.getElementById("cavaleiro").style.display = "none";
+    iniciarTemporizador();
+    atualizarTemporizador();
+}
 let tempo = 120;
 let intervalo;
 let jogoAtivo=true;
+let inicioFase3 = Date.now();
 
 function iniciarTemporizador(){
     tempo = 120;
@@ -36,6 +44,7 @@ function iniciarTemporizador(){
             document.getElementById("Fase2Fundo3").style.display = "none";
             document.getElementById("inventario").style.display = "none";
             document.getElementById("cavaleiro").style.display = "block"; // Exibe a tela de fim de jogo
+            document.getElementById("botao").style.display = "block";
         }
 
      }, 1000);
@@ -48,6 +57,16 @@ function iniciarTemporizador(){
         document.getElementById("temporizador").textContent = `${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
 
     }
+
+    function verificarTempoFase3() {
+    let tempoDecorrido = Date.now() - inicioFase3;// Calcula quanto tempo passou desde o início da fase
+    let limiteTempo = 90 * 1000;// Limite de tempo: 1 minuto e 30 segundos
+    let tempoExcedido = false;
+    // Verifica se o jogador ultrapassou o limite
+    if(tempoDecorrido > limiteTempo){
+        tempoExcedido = true;
+    }
+}
 
     function adicionarHistorico(texto){
     let lista = document.getElementById("listaHistorico");

@@ -1,33 +1,10 @@
-function avancarBom(){
-    document.getElementById("fase3portas").style.display = "none";
-    document.getElementById("finalbom").style.display = "block";
-}
-function voltarBom(){
-    document.getElementById("fase3portas").style.display = "block";
-    document.getElementById("finalbom").style.display = "none";
-}
-
-function avancarParte2(){
-    document.getElementById("fundo1").style.display = "none";
-    document.getElementById("fundo2").style.display = "block";
-}
-
-function avancarParte3(){
-    document.getElementById("fundo2").style.display = "none";
-    document.getElementById("fundo3").style.display = "block";
-}
-
-function videoBom(){
-    let video = document.getElementById("video-finalbom");
-    video.style.display = "block";
-    video.play();
-
-}
-
-function abrirBau(){
-    document.getElementById("baufechado").style.display = "none";
-    document.getElementById("bauaberto").style.display = "block";
-    document.getElementById("pena").style.display = "block";
+function decidirFinal(){
+    if(tempoExcedido===true){
+        avancarRuim();
+    }
+    else{
+        avancarBom();
+    }
 }
 
 function adicionarHistorico(texto){
@@ -79,6 +56,40 @@ function temItem(nome) {
     });
 
 }
+
+
+function avancarBom(){
+    document.getElementById("fase3portas").style.display = "none";
+    document.getElementById("finalbom").style.display = "block";
+}
+function voltarBom(){
+    document.getElementById("fase3portas").style.display = "block";
+    document.getElementById("finalbom").style.display = "none";
+}
+
+function avancarParte2(){
+    document.getElementById("fundo1").style.display = "none";
+    document.getElementById("fundo2").style.display = "block";
+}
+
+function avancarParte3(){
+    document.getElementById("fundo2").style.display = "none";
+    document.getElementById("fundo3").style.display = "block";
+}
+
+function videoBom(){
+    let video = document.getElementById("video-finalbom");
+    video.style.display = "block";
+    video.play();
+
+}
+
+function abrirBau(){
+    document.getElementById("baufechado").style.display = "none";
+    document.getElementById("bauaberto").style.display = "block";
+    document.getElementById("pena").style.display = "block";
+}
+
 
 function interagirGargula(){
     document.getElementById("caixa-de-dialogo").style.display = "block";
@@ -143,3 +154,10 @@ function interagirGargula2(){
         },10000);
     },10000);
 }
+
+//====FINAL RUIM====//
+
+function avancarRuim(){
+    document.getElementById("finalruim").style.display = "block";
+}
+

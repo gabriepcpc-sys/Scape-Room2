@@ -9,7 +9,7 @@
 <body>
     <div id="fase3portas" class="fundo-porta" style="display: block;"><!-- div do quarto das portas com id,classe e display -->
     <img id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
-    <img id="porta" class="porta" onclick="avancarBom()" src="../imagens/porta-fase5.png"><!--chama a imagem -->
+    <img id="porta" class="porta" onclick="decidirFinal()" src="../imagens/porta-fase5.png"><!--chama a imagem -->
     <img id="baufechado" onclick="abrirBau()" src="../imagens/bau-fase5.png">
     <img id="bauaberto" src="../imagens/bauAberto-fase5.png">
     <img id="pena"  src="../imagens/pena-fase5.png">
@@ -60,9 +60,9 @@
         <img style="display: none;" id="fundo1-finalruim" src="../imagens/fundo1-fase5-finalruim.png">
         <img style="display: none;" id="fundo2-finalruim" src="../imagens/fundo2-fase5finalruim.png">
         <div id="caixa-de-dialogo-finalruim" style="display: none;">
-            <p class="p" id="frase1-finalruim" style="display: non;">Quase... Quase que você escapou, por que você pegou o elmo?! Enfim, o rei quer falar com você... Somos os cavaleiros particulares dele, e se viemos até aqui, pode ter certeza que o final que você está agora, não é bom...</p>    
+            <p class="p" id="frase1-finalruim" style="display: none;">Quase... Quase que você escapou, por que você pegou o elmo?! Enfim, o rei quer falar com você... Somos os cavaleiros particulares dele, e se viemos até aqui, pode ter certeza que o final que você está agora, não é bom...</p>    
         </div>
-        <img style="display: non;" id="fundo3-finalruim" src="../imagens/fundo3-fase5finalruim.png">
+        <img style="display: none;" id="fundo3-finalruim" src="../imagens/fundo3-fase5finalruim.png">
         <div id="caixa-de-dialogo-finalruim" style="display: non;">
             <p class="p" id="frase2-finalruim" style="display: none;">Foi um milagre você ter sobrevivido na terceira parte do castelo... Achei que meu cavaleiro ia te matar... você viu ele te observando né?</p>
             <p class="p escondido" id="frase3-finalruim" style="display: non;">Isso não importa mais, até porque você demorou. Demorou muito para acertar a ordem daqueles livros. Você gostou de ficar lá? Se sim, aproveite, porque daqui de dentro você não sai mais...</p>
@@ -91,7 +91,7 @@
         <span id="setaHistorico">↑</span>
     </button>
 
-
+    <script src="../JavaScript.js/Fase3.js"></script>
     <script src="../JavaScript.js/Fase5.js"></script>
 </body>
 </html>

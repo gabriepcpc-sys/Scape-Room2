@@ -7,7 +7,14 @@ function entrarTabuleiro(){
     },10000);
 }
 
+function sairMinigame(){
+    document.getElementById("fundo-2").style.display="none";
+    document.getElementById("fundo3").style.display = "block";
+}
 
+function pegarCoroa(){
+    window.location.href = "5Fase.html";
+}
 const tabuleiro = document.getElementById("xadrez");
 //variávei que guardam posição atual do persoagem
 let linhaAtual=0;
@@ -59,6 +66,7 @@ function verificarVitoria(){
     if(linhaAtual === 7 && colunaAtual === 4){
         jogoAtivo = false;
         document.getElementById("mensagemVitoria").style.display = "block";
+        document.getElementById("botao").style.display = "block";
     }
 }
 
