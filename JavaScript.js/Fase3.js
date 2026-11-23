@@ -23,6 +23,7 @@ function voltar() {
 function reiniciar(){
 
     document.getElementById("Fase2Fundo1").style.display = "block";
+    document.getElementById("temporizador").style.display = "block";
 
     let lista = document.getElementById("listaHistorico");
     lista.innerHTML = "";
@@ -69,7 +70,7 @@ let jogoAtivo=true;
 let inicioFase3;
 
 function iniciarTemporizador(){
-    tempo = 14;
+    tempo = 1;
     inicioFase3 = Date.now();
     atualizarTemporizador();
 
@@ -83,7 +84,9 @@ function iniciarTemporizador(){
             document.getElementById("Fase2Fundo3").style.display = "none";
             document.getElementById("inventario").style.display = "none";
             document.getElementById("botaoHistorico").style.display = "none";
-            document.getElementById("diarioDeBordo").classList.remove("aberto"); 
+            document.getElementById("diarioDeBordo").classList.remove("aberto");
+            document.getElementById("temporizador").style.display = "none"; 
+
 
             document.getElementById("cavaleiro").style.display = "block"; // Exibe a tela de fim de jogo
             document.getElementById("botao").style.display = "block";

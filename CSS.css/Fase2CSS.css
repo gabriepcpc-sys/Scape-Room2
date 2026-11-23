@@ -192,7 +192,7 @@ font-family: 'Redaction 50';
 top: 800px;
 left: 350px;
 color: #FFFFFF;
-text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(0, 255, 255), 0 -10px 20px #00aeff, 0 -18px 40px rgb(0, 255, 255);
 color: #FFFFFF;
 }
 
@@ -255,8 +255,8 @@ filter: drop-shadow(0 0 15px rgb(254, 255, 255)); /*cria a sombra do esqueleto a
 #frase3{
     position: absolute;
     text-align: center;
-    top: 100px;
-    width: 750px;
+    top: 80px;
+    width: 740px;
     left: 125px;
 }
 #botao{

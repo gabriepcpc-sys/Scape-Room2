@@ -7,9 +7,9 @@
      <link rel="stylesheet" href="../CSS.css/Fase4CSS.css"><!--linka o html ao css-->
 </head>
 <body>
-    <div id="areaJogo">
-        <div id="todosCenarios">
-        <div id="fundo-1">
+    <div id="areaJogo" style="display: non">
+        <div id="todosCenarios" >
+        <div id="fundo-1" style="display: non">
             <img id="fundo1" src="../imagens/fundo1-fase4.png">
             <img id="rei" onclick="entrarTabuleiro()" src="../imagens/rei-fase4.png">
             <img id="tabuleiro" src="../imagens/tabuleiro-fase4.png">
@@ -24,15 +24,18 @@
         </div>
     </div>
     
-<div id="areaJogo2">
+<div id="areaJogo2" >
     <div id="cenarioTabuleiro">
 
-        <div id="fundo-2"style="display: none">
+        <div id="fundo-2"style="display: non">
             <img id="fundo2" src="../imagens/fundo2-fase4.png">
                 <div id="xadrez">
                     <button id="botao" style="display: non;" onclick="sairMinigame()">Voltar</button>
-
+        
                 </div>
+        <p id="mensagemVitoria" style="display: none">
+        Parabéns! Você encontrou a saída!
+        </p>    
         </div>
     </div> 
 </div>
@@ -45,11 +48,9 @@
     </div>
     </div>
     
-    <button id="botaoHistorico" onclick="alternarHistorico()">
+    <button id="botaoHistorico" onclick="alternarHistorico()"></button>
 
-    <p id="mensagemVitoria" style="display:none;">
-    Parabéns! Você encontrou a saída!
-    </p>
+
 
     <script src="../JavaScript.js/Fase4.js"></script>
 </body>

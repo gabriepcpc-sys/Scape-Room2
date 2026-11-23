@@ -62,7 +62,12 @@ html, body {
     width: 1671px; /*largura com os pixels exato da imagem*/
     height: 941px; /*altura com os pixels exato da imagem*/
 }
-
+#Fase2Fundo2{
+position: absolute;
+z-index: 0;
+width: 1671px;
+height: 941px;
+}
 #sala1,
 #fase2fundo3{
     display: block;
@@ -86,7 +91,8 @@ html, body {
     position:absolute;
     z-index: 1;/*camada onde o elemento está posicionado */
     top: 30px; /*a imagem esta a 30 pixels do topo */
-    left: 10px; /*a imagem esta a 10 pixels da esquerda */
+    left: 50%; /*a imagem esta a 10 pixels da esquerda */
+    transform: translateX(-50%);
     width: 1000px; /*a imagem tem 1000 pixels de largura */
     height: 1000px; /*a imagem tem 1000 pixels de altura */
 }
@@ -250,10 +256,28 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
     z-index: 3;
     color: rgb(30, 255, 0);
     top: 850px;
-    left: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Redaction 50', cursive;
     font-size: 38px;
-    
+    text-align: center;
+}
+#temporizador{
+    position: absolute;
+    top: 5px;
+    left: 750px;
+    z-index: 20;
+    font-family: 'New Rocker', cursive;
+    font-size: 38px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 2px;
+    color: #FCF6BA;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+    background: linear-gradient(135deg, rgba(20, 4, 4, 0.92), rgba(78, 3, 13, 0.92));
+    padding: 10px 24px;
+    border: 2px solid rgba(212, 175, 55, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 #pessimo{
     position: absolute;
@@ -261,9 +285,10 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
     z-index: 3;
     color: rgb(255, 0, 0);
     top: 840px;
-    left: 220px;
-    font-family: 'Redaction 50', cursive;
+    left: 50%;
+    transform: translateX(-50%);    font-family: 'Redaction 50', cursive;
     font-size: 45px;
+    text-align: center;
 }
       #olhos{
         position: absolute;
@@ -277,13 +302,13 @@ filter: drop-shadow( 0 0 15px rgb(248, 248, 248));/*sombra ao passar o cursor*/
 #botaoTestar{    
 position: absolute;
     z-index: 2; /*  camada onde o elemento esta posicionado  */
-    top: 450px; /* Ajuste para ficar na altura boa*/
-    width: 180px; /* Largura do botão */
-    left: 820px; /* Ajuste para não ficar muito no canto */
+    top: 430px; /* Ajuste para ficar na altura boa*/
+    width: 270px; /* Largura do botão */
+    left: 1150px; /* Ajuste para não ficar muito no canto */
     background-color: #4a4e4d7c; /*cor de fundo do botao*/
     color: #f7f4f4;/*cor da fonte*/
     font-family: 'Creepster', cursive; /* chama a fonte creepster*/
-    font-size: 30px; /*tamanho da fonte*/
+    font-size: 50px; /*tamanho da fonte*/
     letter-spacing: 2px;/*espaçamento entre as letras*/
     border: 5px solid #1b2922;/*configuerações da borda*/
     border-radius: 10px;/*arredondamento da borda*/
@@ -291,13 +316,13 @@ position: absolute;
 #botaoVoltar{
     position: absolute;
      z-index: 2; /*  camada onde o elemento esta posicionado  */
-    top: 550px; /* Ajuste para ficar na altura boa*/
-    width: 140px; /* Largura do botão */
-    left: 820px; /* Ajuste para não ficar muito no canto */
+    top: 580px; /* Ajuste para ficar na altura boa*/
+    width: 150px; /* Largura do botão */
+    left: 1150px; /* Ajuste para não ficar muito no canto */
     background-color: #4a4e4d7c; /*cor de fundo do botao*/
     color: #f7f4f4;/*cor da fonte*/
     font-family: 'Creepster', cursive; /* chama a fonte creepster*/
-    font-size: 30px; /*tamanho da fonte*/
+    font-size: 50px; /*tamanho da fonte*/
     letter-spacing: 2px;/*espaçamento entre as letras*/
     border: 5px solid #1b2922;/*configuerações da borda*/
     border-radius: 10px;/*arredondamento da borda*/
@@ -365,12 +390,15 @@ height: 65px;
     font-family: 'Creepster', cursive;/* chama a fonte creepster*/
     font-size: 80px;/*tamanho da fonte*/
     letter-spacing: 2px;/*espaçamento entre as letra*/
+    text-align: center;
+
 }
 .divtitulo{
     position: absolute;
     z-index: 2; /*camada onde o elemento está posicionado */
     top: 10px; /*a div do titulo esta a 10px do topo*/
-    left:60px;/*a div do titulo esta a 60px da esquerda*/
+    left:50%;/*a div do titulo esta a 60px da esquerda*/
+    transform: translateX(-50%);
     width: 900px;/*a div do titulo tem 90px de largura*/
 }
 .divestante{
@@ -378,7 +406,7 @@ height: 65px;
     display: flex;/*diz que os elementos dentro da div são flexiveis*/
     gap: 5px;/*espaçamento entre os elementos de 5px*/
     top: 420px;/*a div esta a 420px do topo*/
-    left:355px ;/*a div esta a 355px da esquerda */
+    left:685px ;/*a div esta a 355px da esquerda */
 
 }
 .livro {
@@ -400,10 +428,10 @@ height: 65px;
 #Tabua{
     position: absolute;
     z-index: 2;/*camada*/
-    width: 100px;/*tem 100px de largura*/
-    height: 905px;/*tem 905px de altura*/
-    top: 4px;/*esta a 0px do topo*/
-    left: -7px;/*esta a px da esquerda*/
+    width: 150px;/*tem 100px de largura*/
+    height: 840px;/*tem 905px de altura*/
+    top: -20px;/*esta a 0px do topo*/
+    left: -17px;/*esta a px da esquerda*/
 }
 #Tabua:hover{
  filter: drop-shadow( 0 0 25px rgb(0, 0, 0));/*sombra ao passar o cursor*/
@@ -581,7 +609,7 @@ color: #FFFFFF;
     font-size:60px; /*tamanho da fonte*/
     font-family: 'New Rocker';
     color: rgb(0, 0, 0); /*cor da fonte*/
-    width: 200px; /*ocupa 100% da largura */
+    width: 250px; /*ocupa 100% da largura */
     height: 90px;
     cursor:pointer; /*faz o cursor do mouse virar uma mãozinha ao passar por cima do botao*/
     top: 770px;
