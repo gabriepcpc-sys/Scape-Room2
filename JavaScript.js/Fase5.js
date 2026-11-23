@@ -233,6 +233,10 @@ function avancarRuim(){
 function pegarElmo(){
     document.getElementById("elmo").style.display = "none";
     document.getElementById("fundo1-finalruim").style.display = "none";
+    document.getElementById("inventario").style.display = "none";
+    document.getElementById("botaoHistorico").style.display = "none";
+    document.getElementById("diarioDeBordo").classList.remove("aberto"); 
+
 
     document.getElementById("fundo2-finalruim").style.display = "block";
     document.getElementById("caixa-de-dialogo-finalruim").style.display = "block";
