@@ -188,6 +188,7 @@ function pegarElmo(){
                 document.getElementById("frase3-finalruim").style.display = "none";
                 document.getElementById("fundo3-finalruim").style.display = "none";
                 document.getElementById("caixa-de-dialogo-finalruim2").style.display = "none";
+                
                 document.getElementById("fundo4-finalruim").style.display = "block";
         },10000);
             
