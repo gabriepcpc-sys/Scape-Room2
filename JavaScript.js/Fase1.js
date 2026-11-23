@@ -72,9 +72,12 @@ function temItem(nome) {
     });
 
 }
+const somChave = new Audio("../som/plim.mp3");
 
 function pegarChave() {// Função para pegar a chave na fase 1
     if (!temItem("Chave")) {
+        somChave.currentTime = 0;
+        somChave.play();
         inventario.push({
             "nome": "Chave",
             "imagem": "../imagens/objeto-fase1.png"
