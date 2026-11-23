@@ -21,13 +21,48 @@ function voltar() {
 }
 
 function reiniciar(){
-    document.getElementById("botao").style.display = "none";
     document.getElementById("Fase2Fundo1").style.display = "block";
+
+    let lista = document.getElementById("listaHistorico");
+    lista.innerHTML = "";
+    lista.style.display = "flex";
+
+    let invent = document.getElementById("listaInventario");
+    invent.innerHTML = "";// Limpa o inventário anterior
+    inventario = [];// Limpa também o vetor do inventário
+    
+    document.getElementById("diarioDeBordo").classList.remove("aberto"); 
+
+    document.getElementById("barril").classList.remove("coletado");
+    document.getElementById("barril").style.pointerEvents ="auto";
+
+    document.getElementById("armadura").classList.remove("coletado");
+    document.getElementById("armadura").style.pointerEvents ="auto";
+
+    document.getElementById("caixa").classList.remove("coletado");
+    document.getElementById("caixa").style.pointerEvents ="auto";
+
+    document.getElementById("baner").classList.remove("coletado");
+    document.getElementById("baner").style.pointerEvents ="auto";
+
+    document.getElementById("objetoEstranho").classList.remove("coletado");
+    document.getElementById("objetoEstranho").style.pointerEvents ="auto";
+
+    document.getElementById("saco").classList.remove("coletado");
+    document.getElementById("saco").style.pointerEvents ="auto";
+
+    document.getElementById("Tabua").classList.remove("coletado");
+    document.getElementById("Tabua").style.pointerEvents ="auto";
+    
+    document.getElementById("botaoHistorico").style.display = "flex";
+    document.getElementById("inventario").style.display = "block";
+    
+    document.getElementById("botao").style.display = "none";
     document.getElementById("cavaleiro").style.display = "none";
     iniciarTemporizador();
     atualizarTemporizador();
 }
-let tempo = 120;
+let tempo;
 let intervalo;
 let jogoAtivo=true;
 let inicioFase3;
@@ -46,6 +81,9 @@ function iniciarTemporizador(){
             document.getElementById("Fase2Fundo2").style.display = "none";
             document.getElementById("Fase2Fundo3").style.display = "none";
             document.getElementById("inventario").style.display = "none";
+            document.getElementById("botaoHistorico").style.display = "none";
+            document.getElementById("diarioDeBordo").classList.remove("aberto"); 
+
             document.getElementById("cavaleiro").style.display = "block"; // Exibe a tela de fim de jogo
             document.getElementById("botao").style.display = "block";
         }
@@ -82,25 +120,23 @@ function alternarHistorico(){
     let aberto = painel.classList.toggle("aberto");//Adiciona ou remove a classe aberto
     if(aberto){
         seta.textContent = "↓";
-        painel.style.display = "block";
     }
     else{
         seta.textContent = "↑";
-        painel.style.display = "none";
     }
 }
  
 
-var inventario = []; // Array para armazenar os itens do inventário
+let inventario = []; // Array para armazenar os itens do inventário
 
 function atualizarInventario() {
     
-    var lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
+    let lista = document.getElementById("listaInventario");// Procura a lista no HTML pelo seu id
     lista.innerHTML = "";// Limpa a lista visual antes de preenchê-la novamente
-    for (var i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
-        var item = inventario[i]; // Pega o item atual do inventário
-        var numero = item.numero; // Pega o número do item atual
-        var cor = item.cor; // Pega o nome do item atual
+    for (let i = 0; i < inventario.length; i++) {// Percorre todas as posições do vetor
+        let item = inventario[i]; // Pega o item atual do inventário
+        let numero = item.numero; // Pega o número do item atual
+        let cor = item.cor; // Pega o nome do item atual
         lista.innerHTML += `<li>
                      <span style="
                         color: ${cor};
@@ -134,6 +170,7 @@ function pegarBarril() {// Função para pegar a armadura na fase 2
     atualizarInventario(); // Atualiza o inventário na tela
     adicionarHistorico("Você encontrou o número do barril!");
     document.getElementById("barril").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("barril").style.pointerEvents = "none";
 }
 
 function pegarArmadura() {// Função para pegar a armadura na fase 2
@@ -148,6 +185,7 @@ function pegarArmadura() {// Função para pegar a armadura na fase 2
     adicionarHistorico("Você encontrou o número da armadura!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("armadura").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("armadura").style.pointerEvents = "none";
 }
 
 function pegarBanner() {// Função para pegar o banner na fase 2
@@ -162,6 +200,7 @@ function pegarBanner() {// Função para pegar o banner na fase 2
     adicionarHistorico("Você encontrou o número do banner!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("baner").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("baner").style.pointerEvents = "none";
 }
 
 function pegarCaixa(){
@@ -176,6 +215,7 @@ function pegarCaixa(){
     adicionarHistorico("Você encontrou o número da caixa!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("caixa").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("caixa").style.pointerEvents = "none";
 }
 
 function pegarObjetoEstranho(){
@@ -190,6 +230,7 @@ function pegarObjetoEstranho(){
     adicionarHistorico("Você encontrou o número do relógio!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("objetoEstranho").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("objetoEstranho").style.pointerEvents = "none";
 }
 
 function pegarSaco(){
@@ -204,6 +245,7 @@ function pegarSaco(){
     adicionarHistorico("Você encontrou o número do saco!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("saco").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("saco").style.pointerEvents = "none";
 }
 
 function pegarTabua(){
@@ -218,6 +260,7 @@ function pegarTabua(){
     adicionarHistorico("Você encontrou o número da tábua!");
     atualizarInventario(); // Atualiza o inventário na tela
     document.getElementById("Tabua").classList.add("coletado"); // Oculta o item na tela após ser pego
+    document.getElementById("Tabua").style.pointerEvents = "none";
 }
 
 
@@ -281,4 +324,29 @@ function avancarFase4(){
 
 
     window.location.href = "4Fase.html";
-     }
+}
+
+function ajustarTela() {
+
+    // Dimensões originais do cenário
+    let larguraBase = 1671;
+    let alturaBase = 941;
+
+    // Calcula a escala necessária
+    let escalaLargura = window.innerWidth / larguraBase;
+    let escalaAltura = window.innerHeight / alturaBase;
+
+    // Escolhe a menor escala para o cenário caber na tela
+    let escala = Math.min(escalaLargura, escalaAltura);
+
+    // Aplica a escala ao palco
+    document.getElementById("todosCenarios").style.transform =
+        "scale(" + escala + ")";
+}
+
+// Executa a função quando o tamanho da janela mudar
+window.onresize = ajustarTela;
+
+// Executa a função inicialmente, quando a página carregar
+ajustarTela();
+
