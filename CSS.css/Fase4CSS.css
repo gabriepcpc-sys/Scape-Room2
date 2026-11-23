@@ -1,15 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');
-*{
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
-    padding: 0;
+    overflow: hidden;
 }
 
-#fundo1{
+#areaJogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: black;
+}
+
+#areaJogo::before {
+    content: "";
+
     position: absolute;
+    inset: -20px;
+
     z-index: 0;
-    width: 1672px;
+
+    background-image: var(--fundo-lateral, url("../imagens/fundo1-fase4.png"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(10px) brightness(0.35);
+}
+
+/* todosCenarios que guarda os cenários */
+#todosCenarios {
+    position: relative;
+    
+    width: 1671px;
     height: 941px;
+
+    flex: 0 0 auto;
+
+    transform-origin: center center;
+}
+
+#fundo1,#fundo-3{
+    position: absolute; /**/
+    top: 0;
+    left: 0;
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1671px; /*largura com os pixels exato da imagem*/
+    height: 941px; /*altura com os pixels exato da imagem*/
+}
+
+#areaJogo2{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: black;
+}
+
+#areaJogo2::before {
+    content: "";
+
+    position: absolute;
+    inset: -20px;
+
+    z-index: 0;
+
+    background-image: var(--fundo-lateral, url("../imagens/fundo2-fase4.png"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(10px) brightness(0.35);
+}
+
+#cenarioTabuleiro{
+    position: relative;
+    
+    width: 1230px;
+    height: 1230px;
+
+    flex: 0 0 auto;
+
+    transform-origin: center center;
+}
+
+#fundo2{
+    position: absolute; /**/
+    top: 0;
+    left: 0;
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1230px;
+    height: 1230px;
 }
 #rei{
     position: absolute;
@@ -28,12 +128,6 @@ filter: drop-shadow( 0 0 25px rgb(236, 8, 8));/*sombra ao passar o cursor*/
     width: 200px;
     top: 558px;
     left: 750px;
-}
-#fundo2{
-    position: absolute;
-    z-index: 0;
-    width: 1230px;
-    height: 1230px;
 }
 #xadrez {
     position: absolute;
@@ -137,12 +231,6 @@ color: #FFFFFF;
     font-size: 30px;
     color: rgb(255, 255, 255);
     margin: 0;
-}
-#fundo-3{
-    position: relative;
-    z-index: 0;
-    width: 1671px;
-    height: 941px;
 }
 #coroa{
 position: absolute;

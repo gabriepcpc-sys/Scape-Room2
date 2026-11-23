@@ -252,6 +252,13 @@ filter: drop-shadow(0 0 15px rgb(254, 255, 255)); /*cria a sombra do esqueleto a
     width: 750px;
     left: 125px;
 }
+#frase3{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    width: 750px;
+    left: 125px;
+}
 #botao{
     position: absolute;
     background-color: rgba(4, 87, 112, 0.863); /*cor do botao*/
