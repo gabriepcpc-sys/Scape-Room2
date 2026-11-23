@@ -13,6 +13,7 @@ function sairMinigame(){
     document.getElementById("areaJogo2").style.display = "none";
     document.getElementById("areaJogo").style.display = "flex";
     document.getElementById("fundo3").style.display = "block";
+    document.getElementById("mensagemVitoria").style.display = "none";
 }
 
 function pegarCoroa(){
