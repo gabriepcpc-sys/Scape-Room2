@@ -8,11 +8,12 @@
   #FundoSite{
     width: 100%; /*o elemento tem 1536 pixels de largura */
     min-height: 100vh;
-    height: 100%; /*o elemento tem 1024 pixels de altura */
+    padding: 20px 15px 60px 15px;
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10; /*camada onde o elemento está posicionado */
-    overflow: hidden; /*esconde o que estiver fora do elemento*/
+    overflow-x: hidden; /*esconde o que estiver fora do elemento*/
     background-image: linear-gradient(rgb(0, 0, 0), rgba(237, 231, 230, 0.226)), url('../imagens/fundo-site.png');
     top: 90px;
 }
@@ -30,7 +31,10 @@
     top: 0px;
     background-color: black;
     width:  100%;
-    height: 100px;
+    min-height: 100px;
+    height: auto;
+    padding: 10px 15px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,10 +169,11 @@
     background-size: cover;
     width: 100%; /*o elemento tem 1536 pixels de largura */
     min-height: 100vh;
-    height: 100%; /*o elemento tem 1024 pixels de altura */
+    padding: 20px 15px 60px 15px;
+    box-sizing: border-box; /*o elemento tem 1024 pixels de altura */
     top:90px;
     z-index: 10; /*camada onde o elemento está posicionado */
-    overflow: hidden; /*esconde o que estiver fora do elemento*/
+    overflow-x: hidden; /*esconde o que estiver fora do elemento*/
     display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
     flex-direction: column; /*deixa conteudo da caixa em coluna*/
     align-items: center;
@@ -177,8 +182,9 @@
   .ConteudoContato{
     z-index: 1; /*camada onde o elemento está posicionado */
     top: 2%; /*o objeto esta a 2% do topo */
-    width: 650px; /*a largura do objeto é 300 pixels */
-    height: 50%; /*a altura do objeto é 50% */
+    width: 90%; /*a largura do objeto é 300 pixels */
+    max-width: 650px;
+    height: auto; /*a altura do objeto é 50% */
     background: linear-gradient(135deg, rgb(0, 0, 0),  rgba(240, 5, 5, 0.66));/*deixa o fundo da caixa em degrade*/
     padding: 20px; /*deixa espaco ao redor do texto*/
     border: 5px solid rgba(212, 175, 55, 0.8);
@@ -186,6 +192,7 @@
     display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
     flex-direction: column; /*deixa conteudo da caixa em coluna*/
     gap: 10px;/*espaco entre os elementos da caixa*/
+    box-sizing: border-box;
   }
   #texto-contato{
     font-family: 'redaction 35';
@@ -254,7 +261,7 @@
 }
 /*---CENARIO/ITEM 1---*/
 #fundo-cenarios-itens{
-  position: absolute;
+  position: relative;
   z-index: 0;
   align-items: center;
   box-sizing: border-box; /* Impede que o padding aumente a largura de 100% e crie barra horizontal */
@@ -266,7 +273,7 @@
   gap: 30px;
   width: 100%;
   min-height: 100%;
-    top: 90px;
+    top: 0;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Mantém o degradê fluido na tela inteira mesmo se rolar a página */
 background-image: 
@@ -345,11 +352,12 @@ linear-gradient(
   #FundoDesenvolvedores {
     width: 100%;
     min-height: 100vh;
+    padding: 20px 15px 60px 15px;
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     background-image: linear-gradient(rgb(0, 0, 0), rgba(237, 231, 230, 0.226)), url('../imagens/fundo-menu.png');
-    box-sizing: border-box;
 }
 .container-devs {
     display: flex;
@@ -409,23 +417,151 @@ linear-gradient(
   border: 2px solid rgba(212, 175, 55, 0.8);
   color: white;
 }
+#table th, #table td{
+  padding: 12px;
+}
 .iass{
-    text-shadow: 0 -1px 4px #ff8585, 0 -2px 10px rgb(174, 0, 255), 0 -10px 20px #ff00ea73, 0 -10px 40px #F00; /*sombra da fonte*/
+    text-shadow: 0 -1px 4px #fcf7f7, 0 -2px 10px rgb(255, 255, 255), 0 -10px 20px #ff00ea73, 0 -10px 40px rgb(0, 0, 0); /*sombra da fonte*/
 }
 #table th{
-      text-shadow: 0 -1px 4px #0ca4e0, 0 -2px 10px rgb(255, 196, 0), 0 -10px 20px #250ac2, 0 -10px 40px rgba(55, 0, 255, 0); /*sombra da fonte*/
+      text-shadow: 0 -1px 4px #e00c0c, 0 -2px 10px rgb(255, 0, 0), 0 -10px 20px #250ac2, 0 -10px 40px rgba(55, 0, 255, 0); /*sombra da fonte*/
 }
 .ias{
-      text-shadow: 0 -1px 4px #0ca4e0, 0 -2px 10px rgb(255, 196, 0), 0 -10px 20px #250ac2, 0 -10px 40px rgba(55, 0, 255, 0); /*sombra da fonte*/
+      text-shadow: 0 -1px 4px #e00c0c, 0 -2px 10px rgb(255, 0, 0), 0 -10px 20px #250ac2, 0 -10px 40px rgba(55, 0, 255, 0); /*sombra da fonte*/
 }
 #FundoIA{
     width: 100%; /*o elemento tem 100% da largura */
     min-height: 100vh;
-    height: 100%; /*o elemento tem 1024 pixels de altura */
+    padding: 20px 15px 60px 15px;
+    box-sizing: border-box;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10; /*camada onde o elemento está posicionado */
-    overflow: hidden; /*esconde o que estiver fora do elemento*/
+    overflow-x: hidden; /*esconde o que estiver fora do elemento*/
     background-image: linear-gradient(rgb(0, 0, 0), rgba(237, 231, 230, 0.226)), url('../imagens/fundo-site.png');
     top: 90px;
+}
+
+@media (max-width: 768px) {
+
+    /* 1. MENU SUPERIOR */
+    .ListaSite {
+        flex-wrap: wrap;          
+        gap: 12px 18px;
+        padding: 5px;
+    }
+
+    #Historia, #Site-inicio, #Cenários, #Itens,
+    #Desenvolvedores, #Voltar, #Contato, #Menu, #ia {
+        font-size: 20px;          
+        margin-top: 0;
+    }
+
+    .lista-cenarios-itens ul {
+        left: 50%;
+        transform: translateX(-50%); 
+        min-width: 140px;
+    }
+
+    .lista-cenarios-itens ul li a {
+        font-size: 22px;
+    }
+
+    /* 2. TÍTULOS E PARÁGRAFOS PRINCIPAIS */
+    h1, #titulo2, #titulo-historia {
+        font-size: 46px;          
+        left: auto;
+        padding: 10px 10px 0 10px;
+        word-break: break-word;
+    }
+
+    #textao-site, #t {
+        font-size: 24px;         
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+
+    /* 3. PÁGINA DE HISTÓRIA */
+    .ConteudoHistória {
+        width: 94%;
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    #textao-historia {
+        font-size: 20px;        
+        line-height: 1.5;
+    }
+
+    /* 4. PÁGINA DE CONTATO */
+    .ConteudoContato {
+        width: 94%;
+        padding: 18px 15px;
+    }
+
+    #texto-contato {
+        font-size: 18px;
+    }
+
+    #botao-contato {
+        width: 100%;              
+        font-size: 24px;
+    }
+
+    /* 5. PÁGINA DE CENÁRIOS E ITENS */
+    #fundo-cenarios-itens {
+        padding: 25px 15px 60px 15px; 
+    }
+
+    .bloco-cenario {
+        flex-direction: column;   
+        gap: 15px;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .fundos, .fundo1 {
+        width: 100%;             
+        max-width: 420px;
+        height: auto;
+        aspect-ratio: 16 / 10;   
+        border-radius: 20px;
+    }
+
+    .descricao-cenario {
+        font-size: 18px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .container-devs {
+        gap: 45px;                
+        margin-top: 35px;
+    }
+
+    .nome-dev {
+        font-size: 28px;
+    }
+
+    .foto-dev {
+        width: 85vw;            
+        max-width: 340px;
+        height: 420px;            
+    }
+
+    #table {
+        width: 96%;
+        margin: 25px auto;
+    }
+
+    #table th {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+
+    #table td {
+        font-size: 12px;          
+        padding: 10px 8px;
+        line-height: 1.5;
+    }
 }
