@@ -24,6 +24,22 @@ html, body {
     background-color: black;
 }
 
+#areaJogo::before {
+    content: "";
+
+    position: absolute;
+    inset: -20px;
+
+    z-index: 0;
+
+    background-image: var(--fundo-lateral, url("../imagens/fase2-inicio.png"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(10px) brightness(0.35);
+}
+
 /* todosCenarios que guarda os cenários */
 #todosCenarios {
     position: relative;
