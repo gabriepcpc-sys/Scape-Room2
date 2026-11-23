@@ -106,7 +106,13 @@ html, body {
 #pena:hover{
         filter: drop-shadow(rgb(245, 242, 242) 0px 0px 5px);
 }
-
+#livro{
+    position: absolute;
+    z-index: 0;
+    width: 200px;
+    top: 600px;
+    left: 50px
+}
 #inventario{
     position: absolute;
     z-index: 4;
