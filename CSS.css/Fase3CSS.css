@@ -386,8 +386,8 @@ filter: drop-shadow( 0 0 5px rgb(187, 232, 4));/*sombra ao passar o cursor*/
 #estanteDaSala{
     position: absolute;
     z-index: 1;/*camada onde o elemento esta*/
-    top: 195px;/*esta a 175px do topo*/
-    left: 1355px;/*esta a 1355px da esquerda*/
+    top: 170px;/*esta a 175px do topo*/
+    left: 1345px;/*esta a 1355px da esquerda*/
     height:500px ;/*tem 500px de altura*/
 }
 #estanteDaSala:hover{
