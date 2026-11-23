@@ -7,50 +7,30 @@
      <link rel="stylesheet" href="../CSS.css/Fase4CSS.css"><!--linka o html ao css-->
 </head>
 <body>
-    <div id="areaJogo" style="display: non">
-        <div id="todosCenarios" >
-        <div id="fundo-1" style="display: non">
-            <img id="fundo1" src="../imagens/fundo1-fase4.png">
-            <img id="rei" onclick="entrarTabuleiro()" src="../imagens/rei-fase4.png">
-            <img id="tabuleiro" src="../imagens/tabuleiro-fase4.png">
-            <div id="caixa-de-dialogo-finalruim" style="display: none;">
-                <p class="p" id="frase1-finalruim">Se aproxime, não tenha medo. É apenas mais um jogo que você precisa concluir para escapar do meu majestoso castelo, mas seja rápido para escapar, caso contrário... você será mais uma armadura na minha sala!</p>    
+    <div id="fundo-1">
+        <img id="fundo1" src="../imagens/fundo1-fase4.png">
+        <img id="rei" onclick="entrarTabuleiro()" src="../imagens/rei-fase4.png">
+        <img id="tabuleiro" src="../imagens/tabuleiro-fase4.png">
+        <div id="caixa-de-dialogo-finalruim" style="display: none;">
+            <p class="p" id="frase1-finalruim">Se aproxime, não tenha medo. É apenas mais um jogo que você precisa concluir para escapar do meu majestoso castelo, mas seja rápido para escapar, caso contrário... você será mais uma armadura na minha sala!</p>    
+        </div>
+    </div>
+    <div id="fundo-2"style="display: none">
+        <img id="fundo2" src="../imagens/fundo2-fase4.png">
+            <div id="xadrez">
+            <button id="botao" style="display: non;" onclick="sairMinigame()">Voltar</button>
+
             </div>
-        </div>
-            <div id="fundo3" style="display: none">
-                <img id="fundo-3" src="../imagens/fundo3-fase4.png">
-                <img id="coroa" onclick="pegarCoroa()" src="../imagens/coroa.png">
-            </div>
-        </div>
+            
     </div>
-    
-<div id="areaJogo2" >
-    <div id="cenarioTabuleiro">
-
-        <div id="fundo-2"style="display: non">
-            <img id="fundo2" src="../imagens/fundo2-fase4.png">
-                <div id="xadrez">
-                    <button id="botao" style="display: non;" onclick="sairMinigame()">Voltar</button>
-        
-                </div>
-        <p id="mensagemVitoria" style="display: none">
-        Parabéns! Você encontrou a saída!
-        </p>    
-        </div>
-    </div> 
-</div>
-    <div id="diarioDeBordo" >
-        <h3>Histórico de Acontecimentos</h3>
-    <div>   
-        <div id="conteudoHistorico">
-            <ul id="listaHistorico"></ul>
-        </div>
+    <div id="fundo3" style="display: none">
+        <img id="fundo-3" src="../imagens/fundo3-fase4.png">
+        <img id="coroa" onclick="pegarCoroa()" src="../imagens/coroa.png">
     </div>
-    </div>
-    
-    <button id="botaoHistorico" onclick="alternarHistorico()"></button>
 
-
+    <p id="mensagemVitoria" style="display:none;">
+    Parabéns! Você encontrou a saída!
+    </p>
 
     <script src="../JavaScript.js/Fase4.js"></script>
 </body>

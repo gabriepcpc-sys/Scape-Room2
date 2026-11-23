@@ -24,22 +24,6 @@ html, body {
     background-color: black;
 }
 
-#areaJogo::before {
-    content: "";
-
-    position: absolute;
-    inset: -20px;
-
-    z-index: 0;
-
-    background-image: var(--fundo-lateral, url("../imagens/fase2-inicio.png"));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    filter: blur(10px) brightness(0.35);
-}
-
 /* todosCenarios que guarda os cenários */
 #todosCenarios {
     position: relative;
@@ -192,7 +176,7 @@ font-family: 'Redaction 50';
 top: 800px;
 left: 350px;
 color: #FFFFFF;
-text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(0, 255, 255), 0 -10px 20px #00aeff, 0 -18px 40px rgb(0, 255, 255);
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 color: #FFFFFF;
 }
 
@@ -256,9 +240,9 @@ filter: drop-shadow(0 0 15px rgb(254, 255, 255)); /*cria a sombra do esqueleto a
     position: absolute;
     text-align: center;
     top: 80px;
-    width: 740px;
+    width: 750px;
     left: 125px;
-}
+    }
 #botao{
     position: absolute;
     background-color: rgba(4, 87, 112, 0.863); /*cor do botao*/

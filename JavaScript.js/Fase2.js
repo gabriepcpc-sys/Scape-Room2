@@ -112,8 +112,9 @@ function interagirEsqueleto(){
         setTimeout(function(){
             document.getElementById("frase2").style.display="none";
             document.getElementById("frase3").style.display="block";
-            adicionarHistorico("Esqueleto: E não se esqueça, ao passar por aquela porta o tempo começa a cair. Ache a ordem certa antes de sua hora chegar ao fim para ficar vivo! E lembre-se: o tempo decide seu final...");
-        setTimeout(function(){
+            adicionarHistorico("Esqueleto:E não se esqueça, ao passar por aquela porta o tempo começa a cair. Ache a ordem certa antes de sua hora chegar ao fim para ficar vivo! E lembre-se: o tempo decide seu final...");
+
+            setTimeout(function(){
             document.getElementById("frase3").style.display="none";
             document.getElementById("caixa-de-dialogo").style.display="none";
             document.getElementById("inventario").style.display = "block"; 
@@ -121,7 +122,9 @@ function interagirEsqueleto(){
             document.getElementById("voltar").style.pointerEvents="auto";
             document.getElementById("botaoHistorico").style.display="flex";
             document.getElementById("porta-masmora").style.pointerEvents="auto";
-            },10000);
+
+            },10000)
+            
         },10000)
     },10000)
 }

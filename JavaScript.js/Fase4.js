@@ -1,8 +1,6 @@
 function entrarTabuleiro(){
     document.getElementById("caixa-de-dialogo-finalruim").style.display = "block";
     setTimeout(function(){
-        document.getElementById("areaJogo").style.display = "none";
-        document.getElementById("areaJogo2").style.display = "flex";
         document.getElementById("caixa-de-dialogo-finalruim").style.display = "none";
         document.getElementById("fundo-1").style.display="none";
         document.getElementById("fundo-2").style.display="block";
@@ -10,8 +8,7 @@ function entrarTabuleiro(){
 }
 
 function sairMinigame(){
-    document.getElementById("areaJogo2").style.display = "none";
-    document.getElementById("areaJogo").style.display = "flex";
+    document.getElementById("fundo-2").style.display="none";
     document.getElementById("fundo3").style.display = "block";
 }
 
@@ -139,27 +136,3 @@ function andarGargula(event){
     }
 }
   document.addEventListener("keydown", andarGargula);
-
-  function ajustarTela() {
-
-    // Dimensões originais do cenário
-    let larguraBase = 1671;
-    let alturaBase = 941;
-
-    // Calcula a escala necessária
-    let escalaLargura = window.innerWidth / larguraBase;
-    let escalaAltura = window.innerHeight / alturaBase;
-
-    // Escolhe a menor escala para o cenário caber na tela
-    let escala = Math.min(escalaLargura, escalaAltura);
-
-    // Aplica a escala ao palco
-    document.getElementById("todosCenarios").style.transform =
-        "scale(" + escala + ")";
-}
-
-// Executa a função quando o tamanho da janela mudar
-window.onresize = ajustarTela;
-
-// Executa a função inicialmente, quando a página carregar
-ajustarTela();

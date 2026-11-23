@@ -1,5 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=VT323&display=swap');
 
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#areaJogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    background-color: black;
+}
+
+#areaJogo::before {
+    content: "";
+
+    position: absolute;
+    inset: -20px;
+
+    z-index: 0;
+
+    background-image: var(--fundo-lateral, url("../imagens/fundo1-fase5-finalbom.png"));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(10px) brightness(0.35);
+}
+
+/* todosCenarios que guarda os cenários */
+#todosCenarios {
+    position: relative;
+    
+    width: 1671px;
+    height: 941px;
+
+    flex: 0 0 auto;
+
+    transform-origin: center center;
+}
+
+#Fase1Fundo1, #Fase1Fundo2{
+    position: absolute; /**/
+    top: 0;
+    left: 0;
+    z-index: 0; /*camada onde o elemento está posicionado */
+    width: 1671px; /*largura com os pixels exato da imagem*/
+    height: 941px; /*altura com os pixels exato da imagem*/
+}
+
+
 #sala-das-portas{
     position: relative;
     z-index: 0;
@@ -47,10 +108,10 @@
 }
 #livro{
     position: absolute;
-    z-index: 2;
+    z-index: 0;
     width: 200px;
-    left: 60px;
-    top: 610px;
+    top: 600px;
+    left: 50px
 }
 #inventario{
     position: absolute;
@@ -416,7 +477,7 @@
     left: 0;
     width: 100vw; 
     height: 100vh;
-    object-fit: cover;/* Faz o mesmo papel do background-size: cover */
+    object-fit: contain;
     background-color: black;
 }
 
@@ -556,4 +617,43 @@ font-family: 'VT323';
 font-size: 40px;
 top: 800px;
 left: 50px;
+}
+
+#video-finalsecreto{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    object-fit: contain;
+    background-color: black;
+}
+
+#botaoMenu{
+    position: fixed;
+    z-index: 10000;
+
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 300px;
+    height: 70px;
+
+    background-color: #24170f;
+    color: white;
+
+    border: 3px solid #a17b48;
+    border-radius: 10px;
+
+    font-family: 'New Rocker', cursive;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+#botaoMenu:hover{
+    background-color: #57351f;
+    box-shadow: 0 0 15px white;
 }

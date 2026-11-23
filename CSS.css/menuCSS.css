@@ -5,15 +5,6 @@ body {
     margin: 0;
     overflow: hidden;
 }
-
-#FundoMenu{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    scrollbar-width: none;
-}
 #videoMenu{
     position: absolute;
     z-index: 0;
@@ -25,8 +16,10 @@ body {
     
 }
 #FundoMenu{
+    z-index: 0;
     width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;        /* Centraliza o título e a caixa na horizontal */
@@ -51,16 +44,13 @@ body {
 
 }
 .titulo{
-    position: absolute;
+    position: relative;
     z-index: 2; /*camada onde o elemento está posicionado */
-    top: -47PX; /*o objeto esta a 10% do topo */
     text-align: center; /*centraliza o texto*/
-    align-items: center;
     justify-content: center;
-    width: 900px; /*a largura do objeto é 900 pixels */
-    height: 50%; /*a altura do objeto é 50% */
-    margin-left: -200px; /*com distancia negativa o elemento fica centralizado */
-    font-size: 90px; /*tamanho da fonte*/
+    max-width: 900px; /*a largura do objeto é 900 pixels */
+    width: 90%;
+    font-size: 120px; /*tamanho da fonte*/
     display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
     flex-direction: row;
     font-family: 'VT323', cursive; /*tipo da fonte*/
@@ -68,14 +58,15 @@ body {
     text-shadow: 15px 15px 10px rgb(2, 2, 2); /*sombra da fonte*/
     
 }
-
+.titulo h1 {
+    margin: 0;
+    line-height: 0.8;           /* Corta o espaço vazio acima e abaixo das letras grandes */
+}
 .caixa-menu{
-   position: absolute;
     z-index:3; /*camada onde o elemento está posicionado */
-    top: 30%; /*o objeto esta a 25% do topo */
-    width: 700px; /*a largura do objeto é 300 pixels */
-    height: 270px; /*a altura do objeto é 50% */
-    margin-left: -200px; /*com distancia negativa o elemento fica centralizado */
+    width: 90%; /*a largura do objeto é 300 pixels */
+    max-width: 700px;
+    height: auto; /*a altura do objeto é 50% */
     background-color: rgba(0, 0, 0, 0.6);/*deixa o fundo da caixa translucida e escura pq a cor é preto*/
     padding: 20px; /*deixa espaco ao redor do texto*/
     border: 3px solid rgba(255, 255, 255, 0.85); /*borda da caixa*/
@@ -84,9 +75,34 @@ body {
     display: flex; /*deixa o conteudo da caixa em uma linha flexivel*/
     flex-direction: column; /*deixa conteudo da caixa em coluna*/
     gap: 10px;/*espaco entre os elementos da caixa*/
+    box-sizing: border-box;
     
 }
 .button:hover{
    box-shadow: 0 0 15px rgb(248, 247, 247);/*faz o brilho no botao ao passar o mouse por cima */
    background-color: rgb(220, 20, 20);/*muda a cor do botao ao passar o mouse por cima*/
+}
+
+@media (max-width: 768px) {
+
+    #FundoMenu {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .titulo {
+        font-size: 52px;           
+        text-shadow: 6px 6px 8px rgb(2, 2, 2);
+    }
+
+    .caixa-menu {
+        width: 95%;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .button {
+        font-size: 38px;            
+        padding: 12px 8px;
+    }
 }
