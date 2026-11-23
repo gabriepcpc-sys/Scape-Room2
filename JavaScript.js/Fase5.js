@@ -53,14 +53,54 @@ function atualizarInventario() {
 }
 
 function temItem(nome) {
-
+    
     return inventario.some(function(item) {
         return item.nome === nome;
     });
+    
+}
+
+function pegarPena(){
+    if (!temItem("pena")) { // Verifica se o item já está no inventário
+        inventario.push({
+            "nome": "pena",
+            "imagem": "../imagens/pena-fase5.png"
+        });
+        console.log("Pena adicionado ao inventário!");
+    }
+    let pena = document.getElementById('pena');
+    pena.remove();
+    atualizarInventario();
+}
+
+//====FINAL SECRETO====//
+
+function videoSecreto(){
+    document.getElementById("botaoHistorico").style.display = "none";
+    document.getElementById("diarioDeBordo").classList.remove("aberto");
+    let video = document.getElementById("video-finalsecreto");
+    video.style.display = "block";
+    video.play();
 
 }
 
 
+function finalSecreto(){
+    if (!temItem("pena")) {
+        return;
+    }
+    adicionarHistorico("Você iniciou o final secreto!");
+    document.getElementById("fase3portas").style.display = "none";
+    document.getElementById("inventario").style.display = "none";    
+    videoSecreto();
+}
+
+
+
+
+
+
+//====FINAL BOM====//
 function avancarBom(){
     document.getElementById("fase3portas").style.display = "none";
     document.getElementById("finalbom").style.display = "block";
@@ -81,6 +121,9 @@ function avancarParte3(){
 }
 
 function videoBom(){
+    document.getElementById("inventario").style.display ="none";
+    document.getElementById("botaoHistorico").style.display = "none";
+    document.getElementById("diarioDeBordo").classList.remove("aberto");
     let video = document.getElementById("video-finalbom");
     video.style.display = "block";
     video.play();
@@ -92,6 +135,7 @@ function abrirBau(){
     document.getElementById("bauaberto").style.display = "block";
     document.getElementById("pena").style.display = "block";
 }
+
 
 
 function interagirGargula(){
@@ -134,6 +178,7 @@ function interagirGargula2(){
     fala3.style.display = "block";
     let gargula = document.getElementById("gato2");
     gargula.style.pointerEvents = 'none';
+    document.getElementById("portao").style.pointerEvents = "none";
 
     setTimeout(function(){
         fala3.style.display = "none";
@@ -145,6 +190,7 @@ function interagirGargula2(){
                 fala5.style.display = "none";
                 document.getElementById("seta").style.display = "block";
                 document.getElementById("caixa-de-dialogo2").style.display = "none";
+                document.getElementById("portao").style.pointerEvents = "auto";
                 
                 inventario.push({
                 "nome":"Tocha",
@@ -197,3 +243,38 @@ function pegarElmo(){
     },10000)
 }
 
+function mostrarBotaoMenu(){
+
+    document.getElementById("botaoMenu").style.display = "block";
+}
+function voltarMenu(){
+
+    window.location.href = "../index.html";
+
+}
+
+
+
+function ajustarTela() {
+
+    // Dimensões originais do cenário
+    let larguraBase = 1671;
+    let alturaBase = 941;
+
+    // Calcula a escala necessária
+    let escalaLargura = window.innerWidth / larguraBase;
+    let escalaAltura = window.innerHeight / alturaBase;
+
+    // Escolhe a menor escala para o cenário caber na tela
+    let escala = Math.min(escalaLargura, escalaAltura);
+
+    // Aplica a escala ao palco
+    document.getElementById("todosCenarios").style.transform =
+        "scale(" + escala + ")";
+}
+
+// Executa a função quando o tamanho da janela mudar
+window.onresize = ajustarTela;
+
+// Executa a função inicialmente, quando a página carregar
+ajustarTela();

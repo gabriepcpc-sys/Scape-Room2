@@ -7,69 +7,78 @@
     <link rel="stylesheet" href="../CSS.css/Fase5CSS.css"><!--linka o html ao css-->
 </head>
 <body>
-    <div id="fase3portas" class="fundo-porta" style="display: block;"><!-- div do quarto das portas com id,classe e display -->
-    <img id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
-    <img id="porta" class="porta" onclick="decidirFinal()" src="../imagens/porta-fase5.png"><!--chama a imagem -->
-    <img id="baufechado" onclick="abrirBau()" src="../imagens/bau-fase5.png">
-    <img id="bauaberto" src="../imagens/bauAberto-fase5.png">
-    <img id="pena"  src="../imagens/pena-fase5.png">
-    <img id="livro" src="../imagens/livro-fase5.png">
-</div>
-    
-    <div id="finasecreto" style="display: none;"><!-- div do final secreto com id e display -->
-        <img style="display: none;" id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
-        <img style="display: non;" id="fundo1-finalsecreto" src="../imagens/fundo1-finalsecreto.png" >
-        <img style="display: none;" id="fundo2-finalsecreto" src="../imagens/fundo2-finalsecreto.png" >
-        <img id="porta-secreto" src="../imagens/porta-finalsecreto.png">
-        <video style="display: none;" id="video-finalsecreto" src="../Videos/Final-Secreto.mp4"></video>
-            <div><p style="display: non;" id="mensagem">Meu deus, que sonho estranho... Que dor de cabeça! O que... por que minha porta ta brilhando assim?</p></div>
+    <div id="areaJogo">
+        <div id="todosCenarios">
+        <div id="fase3portas" class="fundo-porta" style="display:  block;"><!-- div do quarto das portas com id,classe e display -->
+        <img id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
+        <img id="porta" class="porta" onclick="decidirFinal()" src="../imagens/porta-fase5.png"><!--chama a imagem -->
+        <img id="baufechado" onclick="abrirBau()" src="../imagens/bau-fase5.png">
+        <img id="bauaberto" src="../imagens/bauAberto-fase5.png">
+        <img id="pena" onclick="pegarPena()" src="../imagens/pena-fase5.png">
+        <img id="livro" onclick="finalSecreto()" src="../imagens/livro-fase5.png">
     </div>
-    
-    <div id="finalbom" style="display: none;"><!-- div do final bom com id e display -->
-        <div id="fundo1">
-            <img id="jardim" src="../imagens/fundo2-fase5-finalbom.png">
-            <img id="seta" onclick="avancarParte2()" src="../imagens/seta-fase5.png">
-            <img id="galao" src="../imagens/galao-fase5.png" style="display: none;">
-            <img id="gato" onclick="interagirGargula()" src="../imagens/gato-fase5.png">
-            <div id="caixa-de-dialogo"style="display: none;">
-            <p class="p" id="frase1" style="display: none;">Eu vi você entrando no castelo, e ouvi seus barulhos... Vi que você escapou do monstro, e conseguiu achar a ordem certa bem rápido...</p>
-            <p class="p escondido" id="frase2" style="display: none;">Suponho que você queira fugir... vou te ajudar, mas prometa queimar esse maldito lugar, as raízes da grande árvore cercam o castelo inteiro. Ao queimar ela, a base do castelo cai junto...</p>
+        
+        <div id="finasecreto" style="display: none;"><!-- div do final secreto com id e display -->
+            <img style="display: none;" id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
+            <img style="display: non;" id="fundo1-finalsecreto" src="../imagens/fundo1-finalsecreto.png" >
+            <img style="display: none;" id="fundo2-finalsecreto" src="../imagens/fundo2-finalsecreto.png" >
+            <img id="porta-secreto" src="../imagens/porta-finalsecreto.png">
+            <div><p style="display: non;" id="mensagem">Meu deus, que sonho estranho... Que dor de cabeça! O que... por que minha porta ta brilhando assim?</p></div>
         </div>
-        </div>
-        <div id="fundo2" style="display:none;">
-            <img id="jardim2" src="../imagens/fundo3-fase5-finalbom.png">
-            <img id="gato2" onclick="interagirGargula2()" src="../imagens/gato-fase5.png">
-            <img id="portao" onclick="avancarParte3()"src="../imagens/portao-jardim.png">
-            <img id="tocha" src="../imagens/tocha-fase5.png">
-            <div id="caixa-de-dialogo2"style="display: none;">
-            <p class="p" id="frase3" style="display: none;">Pelo visto você acabou de falar com um dos meus. Ao que vejo nós 3 queremos o fim desse lugar. Caso contrário, você não estaria indo com um galão de gasolina em direção a grande árvore...</p>
-            <p class="p escondido" id="frase4" style="display: none;">Mas do que adianta isso sem fogo? NADA. Tenho a solução para isso, na verdade sempre esperei para que alguém fizesse isso. Mas eles sempre ficavam presos na masmora ou morriam na sala dos livros... </p>
-            <p class="p escondido" id="frase5" style="display: none;">Eu amaria ver essa árvore em chamas, pena que eu não posso me mexer. Essa maldição posta em mim é fruto desse castelo, por isso ver esse lugar morrer vai ser algo tão libertador. A grande árvore está a sua direita!</p>
+        
+        <div id="finalbom" style="display: none;"><!-- div do final bom com id e display -->
+            <div id="fundo1">
+                <img id="jardim" src="../imagens/fundo2-fase5-finalbom.png">
+                <img id="seta" onclick="avancarParte2()" src="../imagens/seta-fase5.png">
+                <img id="galao" src="../imagens/galao-fase5.png" style="display: none;">
+                <img id="gato" onclick="interagirGargula()" src="../imagens/gato-fase5.png">
+                <div id="caixa-de-dialogo"style="display: none;">
+                <p class="p" id="frase1" style="display: none;">Eu vi você entrando no castelo, e ouvi seus barulhos... Vi que você escapou do monstro, e conseguiu achar a ordem certa bem rápido...</p>
+                <p class="p escondido" id="frase2" style="display: none;">Suponho que você queira fugir... vou te ajudar, mas prometa queimar esse maldito lugar, as raízes da grande árvore cercam o castelo inteiro. Ao queimar ela, a base do castelo cai junto...</p>
+            </div>
+            </div>
+            <div id="fundo2" style="display:none;">
+                <img id="jardim2" src="../imagens/fundo3-fase5-finalbom.png">
+                <img id="gato2" onclick="interagirGargula2()" src="../imagens/gato-fase5.png">
+                <img id="portao" onclick="avancarParte3()"src="../imagens/portao-jardim.png">
+                <img id="tocha" src="../imagens/tocha-fase5.png" style="display: none;">
+                <div id="caixa-de-dialogo2"style="display: none;">
+                <p class="p" id="frase3" style="display: none;">Pelo visto você acabou de falar com um dos meus. Ao que vejo nós 3 queremos o fim desse lugar. Caso contrário, você não estaria indo com um galão de gasolina em direção a grande árvore...</p>
+                <p class="p escondido" id="frase4" style="display: none;">Mas do que adianta isso sem fogo? NADA. Tenho a solução para isso, na verdade sempre esperei para que alguém fizesse isso. Mas eles sempre ficavam presos na masmora ou morriam na sala dos livros... </p>
+                <p class="p escondido" id="frase5" style="display: none;">Eu amaria ver essa árvore em chamas, pena que eu não posso me mexer. Essa maldição posta em mim é fruto desse castelo, por isso ver esse lugar morrer vai ser algo tão libertador. A grande árvore está a sua direita!</p>
+                </div>
+            </div>
+            <div id="fundo3" style="display: block;">
+                <img id="jardim3" src="../imagens/fundo4-fase5-finalbom.png">
+                <img id="zona" onclick="videoBom()" src="../imagens/zonapontilhada-fase5finalbom.png">
             </div>
         </div>
-        <div id="fundo3" style="display: none;">
-            <img id="jardim3" src="../imagens/fundo4-fase5-finalbom.png">
-            <img id="zona" onclick="videoBom()" src="../imagens/zonapontilhada-fase5finalbom.png">
-            <video style="display: none;" id="video-finalbom" src="../Videos/Final-Bom.mp4"></video>
+        
+        <div id="finalruim" style="display: none;"><!-- div do final ruim com id e display -->
+            <img style="display: none;" id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
+            <img id="elmo" onclick="pegarElmo()" src="../imagens/elmo-fase5finalruim.png">
+            <img id="fundo1-finalruim" src="../imagens/fundo1-fase5-finalruim.png">
+            <img style="display: none;" id="fundo2-finalruim" src="../imagens/fundo2-fase5finalruim.png">
+            <div id="caixa-de-dialogo-finalruim" style="display: none;">
+                <p class="p" id="frase1-finalruim" style="display: none;">Quase... Quase que você escapou, por que você pegou o elmo?! Enfim, o rei quer falar com você... Somos os cavaleiros particulares dele, e se viemos até aqui, pode ter certeza que o final que você está agora, não é bom...</p>    
+            </div>
+            <img style="display: none;" id="fundo3-finalruim" src="../imagens/fundo3-fase5finalruim.png">
+            <div id="caixa-de-dialogo-finalruim2" style="display: none;">
+                <p class="p" id="frase2-finalruim" style="display: none;">Foi um milagre você ter sobrevivido na terceira parte do castelo... Achei que meu cavaleiro ia te matar... você viu ele te observando né?</p>
+                <p class="p escondido" id="frase3-finalruim" style="display: none;">Isso não importa mais, até porque você demorou. Demorou muito para acertar a ordem daqueles livros. Você gostou de ficar lá? Se sim, aproveite, porque daqui de dentro você não sai mais...</p>
+            </div>
+            <img style="display: none;" id="fundo4-finalruim" src="../imagens/fundo4-fase5finalruim.png">
         </div>
     </div>
-    
-    <div id="finalruim" style="display: none;"><!-- div do final ruim com id e display -->
-        <img style="display: none;" id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
-        <img id="elmo" onclick="pegarElmo()" src="../imagens/elmo-fase5finalruim.png">
-        <img id="fundo1-finalruim" src="../imagens/fundo1-fase5-finalruim.png">
-        <img style="display: none;" id="fundo2-finalruim" src="../imagens/fundo2-fase5finalruim.png">
-        <div id="caixa-de-dialogo-finalruim" style="display: none;">
-            <p class="p" id="frase1-finalruim" style="display: none;">Quase... Quase que você escapou, por que você pegou o elmo?! Enfim, o rei quer falar com você... Somos os cavaleiros particulares dele, e se viemos até aqui, pode ter certeza que o final que você está agora, não é bom...</p>    
-        </div>
-        <img style="display: none;" id="fundo3-finalruim" src="../imagens/fundo3-fase5finalruim.png">
-        <div id="caixa-de-dialogo-finalruim2" style="display: none;">
-            <p class="p" id="frase2-finalruim" style="display: none;">Foi um milagre você ter sobrevivido na terceira parte do castelo... Achei que meu cavaleiro ia te matar... você viu ele te observando né?</p>
-            <p class="p escondido" id="frase3-finalruim" style="display: none;">Isso não importa mais, até porque você demorou. Demorou muito para acertar a ordem daqueles livros. Você gostou de ficar lá? Se sim, aproveite, porque daqui de dentro você não sai mais...</p>
-        </div>
-        <img style="display: none;" id="fundo4-finalruim" src="../imagens/fundo4-fase5finalruim.png">
-    </div>
+</div>
 
+<video style="display: none;" id="video-finalbom" src="../Videos/Final-Bom.mp4" onended="mostrarBotaoMenu()"></video>
+
+<video style="display: none;" id="video-finalsecreto" src="../Videos/Final-Secreto.mp4" onended="mostrarBotaoMenu()"></video>
+
+    <button id="botaoMenu" onclick="voltarMenu()" style="display: none;">
+        Voltar ao menu
+    </button>
 
     <div id="inventario"> <!-- div que guarda o inventário -->
                 <h3>Inventário</h3> <!-- titulo do inventário -->
