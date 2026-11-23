@@ -84,7 +84,6 @@ function videoSecreto(){
 
 }
 
-
 function finalSecreto(){
     if (!temItem("pena")) {
         return;
@@ -93,6 +92,26 @@ function finalSecreto(){
     document.getElementById("fase3portas").style.display = "none";
     document.getElementById("inventario").style.display = "none";    
     videoSecreto();
+}
+
+function momentoFinal(){
+    document.getElementById("mensagem").style.display = "block";
+    setTimeout(function(){
+        document.getElementById("mensagem").style.display = "none";    
+        document.getElementById("fundo1-finalsecreto").style.display = "none"; // Mostra o cenário do quarto
+                document.getElementById("porta-secreto").style.display = "none"; // Mostra o cenário do quarto
+        document.getElementById("fundo2-finalsecreto").style.display = "block";
+        document.getElementById("fundo2-finalsecreto").style.display = "block";
+         document.getElementById("botaoMenu").style.display = "block";
+
+    },5000);
+    
+}
+
+function quartoSecreto(){
+    document.getElementById("video-finalsecreto").style.display = "none"; // Esconde o vídeo
+    document.getElementById("finasecreto").style.display = "block";        // Mostra a div pai do final secreto
+    document.getElementById("fundo1-finalsecreto").style.display = "block"; // Mostra o cenário do quarto
 }
 
 

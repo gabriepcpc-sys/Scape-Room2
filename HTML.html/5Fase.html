@@ -20,10 +20,10 @@
         
         <div id="finasecreto" style="display: none;"><!-- div do final secreto com id e display -->
             <img style="display: none;" id="sala-das-portas" src="../imagens/fundo1-fase5-finalbom.png"><!--chama a imagem -->
-            <img style="display: non;" id="fundo1-finalsecreto" src="../imagens/fundo1-finalsecreto.png" >
+            <img style="display: none;" id="fundo1-finalsecreto" src="../imagens/fundo1-finalsecreto.png" >
             <img style="display: none;" id="fundo2-finalsecreto" src="../imagens/fundo2-finalsecreto.png" >
-            <img id="porta-secreto" src="../imagens/porta-finalsecreto.png">
-            <div><p style="display: non;" id="mensagem">Meu deus, que sonho estranho... Que dor de cabeça! O que... por que minha porta ta brilhando assim?</p></div>
+            <img id="porta-secreto" onclick="momentoFinal()" src="../imagens/porta-finalsecreto.png">
+            <div><p style="display: none;" id="mensagem">Meu deus, que sonho estranho... Que dor de cabeça! O que... por que minha porta ta brilhando assim?</p></div>
         </div>
         
         <div id="finalbom" style="display: none;"><!-- div do final bom com id e display -->
@@ -74,7 +74,7 @@
 
 <video style="display: none;" id="video-finalbom" src="../Videos/Final-Bom.mp4" onended="mostrarBotaoMenu()"></video>
 
-<video style="display: none;" id="video-finalsecreto" src="../Videos/Final-Secreto.mp4" onended="mostrarBotaoMenu()"></video>
+<video style="display: none;" id="video-finalsecreto" src="../Videos/Final-Secreto.mp4" onended="quartoSecreto()"></video>
 
     <button id="botaoMenu" onclick="voltarMenu()" style="display: none;">
         Voltar ao menu
